@@ -18,29 +18,29 @@ export default function Footer() {
 
         {/* CENTER SOCIAL ICONS */}
         <div className="flex items-center gap-4">
-          {[
-            { href: "#", icon: "icon 1.svg", alt: "LinkedIn" },
-            { href: "#", icon: "icon 2.svg", alt: "YouTube" },
-            { href: "#", icon: "icon 3.svg", alt: "Facebook" },
-            { href: "#", icon: "icon 4.svg", alt: "Instagram" },
-          ].map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="w-10 h-10 flex items-center justify-center rounded-lg
-                         border border-[#CCFF00]/60 hover:bg-[#CCFF00]
-                         transition-all duration-300"
-            >
-              <Image
-                src={item.icon}
-                alt={item.alt}
-                width={20}
-                height={20}
-                className="invert hover:invert-0 transition"
-              />
-            </Link>
-          ))}
-        </div>
+  {[
+    { href: "#", icon: "/icon 1.svg", alt: "LinkedIn" },
+    { href: "#", icon: "/icon 2.svg", alt: "YouTube" },
+    { href: "#", icon: "/icon 3.svg", alt: "Facebook" },
+    { href: "#", icon: "/icon 4.svg", alt: "Instagram" },
+  ].map((item, index) => (
+    <Link
+      key={index}
+      href={item.href}
+      className="w-10 h-10 flex items-center justify-center rounded-lg
+                 hover:scale-110 transition-transform duration-300"
+    >
+      <Image
+        src={item.icon}
+        alt={item.alt}
+        width={22}
+        height={22}
+        className="transition-opacity duration-300 hover:opacity-90"
+      />
+    </Link>
+  ))}
+</div>
+
 
         {/* RIGHT */}
         <div className="flex items-center gap-6 text-sm text-gray-400">
