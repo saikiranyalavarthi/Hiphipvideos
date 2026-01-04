@@ -34,3 +34,17 @@ body {
 .marquee:hover {
   animation-play-state: paused;
 }
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  font-size: 16px;
+  transition: all 0.25s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ccff00;
+  box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.35);
+}
