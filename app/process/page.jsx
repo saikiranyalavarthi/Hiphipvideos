@@ -1,9 +1,10 @@
 import React from 'react'
+import ProcessSection from '../components/ProcessSection'
 
 const page = () => {
   return (
     <div>
-      process
+ <ProcessSection/>
     </div>
   )
 }
