@@ -1,11 +1,20 @@
-import React from 'react'
+import Hero from "../components/Hero";
+import AboutServices from "../components/AboutServices";
+import ClientsSection from "../components/ClientsSection";
+import ContactSection from "../components/ContactSection";
+import Location from "../components/Location";
 
-const page = () => {
+export default function Home() {
   return (
-    <div>
- 
-    </div>
-  )
-}
+    <>
+       <Hero /> 
+<AboutServices/>
 
-export default page
+<Location/>
+<ClientsSection/>
+
+<ContactSection/>
+ 
+    </>
+  );
+}
