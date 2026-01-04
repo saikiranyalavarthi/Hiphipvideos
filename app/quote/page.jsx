@@ -8,11 +8,11 @@ export default function Home() {
   
 
 
-<Location/>
+
 
 
 <ContactSection/>
- 
+<Location/>
     </>
   );
 }
