@@ -3,23 +3,27 @@
 import { useState } from "react";
 
 export default function IndustriesSection() {
+
+  // ✅ Fixed Industries Array
   const industries = [
-    "All",
-    "SaaS",
-    "Tech",
-    "Healthcare",
-    "Biotech",
-    "Education",
-    "Finance",
+    "Featured",
+    "Products",
+    "Gadgets",
+    "Automobiles",
+    "Real Estate",
+    "Fashion",
+    "Industrial",
     "Corporate",
-    "Media",
+    "Explainers",
+    "Documentaries",
+    "Tech",
   ];
 
   const projects = [
     {
       title: "Open Cinema",
       length: "60 Seconds",
-      industry: "Transport",
+      industry: "Explainers",
       type: "Explainer Video Production",
       image: "/image1 (2).jpeg",
     },
@@ -33,35 +37,35 @@ export default function IndustriesSection() {
     {
       title: "Healthcare Story",
       length: "90 Seconds",
-      industry: "Healthcare",
+      industry: "Corporate",
       type: "Brand Film",
       image: "/image1 (4).jpeg",
     },
     {
       title: "Education Platform",
       length: "60 Seconds",
-      industry: "Education",
+      industry: "Products",
       type: "Explainer Video",
       image: "/image1 (5).jpeg",
     },
     {
       title: "Startup Pitch",
       length: "30 Seconds",
-      industry: "SaaS",
+      industry: "Gadgets",
       type: "Promo Video",
       image: "/image1 (6).jpeg",
     },
     {
       title: "Biotech Visual",
       length: "75 Seconds",
-      industry: "Biotech",
+      industry: "Industrial",
       type: "Animated Video",
       image: "/image1 (7).jpeg",
     },
     {
       title: "Finance Campaign",
       length: "45 Seconds",
-      industry: "Finance",
+      industry: "Real Estate",
       type: "Ad Film",
       image: "/image1 (8).jpeg",
     },
@@ -75,52 +79,39 @@ export default function IndustriesSection() {
     {
       title: "Creative Motion",
       length: "50 Seconds",
-      industry: "Media",
+      industry: "Featured",
       type: "Motion Graphics",
       image: "/image1 (10).jpeg",
     },
   ];
 
-  const [activeIndustry, setActiveIndustry] = useState("All");
+  const [activeIndustry, setActiveIndustry] = useState("Featured");
 
   const filteredProjects =
-    activeIndustry === "All"
+    activeIndustry === "Featured"
       ? projects
-      : projects.filter(
-          (item) => item.industry === activeIndustry
-        );
+      : projects.filter((item) => item.industry === activeIndustry);
 
   return (
-    <section className="bg-black text-white py-32">
+    <section className="bg-black text-white py-4">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center mb-20">
-          <p className="text-sm uppercase tracking-widest text-[#CCFF00] mb-4">
-            Portfolio
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-            Industries <span className="text-[#CCFF00]">We’ve Worked In</span>
-          </h2>
-
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Explore our selected work across multiple industries, crafted to
-            deliver engaging and impactful visual experiences.
-          </p>
-        </div>
+        <h2 className="text-3xl font-semibold mb-8">
+          See what we have made
+        </h2>
 
         {/* INDUSTRY FILTER */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16">
+        <div className="flex flex-wrap gap-3 mb-16">
           {industries.map((item, index) => (
             <button
               key={index}
               onClick={() => setActiveIndustry(item)}
-              className={`px-6 py-3 rounded-full border text-sm font-medium transition
+              className={`px-5 py-2 rounded-full text-sm font-medium transition border
                 ${
                   activeIndustry === item
                     ? "bg-[#CCFF00] text-black border-[#CCFF00]"
-                    : "border-white/15 text-white hover:border-[#CCFF00] hover:text-[#CCFF00]"
+                    : "border-white/20 text-white hover:border-[#CCFF00] hover:text-[#CCFF00]"
                 }
               `}
             >
@@ -140,15 +131,15 @@ export default function IndustriesSection() {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-[260px] object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* RED OVERLAY */}
-              <div className="absolute inset-0 bg-red-600/90 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              {/* DARK OVERLAY (changed from red) */}
+              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
               {/* CONTENT */}
               <div className="absolute inset-0 flex flex-col justify-center px-6 text-white opacity-0 group-hover:opacity-100 transition duration-500">
-                <h3 className="text-xl font-bold mb-3 uppercase">
+                <h3 className="text-lg font-semibold mb-2 uppercase">
                   {item.title}
                 </h3>
                 <p className="text-sm mb-1">Length: {item.length}</p>
@@ -156,9 +147,9 @@ export default function IndustriesSection() {
                 <p className="text-sm">{item.type}</p>
               </div>
 
-              {/* PLAY BUTTON */}
+              {/* PLAY BUTTON (Green like screenshot) */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center text-lg font-bold opacity-90 group-hover:scale-110 transition">
+                <div className="w-12 h-12 rounded-full bg-[#CCFF00] text-black flex items-center justify-center text-lg font-bold shadow-lg group-hover:scale-110 transition">
                   ▶
                 </div>
               </div>

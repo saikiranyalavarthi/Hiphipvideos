@@ -8,49 +8,45 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50">
-      <div
-        className="
-          mx-auto max-w-7xl
-          flex items-center justify-between
-          px-6 py-3
-          rounded-2xl
-          bg-gray-900/80
-          backdrop-blur-xl
-          border border-white/10
-          shadow-xl
-        "
-      >
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black">
+      <div className="max-w-[1440px] mx-auto h-[129px] flex items-center justify-between px-20">
+        
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center">
           <Image
             src="/hiphiplogo.svg"
             alt="HipHip Logo"
-            width={46}
-            height={46}
+            width={80}   // 🔥 Increased logo width
+            height={50}
             priority
+            className="object-contain"
           />
         </Link>
 
         {/* DESKTOP MENU */}
-        <ul className="hidden md:flex items-center gap-8 text-white font-medium">
+        <ul className="hidden md:flex items-center gap-16 text-white text-[19px] font-medium tracking-wide">
           <li>
-            <Link href="/" className="hover:text-orange-400 transition">
+            <Link href="/" className="hover:text-[#CCFF00] transition duration-300">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/portfolio" className="hover:text-orange-400 transition">
+            <Link href="/portfolio" className="hover:text-[#CCFF00] transition duration-300">
               Portfolio
             </Link>
           </li>
           <li>
-            <Link href="/process" className="hover:text-orange-400 transition">
+            <Link href="/pricing" className="hover:text-[#CCFF00] transition duration-300">
+              Pricing
+            </Link>
+          </li>
+          <li>
+            <Link href="/process" className="hover:text-[#CCFF00] transition duration-300">
               Our Process
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-orange-400 transition">
+            <Link href="/about" className="hover:text-[#CCFF00] transition duration-300">
               About
             </Link>
           </li>
@@ -60,23 +56,27 @@ export default function Navbar() {
         <Link
           href="/quote"
           className="
-            hidden md:inline-block
+            hidden md:inline-flex
+            items-center
+            gap-3
             bg-[#CCFF00]
             text-black
-            px-5 py-2
+            px-10
+            h-[60px]
             rounded-xl
+            text-[17px]
             font-semibold
-            hover:bg-orange-400
-            transition
+            hover:opacity-90
+            transition duration-300
           "
         >
-          Get Quote
+          Get a Free Discovery Call →
         </Link>
 
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-3xl"
         >
           {open ? "✕" : "☰"}
         </button>
@@ -84,54 +84,19 @@ export default function Navbar() {
 
       {/* MOBILE MENU */}
       {open && (
-        <div
-          className="
-            md:hidden
-            mx-auto max-w-7xl
-            mt-2
-            px-6 py-6
-            rounded-2xl
-            bg-gray-900/95
-            backdrop-blur-xl
-            border border-white/10
-            shadow-xl
-          "
-        >
-          <ul className="flex flex-col gap-6 text-white font-medium">
+        <div className="md:hidden bg-black px-8 pb-8">
+          <ul className="flex flex-col gap-6 text-white text-lg">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/portfolio">Portfolio</Link></li>
+            <li><Link href="/pricing">Pricing</Link></li>
+            <li><Link href="/process">Our Process</Link></li>
+            <li><Link href="/about">About</Link></li>
             <li>
-              <Link href="/" onClick={() => setOpen(false)}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/portfolio" onClick={() => setOpen(false)}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link href="/process" onClick={() => setOpen(false)}>
-                Our Process
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={() => setOpen(false)}>
-                About
-              </Link>
-            </li>
-            <li className="pt-4">
               <Link
                 href="/quote"
-                onClick={() => setOpen(false)}
-                className="
-                  block text-center
-                  bg-[#CCFF00]
-                  text-black
-                  py-3
-                  rounded-xl
-                  font-semibold
-                "
+                className="block mt-4 bg-[#CCFF00] text-black text-center py-3 rounded-lg font-semibold"
               >
-                Get Quote
+                Get a Free Discovery Call
               </Link>
             </li>
           </ul>

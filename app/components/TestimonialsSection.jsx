@@ -3,95 +3,99 @@
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Scott Stout",
-      company: "MedVector",
-      quote:
-        "Their ability to understand complex topics and visualize them was amazing. We’ve raised $3.5M with a lot of help from HipHip Videos!",
+      name: "Daniel Harper",
+      role: "Aurora Tech",
+      image: "/avatar1.jpg",
+      text: "We captured our product’s value with precision and clarity. The launch video alone drove a 35% increase in demo bookings within the first week.",
     },
     {
-      name: "Ian Phillips",
-      company: "Saatchi Wellness",
-      quote:
-        "HipHip Videos is a beautiful explainer video company with an easy process to get your project done in a simple, elegant way.",
+      name: "Isabella Rossi",
+      role: "Velora Living",
+      image: "/avatar2.jpg",
+      text: "Their creative direction elevated our brand. From strategy to execution, everything felt seamless and intentional.",
     },
     {
-      name: "Lhea Lecy",
-      company: "Thermo Fisher",
-      quote:
-        "HipHip Videos is amazing to work with. Their quality of work is exceptional, and they are very responsive and always professional.",
+      name: "Liam Bennett",
+      role: "Northbridge Automotive",
+      image: "/avatar1.jpg",
+      text: "From script to final render, the team was professional and precise. We achieved exceptional brand recall across international markets.",
     },
     {
-      name: "Josh Kliot",
-      company: "Airtm",
-      quote:
-        "HipHip Videos went the extra mile to understand our product. Very satisfied with their team, process, creativity, and explainer video.",
+      name: "Sophia Laurent",
+      role: "Maison Rêve",
+      image: "/avatar2.jpg",
+      text: "They translated our vision into stunning visual storytelling. The campaign generated immediate sales impact.",
     },
     {
-      name: "April A. Arslan",
-      company: "Law-Whiz",
-      quote:
-        "Nothing out there compares to their ability to deliver the story and message with such clarity and impact.",
+      name: "Ethan Miller",
+      role: "Helix Dynamics",
+      image: "/avatar1.jpg",
+      text: "Their understanding of technical features and market positioning was impressive.",
     },
     {
-      name: "Mandy Kennedy",
-      company: "Infinant Health",
-      quote:
-        "HipHip Videos was super easy to work with and flexible to our pace. Their process and review system were seamless.",
+      name: "Camila Duarte",
+      role: "Solara Beauty",
+      image: "/avatar2.jpg",
+      text: "They showcased our products with cinematic elegance and refinement.",
     },
     {
-      name: "Jen Erickson",
-      company: "DocuSign",
-      quote:
-        "The internal feedback we’ve gotten has been great. We appreciated the team’s responsiveness and ability to meet deadlines.",
+      name: "Noah Andersen",
+      role: "Arctic Labs",
+      image: "/avatar1.jpg",
+      text: "The team brought speed, structure, and creativity.",
     },
     {
-      name: "Lindsey Reis",
-      company: "SoClean",
-      quote:
-        "The process was simple, stayed on track, and always professional. We highly recommend HipHip Videos.",
+      name: "Amélie Dubois",
+      role: "Lumière Interiors",
+      image: "/avatar2.jpg",
+      text: "We stood out in a crowded marketplace thanks to their strategy.",
     },
   ];
 
   return (
-    <section className="bg-black text-white py-32">
+    <section className="bg-black text-white py-4">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* HEADER */}
-        <div className="text-center mb-20">
-          <p className="text-sm uppercase tracking-widest text-[#CCFF00] mb-4">
-            Testimonials
-          </p>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
+          What our clients say
+        </h2>
 
-          <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-            What Clients Say About{" "}
-            <span className="text-[#CCFF00]">HipHip Videos</span>
-          </h2>
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Trusted by startups, enterprises, and global brands to bring their
-            stories to life through powerful explainer videos.
-          </p>
-        </div>
-
-        {/* TESTIMONIAL GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-[#0f0f0f] border border-white/10 rounded-2xl p-8 hover:border-[#CCFF00] transition"
+              className="border border-white/15 rounded-xl p-8 bg-black hover:border-[#CCFF00] hover:shadow-[0_0_20px_rgba(204,255,0,0.2)] transition duration-300"
             >
-              <p className="text-gray-300 text-base leading-relaxed mb-8">
-                “{item.quote}”
+              {/* Avatar */}
+              <div className="flex justify-center mb-6">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-16 h-16 rounded-full object-cover border border-white/20"
+                />
+              </div>
+
+              {/* Name */}
+              <h3 className="text-center font-semibold text-lg">
+                {item.name}
+              </h3>
+
+              {/* Role */}
+              <p className="text-center text-gray-400 text-sm mb-4">
+                {item.role}
               </p>
 
-              <div className="border-t border-white/10 pt-6">
-                <h4 className="text-lg font-semibold">{item.name}</h4>
-                <p className="text-sm text-[#CCFF00]">{item.company}</p>
-              </div>
+              {/* Text */}
+              <p className="text-gray-300 text-sm text-center leading-relaxed">
+                “{item.text}”
+              </p>
             </div>
           ))}
-        </div>
 
+        </div>
       </div>
     </section>
   );

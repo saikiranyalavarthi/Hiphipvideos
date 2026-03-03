@@ -13,7 +13,7 @@ export default function ClientsSection() {
   ];
 
   return (
-    <section className="bg-black py-28 overflow-hidden">
+    <section className="bg-black py-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-5xl font-medium mb-16 text-white">
           Our Clients

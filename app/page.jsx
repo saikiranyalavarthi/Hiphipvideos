@@ -5,6 +5,8 @@ import ClientsSection from "./components/ClientsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 
+import CallToActionSection from "./components/CallToActionSection";
+
 export default function Home() {
   return (
     <>
@@ -15,6 +17,8 @@ export default function Home() {
 <ClientsSection/>
 <TestimonialsSection/>
 <ContactSection/>
+<CallToActionSection/>
+
  
     </>
   );
