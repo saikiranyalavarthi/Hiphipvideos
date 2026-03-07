@@ -1,102 +1,102 @@
 "use client";
 
 export default function TestimonialsSection() {
+
   const testimonials = [
     {
       name: "Daniel Harper",
-      role: "Aurora Tech",
-      image: "/avatar1.jpg",
-      text: "We captured our product’s value with precision and clarity. The launch video alone drove a 35% increase in demo bookings within the first week.",
+      role: "Aurelius Tech",
+      image: "/avatar/avatar1.jpg",
+      text: "They captured our product’s value with precision and clarity. The launch video alone drove a 38% increase in demo bookings within the first month.",
     },
     {
       name: "Isabella Rossi",
       role: "Velora Living",
-      image: "/avatar2.jpg",
-      text: "Their creative direction elevated our brand. From strategy to execution, everything felt seamless and intentional.",
+      image: "/avatar/avatar2.svg",
+      text: "Their creative direction transformed our concept into a premium visual story. Engagement across our paid campaigns doubled after publishing the new videos.",
     },
     {
       name: "Liam Bennett",
       role: "Northbridge Automotive",
-      image: "/avatar1.jpg",
-      text: "From script to final render, the team was professional and precise. We achieved exceptional brand recall across international markets.",
+      image: "/avatar/avatar3.svg",
+      text: "From script to final render, the process was seamless and professional. The product film elevated our brand perception across international markets.",
     },
     {
-      name: "Sophia Laurent",
-      role: "Maison Rêve",
-      image: "/avatar2.jpg",
-      text: "They translated our vision into stunning visual storytelling. The campaign generated immediate sales impact.",
+      name: "Sofia Laurent",
+      role: "Maison Elara",
+      image: "/avatar/avatar4.png",
+      text: "They translated intricate details into elegant, compelling visuals. Our online sales saw a noticeable lift immediately after the campaign went live.",
     },
     {
-      name: "Ethan Miller",
+      name: "Ethan Müller",
       role: "Helix Dynamics",
-      image: "/avatar1.jpg",
-      text: "Their understanding of technical features and market positioning was impressive.",
+      image: "avatar/avatar5.jpg",
+      text: "Their understanding of technical features and market positioning was impressive. The final videos simplified our messaging without losing sophistication.",
     },
     {
       name: "Camila Duarte",
-      role: "Solara Beauty",
-      image: "/avatar2.jpg",
-      text: "They showcased our products with cinematic elegance and refinement.",
+      role: "Solstice Realty",
+      image: "avatar/avatar6.png",
+      text: "They showcased our properties with cinematic precision and atmosphere. Buyer inquiries increased significantly after the first promotional release.",
     },
     {
       name: "Noah Andersen",
       role: "Arctic Labs",
-      image: "/avatar1.jpg",
-      text: "The team brought speed, structure, and creativity.",
+      image: "avatar/avatar7.jpg",
+      text: "Their team brought speed, structure, and creative excellence to the table. We saw measurable growth in conversions within weeks of launch.",
     },
     {
       name: "Amélie Dubois",
-      role: "Lumière Interiors",
-      image: "/avatar2.jpg",
-      text: "We stood out in a crowded marketplace thanks to their strategy.",
+      role: "Luma Interiors",
+      image: "avatar/avatar8.jpg",
+      text: "The visuals felt modern, refined, and strategically crafted. Our brand now stands out clearly in an otherwise crowded marketplace.",
     },
   ];
 
   return (
-    <section className="bg-black text-white py-4">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="bg-black flex flex-col items-center justify-center py-[48px]">
 
-        {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-16">
-          What our clients say
-        </h2>
+      {/* TITLE */}
+      <h2 className="text-white text-center text-[38px] font-bold leading-[56px] tracking-[-0.32px] mb-[48px]">
+        What our clients say
+      </h2>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* GRID CONTAINER */}
+      <div className="grid grid-cols-4 gap-[24px] max-w-[1440px]">
 
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="border border-white/15 rounded-xl p-8 bg-black hover:border-[#CCFF00] hover:shadow-[0_0_20px_rgba(204,255,0,0.2)] transition duration-300"
-            >
-              {/* Avatar */}
-              <div className="flex justify-center mb-6">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="w-16 h-16 rounded-full object-cover border border-white/20"
-                />
-              </div>
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="w-[342px] h-[400px] flex flex-col items-center justify-center gap-[24px] p-[40px] border border-white/20 rounded-lg text-center"
+          >
 
-              {/* Name */}
-              <h3 className="text-center font-semibold text-lg">
-                {item.name}
-              </h3>
+            {/* AVATAR */}
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-[64px] h-[64px] rounded-full object-cover"
+            />
 
-              {/* Role */}
-              <p className="text-center text-gray-400 text-sm mb-4">
-                {item.role}
-              </p>
+            {/* NAME */}
+            <h3 className="text-white text-[16px] font-semibold leading-[24px]">
+              {item.name}
+            </h3>
 
-              {/* Text */}
-              <p className="text-gray-300 text-sm text-center leading-relaxed">
-                “{item.text}”
-              </p>
-            </div>
-          ))}
+            {/* ROLE */}
+            <p className="text-white/70 text-[14px] leading-[20px]">
+              {item.role}
+            </p>
 
-        </div>
+            {/* TEXT */}
+            <p className="text-white text-[16px] leading-[24px]">
+              "{item.text}"
+            </p>
+
+          </div>
+        ))}
+
       </div>
+
     </section>
   );
 }

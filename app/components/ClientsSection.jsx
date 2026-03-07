@@ -1,38 +1,44 @@
 "use client";
 
 export default function ClientsSection() {
+
   const clients = [
-    "Fonterra",
-    "Allegion",
-    "NZMP",
-    "one.nz",
-    "Toitū Envirocare",
-    "Doc Edge",
-    "Xiaomi",
-    "Sony",
+    "/clients/img1.png",
+    "/clients/img2.png",
+    "/clients/img3.png",
+    "/clients/img4.png",
+    "/clients/img5.png",
+    "/clients/img6.png",
   ];
 
   return (
-    <section className="bg-black py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-5xl font-medium mb-16 text-white">
+    <section className="bg-black flex flex-col justify-center items-center gap-[10px]">
+
+      {/* CONTAINER */}
+      <div className="w-[1440px] py-[60px] flex flex-col items-center gap-[16px]">
+
+        {/* TITLE */}
+        <h2 className="text-white text-[32px] font-semibold leading-[40px] tracking-[-0.16px] text-center">
           Our Clients
         </h2>
-      </div>
 
-      {/* MARQUEE */}
-      <div className="relative w-full overflow-hidden">
-        <div className="marquee gap-20 px-10">
-          {[...clients, ...clients, ...clients].map((client, index) => (
-            <div
-              key={index}
-              className="text-white/90 text-2xl md:text-3xl font-semibold whitespace-nowrap hover:text-[#CCFF00] transition"
-            >
-              {client}
+        {/* LOGOS ROW */}
+        <div className="w-full flex items-center justify-center">
+
+          {clients.map((logo, index) => (
+            <div key={index} className="flex items-center justify-center w-[160px] h-[60px]">
+              <img
+                src={logo}
+                alt="Client Logo"
+                className="max-w-full max-h-full object-contain opacity-80 hover:opacity-100 transition duration-300"
+              />
             </div>
           ))}
+
         </div>
+
       </div>
+
     </section>
   );
 }
