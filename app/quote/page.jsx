@@ -1,6 +1,7 @@
 
 import ContactSection from "../components/ContactSection";
-import Location from "../components/Location";
+import OfficesSection from "../components/OfficesSection";
+
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
 
 
 <ContactSection/>
-<Location/>
+<OfficesSection/>
+
     </>
   );
 }

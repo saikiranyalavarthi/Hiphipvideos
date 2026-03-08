@@ -1,23 +1,29 @@
-import Hero from "../components/Hero";
+
 import AboutServices from "../components/AboutServices";
 import ClientsSection from "../components/ClientsSection";
-import ContactSection from "../components/ContactSection";
-import Location from "../components/Location";
-import AboutPhilosophySection from "../components/AboutPhilosophySection";
+
+
+
 import HeroCreativePage from "../components/HeroCreativePage";
+import AboutSection from "../components/AboutSection";
+import CTASection from "../components/CTASection";
+import OfficesSection from "../components/OfficesSection";
+
 
 export default function Home() {
   return (
     <>
-       {/* <Hero />  */}
+
        <HeroCreativePage/>
-       <AboutPhilosophySection/>
+     <AboutSection/>
 <AboutServices/>
 
-<Location/>
+<OfficesSection/>
 <ClientsSection/>
+<CTASection/>
 
-<ContactSection/>
+
+
  
     </>
   );
