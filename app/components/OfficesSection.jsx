@@ -57,7 +57,7 @@ export default function OfficesSection() {
           <div className="flex flex-col gap-[8px]">
     
             <div className="flex items-center gap-[8px]">
-              <img src="india.jpg" alt="" className="w-[20px] h-[14px] object-cover"/>
+              <img src="India.jpg" alt="" className="w-[20px] h-[14px] object-cover"/>
               <h3 className="text-white text-[18px] font-semibold">
                 India
               </h3>
