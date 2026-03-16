@@ -42,7 +42,7 @@ return ( <section className="bg-black text-white flex justify-center">
     </div>
 
     {/* FILTER BUTTONS */}
-    <div className="w-full flex flex-wrap gap-[12px] mb-[40px] py-8">
+    <div className="w-full flex flex-wrap gap-[12px] mb-[40px] py-2">
       {industries.map((item,index)=>(
         <button
           key={index}
