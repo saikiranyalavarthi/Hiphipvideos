@@ -47,7 +47,7 @@ export default function PricingSection() {
             <div className="flex items-center gap-4">
     
               <div className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-                <img src="/process/clock.jpg" alt="" className="w-[34px]" />
+                <img src="/process/Clock.jpg" alt="" className="w-[34px]" />
               </div>
     
               <div>
@@ -105,7 +105,7 @@ export default function PricingSection() {
             <div className="flex items-center gap-4">
     
               <div className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-                <img src="/process/clock.jpg" alt="" className="w-[34px]" />
+                <img src="/process/Clock.jpg" alt="" className="w-[34px]" />
               </div>
     
               <div>
@@ -133,7 +133,7 @@ export default function PricingSection() {
             <div className="flex items-center gap-4">
     
               <div className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-                <img src="/process/clock.jpg" alt="" className="w-[34px]" />
+                <img src="/process/Clock.jpg" alt="" className="w-[34px]" />
               </div>
     
               <div>
@@ -161,7 +161,7 @@ export default function PricingSection() {
             <div className="flex items-center gap-4">
     
               <div className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
-                <img src="/process/clock.jpg" alt="" className="w-[34px]" />
+                <img src="/process/Clock.jpg" alt="" className="w-[34px]" />
               </div>
     
               <div>
