@@ -93,26 +93,54 @@ return ( <nav className="fixed top-0 left-0 w-full z-50 bg-black flex justify-ce
 
   {/* MOBILE MENU */}
   {open && (
-    <div className="absolute top-[80px] left-0 w-full bg-black md:hidden border-t border-gray-800">
-      <ul className="flex flex-col gap-6 p-6 text-white text-lg">
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/portfolio">Portfolio</Link></li>
-        <li><Link href="/pricing">Pricing</Link></li>
-        <li><Link href="/process">Our Process</Link></li>
-        <li><Link href="/about">About</Link></li>
+  <div className="absolute top-[80px] left-0 w-full bg-black md:hidden border-t border-gray-800">
+    
+    <ul className="flex flex-col items-center gap-6 p-8 text-white text-lg">
 
-        <li>
-          <Link
-            href="/quote"
-            className="bg-[#CCFF00] text-black py-3 text-center rounded-lg font-semibold"
-          >
-            Get a Free Discovery Call
-          </Link>
-        </li>
-      </ul>
-    </div>
-  )}
+      <li>
+        <Link href="/" className="hover:text-[#CCFF00] transition">
+          Home
+        </Link>
+      </li>
 
+      <li>
+        <Link href="/portfolio" className="hover:text-[#CCFF00] transition">
+          Portfolio
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/pricing" className="hover:text-[#CCFF00] transition">
+          Pricing
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/process" className="hover:text-[#CCFF00] transition">
+          Our Process
+        </Link>
+      </li>
+
+      <li>
+        <Link href="/about" className="hover:text-[#CCFF00] transition">
+          About
+        </Link>
+      </li>
+
+      {/* MOBILE BUTTON */}
+      <li className="w-full max-w-[260px] pt-2">
+        <Link
+          href="/quote"
+          className="w-full block text-center bg-[#CCFF00] text-black py-3 rounded-[8px] font-semibold hover:bg-[#b6e600] transition"
+        >
+          Get a Free Discovery Call
+        </Link>
+      </li>
+
+    </ul>
+
+  </div>
+)}
 </nav>
 
 

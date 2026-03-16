@@ -1,4 +1,27 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function Hero() {
+
+  const words = [
+    "Advertisements",
+    "Movies",
+    "Content Videos",
+    "Documentaries",
+    "Product Videos",
+    "Explainers"
+  ];
+
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % words.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return ( <section className="relative min-h-[600px] md:h-[700px] w-full overflow-hidden bg-black flex justify-center">
   
 
@@ -21,7 +44,7 @@ export default function Hero() {
         <h1 className="text-[#FFF] text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-[40px] md:leading-[56px] tracking-[-0.32px]">
           Build stunning{" "}
           <span className="text-[#CCFF00]">
-            Advertisements_
+            {words[wordIndex]}_
           </span>
         </h1>
   
@@ -60,5 +83,4 @@ export default function Hero() {
 
   
   );
-  }
-  
+}

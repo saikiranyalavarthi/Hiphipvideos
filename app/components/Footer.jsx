@@ -27,7 +27,7 @@ return ( <footer className="bg-black flex justify-center py-[60px] px-6 lg:px-12
         <Link
           key={index}
           href="#"
-          className="w-[28px] h-[28px] flex items-center justify-center 
+          className="group w-[28px] h-[28px] flex items-center justify-center 
                      border border-[#CCFF00] rounded-[4px] 
                      hover:bg-[#CCFF00] transition"
         >
@@ -36,6 +36,7 @@ return ( <footer className="bg-black flex justify-center py-[60px] px-6 lg:px-12
             alt={icon.alt}
             width={14}
             height={14}
+            className="transition group-hover:brightness-0"
           />
         </Link>
       ))}
@@ -45,11 +46,11 @@ return ( <footer className="bg-black flex justify-center py-[60px] px-6 lg:px-12
     {/* RIGHT */}
     <div className="flex items-center gap-[20px] md:gap-[24px] text-white text-[14px] md:text-[16px] leading-[24px]">
 
-      <Link href="#" className="hover:text-[#CCFF00] transition">
+      <Link href="/Terms" className="hover:text-[#CCFF00] transition">
         Terms of use
       </Link>
 
-      <Link href="#" className="hover:text-[#CCFF00] transition">
+      <Link href="/Privacy" className="hover:text-[#CCFF00] transition">
         Privacy policy
       </Link>
 
@@ -58,7 +59,6 @@ return ( <footer className="bg-black flex justify-center py-[60px] px-6 lg:px-12
   </div>
 
 </footer>
-
 
 );
 }

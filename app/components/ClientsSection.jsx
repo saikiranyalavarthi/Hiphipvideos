@@ -23,7 +23,7 @@ return ( <section className="bg-black flex flex-col justify-center items-center 
     </h2>
 
     {/* LOGOS ROW */}
-    <div className="w-full flex flex-wrap items-center justify-center gap-6 md:gap-10">
+    <div className="w-full flex flex-wrap items-center justify-center gap-6 md:gap-10 pt-6">
 
       {clients.map((logo, index) => (
         <div

@@ -6,7 +6,7 @@ export default function AboutSection() {
       {/* LEFT TITLE */}
       <div className="w-[220px] flex-shrink-0">
   
-        <h2 className="text-white text-[28px] font-semibold">
+        <h2 className="text-white text-[24px] font-semibold">
           About us
         </h2>
   
@@ -14,18 +14,18 @@ export default function AboutSection() {
   
   
       {/* RIGHT TEXT */}
-      <div className="max-w-[900px] flex flex-col gap-[24px]">
+      <div className="max-w-[900px] flex flex-col gap-[20px]">
   
-        <p className="text-white text-[24px] md:text-[28px] lg:text-[32px] font-normal leading-[32px] md:leading-[36px] lg:leading-[40px] tracking-[-0.16px]">
+        <p className="text-white text-[18px] md:text-[20px] lg:text-[22px] font-normal leading-[28px] md:leading-[30px] lg:leading-[32px] tracking-[-0.16px]">
           We have no house style, or allegiance to medium or method.
         </p>
   
-        <p className="text-white text-[24px] md:text-[28px] lg:text-[32px] font-normal leading-[32px] md:leading-[36px] lg:leading-[40px] tracking-[-0.16px]">
+        <p className="text-white text-[18px] md:text-[20px] lg:text-[22px] font-normal leading-[28px] md:leading-[30px] lg:leading-[32px] tracking-[-0.16px]">
           We pride ourselves on our ability to make best-in-class work for any sort
           of client: big or small, established or upstart, commercial or otherwise.
         </p>
   
-        <p className="text-white text-[24px] md:text-[28px] lg:text-[32px] font-normal leading-[32px] md:leading-[36px] lg:leading-[40px] tracking-[-0.16px]">
+        <p className="text-white text-[18px] md:text-[20px] lg:text-[22px] font-normal leading-[28px] md:leading-[30px] lg:leading-[32px] tracking-[-0.16px]">
           Creativity is our guiding principle. We come to work to create powerful
           stories, moments and messages. Our mission is to put more of the budget
           into the work, rather than the processes around it.
@@ -39,5 +39,4 @@ export default function AboutSection() {
 
   
   );
-  }
-  
+}
