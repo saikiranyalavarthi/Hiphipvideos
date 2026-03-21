@@ -48,3 +48,40 @@ body {
   border-color: #ccff00;
   box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.35);
 }
+
+
+.text-glow {
+  text-shadow: 0 0 8px rgba(204, 255, 0, 0.7),
+               0 0 16px rgba(204, 255, 0, 0.5);
+}
+
+.label-style {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+.req {
+  color: rgba(251,94,42,0.9);
+  margin-left: 4px;
+}
+
+.input-style {
+  height: 55px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #757575;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-style:focus {
+  border-color: #CCFF00;
+  box-shadow: 0 0 10px rgba(204,255,0,0.3);
+}
