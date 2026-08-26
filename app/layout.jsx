@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import FloatingContactButtons from "./components/FloatingContactButtons";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -170,6 +171,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6TK4Y60WKR"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6TK4Y60WKR');
+  `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
