@@ -1,13 +1,3 @@
-// export function trackEvent(eventName, parameters = {}) {
-//   if (typeof window === "undefined") return;
-
-//   if (typeof window.gtag !== "function") {
-//     console.warn("Google Analytics is not loaded.");
-//     return;
-//   }
-
-//   window.gtag("event", eventName, parameters);
-// }
 export function trackEvent(eventName, parameters = {}) {
   if (typeof window === "undefined") {
     console.warn("Window is not available");
