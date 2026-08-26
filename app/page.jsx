@@ -1,24 +1,33 @@
 import Hero from "./components/Hero";
+import WhatWeDo from "./components/WhatWeDo";
 import AboutServices from "./components/AboutServices";
 import IndustriesSection from "./components/IndustriesSection";
 import ClientsSection from "./components/ClientsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
-
+import CaseStudies from "./components/CaseStudies";
+import WhyHipHipVideos from "./components/WhyHipHipVideos";
+import HyderabadSection from "./components/HyderabadSection";
+import ProcessSection from "./components/ProcessSection";
+import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
 
 export default function Home() {
   return (
     <>
-       <Hero /> 
-<AboutServices/>
-<IndustriesSection/>
-
-<ClientsSection/>
-<TestimonialsSection/>
-<ContactSection/>
-<CTASection/>
- 
+      <Hero />
+      <WhatWeDo />
+      <AboutServices />
+      <IndustriesSection />
+      <ClientsSection />
+      <CaseStudies />
+      <WhyHipHipVideos />
+      <ProcessSection />
+      <HyderabadSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <ContactSection />
+      <CTASection />
     </>
   );
 }

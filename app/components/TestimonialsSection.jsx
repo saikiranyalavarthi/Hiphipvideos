@@ -1,226 +1,218 @@
-// "use client";
-
-// export default function TestimonialsSection() {
-
-// const testimonials = [
-// {
-// name: "Daniel Harper",
-// role: "Aurelius Tech",
-// image: "/avatar/avatar1.jpg",
-// text: "They captured our product’s value with precision and clarity. The launch video alone drove a 38% increase in demo bookings within the first month.",
-// },
-// {
-// name: "Isabella Rossi",
-// role: "Velora Living",
-// image: "/avatar/avatar2.svg",
-// text: "Their creative direction transformed our concept into a premium visual story. Engagement across our paid campaigns doubled after publishing the new videos.",
-// },
-// {
-// name: "Liam Bennett",
-// role: "Northbridge Automotive",
-// image: "/avatar/avatar3.svg",
-// text: "From script to final render, the process was seamless and professional. The product film elevated our brand perception across international markets.",
-// },
-// {
-// name: "Sofia Laurent",
-// role: "Maison Elara",
-// image: "/avatar/avatar4.png",
-// text: "They translated intricate details into elegant, compelling visuals. Our online sales saw a noticeable lift immediately after the campaign went live.",
-// },
-// {
-// name: "Ethan Müller",
-// role: "Helix Dynamics",
-// image: "avatar/avatar5.jpg",
-// text: "Their understanding of technical features and market positioning was impressive. The final videos simplified our messaging without losing sophistication.",
-// },
-// {
-// name: "Camila Duarte",
-// role: "Solstice Realty",
-// image: "avatar/avatar6.png",
-// text: "They showcased our properties with cinematic precision and atmosphere. Buyer inquiries increased significantly after the first promotional release.",
-// },
-// {
-// name: "Noah Andersen",
-// role: "Arctic Labs",
-// image: "avatar/avatar7.jpg",
-// text: "Their team brought speed, structure, and creative excellence to the table. We saw measurable growth in conversions within weeks of launch.",
-// },
-// {
-// name: "Amélie Dubois",
-// role: "Luma Interiors",
-// image: "avatar/avatar8.jpg",
-// text: "The visuals felt modern, refined, and strategically crafted. Our brand now stands out clearly in an otherwise crowded marketplace.",
-// },
-// ];
-
-// return ( <section className="bg-black flex flex-col items-center justify-center py-[48px] px-6 lg:px-12">
-
-
-//   {/* TITLE */}
-//   <h2 className="text-white text-center text-[28px] md:text-[34px] lg:text-[38px] font-bold leading-[40px] md:leading-[48px] lg:leading-[56px] tracking-[-0.32px] mb-[48px]">
-//     What our clients say
-//   </h2>
-
-//   {/* GRID CONTAINER */}
-//   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[24px] w-full max-w-[1440px]">
-
-//     {testimonials.map((item, index) => (
-//       <div
-//         key={index}
-//         className="w-full min-h-[360px] flex flex-col items-center justify-center gap-[24px] p-[32px] md:p-[40px] border border-white/20 rounded-lg text-center"
-//       >
-
-//         {/* AVATAR */}
-//         <img
-//           src={item.image}
-//           alt={item.name}
-//           className="w-[64px] h-[64px] rounded-full object-cover"
-//         />
-
-//         {/* NAME */}
-//         <h3 className="text-white text-[16px] font-semibold leading-[24px]">
-//           {item.name}
-//         </h3>
-
-//         {/* ROLE */}
-//         <p className="text-white/70 text-[14px] leading-[20px]">
-//           {item.role}
-//         </p>
-
-//         {/* TEXT */}
-//         <p className="text-white text-[16px] leading-[24px]">
-//           "{item.text}"
-//         </p>
-
-//       </div>
-//     ))}
-
-//   </div>
-
-// </section>
-
-
-// );
-// }
-
-
-
 "use client";
+
 import { motion } from "framer-motion";
 
+const testimonials = [
+  {
+    quote:
+      "HipHipVideos understood our vision and turned it into a strong visual story that communicated our product clearly.",
+    name: "Arjun Mehta",
+    role: "Founder",
+    company: "DemoTech",
+  },
+  {
+    quote:
+      "The production process was creative, professional and well organised from concept through final delivery.",
+    name: "Priya Sharma",
+    role: "Marketing Manager",
+    company: "BrandNest",
+  },
+  {
+    quote:
+      "The final product video gave our campaign a strong visual identity and presented the product beautifully.",
+    name: "Rahul Verma",
+    role: "Brand Director",
+    company: "NovaWorks",
+  },
+];
+const results = [
+  {
+    value: "Creative",
+    label: "Video Strategy",
+  },
+  {
+    value: "End-to-End",
+    label: "Production",
+  },
+  {
+    value: "3D & Motion",
+    label: "Visual Capabilities",
+  },
+  {
+    value: "Brand-Focused",
+    label: "Storytelling",
+  },
+];
+
 export default function TestimonialsSection() {
-
-  const testimonials = [
-    {
-      name: "Daniel Harper",
-      role: "Aurelius Tech",
-      image: "/avatar/avatar1.jpg",
-      text: "They captured our product’s value with precision and clarity. The launch video alone drove a 38% increase in demo bookings within the first month.",
-    },
-    {
-      name: "Isabella Rossi",
-      role: "Velora Living",
-      image: "/avatar/avatar2.svg",
-      text: "Their creative direction transformed our concept into a premium visual story. Engagement across our paid campaigns doubled after publishing the new videos.",
-    },
-    {
-      name: "Liam Bennett",
-      role: "Northbridge Automotive",
-      image: "/avatar/avatar3.svg",
-      text: "From script to final render, the process was seamless and professional. The product film elevated our brand perception across international markets.",
-    },
-    {
-      name: "Sofia Laurent",
-      role: "Maison Elara",
-      image: "/avatar/avatar4.png",
-      text: "They translated intricate details into elegant, compelling visuals. Our online sales saw a noticeable lift immediately after the campaign went live.",
-    },
-    {
-      name: "Ethan Müller",
-      role: "Helix Dynamics",
-      image: "avatar/avatar5.jpg",
-      text: "Their understanding of technical features and market positioning was impressive. The final videos simplified our messaging without losing sophistication.",
-    },
-    {
-      name: "Camila Duarte",
-      role: "Solstice Realty",
-      image: "avatar/avatar6.png",
-      text: "They showcased our properties with cinematic precision and atmosphere. Buyer inquiries increased significantly after the first promotional release.",
-    },
-    {
-      name: "Noah Andersen",
-      role: "Arctic Labs",
-      image: "avatar/avatar7.jpg",
-      text: "Their team brought speed, structure, and creative excellence to the table. We saw measurable growth in conversions within weeks of launch.",
-    },
-    {
-      name: "Amélie Dubois",
-      role: "Luma Interiors",
-      image: "avatar/avatar8.jpg",
-      text: "The visuals felt modern, refined, and strategically crafted. Our brand now stands out clearly in an otherwise crowded marketplace.",
-    },
-  ];
-
   return (
-    <section className="bg-black flex flex-col items-center justify-center py-[40px] md:py-[48px] px-6 lg:px-12 overflow-hidden">
+    <section
+      aria-labelledby="testimonials-heading"
+      className="relative overflow-hidden bg-[#050505] py-20 text-white sm:py-24 md:py-32"
+    >
+      {/* BACKGROUND GLOW */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-[-180px] top-[20%] h-[450px] w-[450px] rounded-full bg-[#CCFF00]/5 blur-[150px]"
+      />
 
-      {/* TITLE */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-center mb-[40px] md:mb-[48px]"
-      >
-        <h2 className="text-white text-[24px] sm:text-[28px] md:text-[34px] lg:text-[38px] font-bold leading-[36px] md:leading-[48px] lg:leading-[56px] tracking-[-0.32px]">
-          What our clients say
-        </h2>
+      <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+        {/* HEADER */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          {/* LABEL */}
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
+            Client Experiences
+          </p>
 
-        {/* Gradient underline */}
-        <div className="w-[70px] h-[3px] bg-gradient-to-r from-[#CCFF00] to-transparent mx-auto mt-3 rounded-full"></div>
-      </motion.div>
-
-      {/* GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] md:gap-[24px] w-full max-w-[1440px]">
-
-        {testimonials.map((item, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.08 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="w-full min-h-[340px] flex flex-col items-center justify-center gap-[20px] p-[24px] md:p-[32px] bg-white/5 backdrop-blur-md border border-white/10 rounded-xl text-center hover:border-[#CCFF00]/40 hover:shadow-[0_0_20px_rgba(204,255,0,0.15)] transition-all duration-300"
+          {/* SEO H2 */}
+          <h2
+            id="testimonials-heading"
+            className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
+            What Clients Say About{" "}
+            <span className="text-[#CCFF00]">HipHipVideos</span>
+          </h2>
 
-            {/* AVATAR */}
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-[60px] h-[60px] md:w-[64px] md:h-[64px] rounded-full object-cover border border-white/20"
-            />
+          {/* SUPPORTING CONTENT */}
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
+            From commercial and corporate videos to product films, explainer
+            videos and branded content, we work closely with our clients to turn
+            ideas into professional visual stories that communicate clearly and
+            support their marketing goals.
+          </p>
+        </motion.div>
 
-            {/* NAME */}
-            <h3 className="text-white text-[15px] md:text-[16px] font-semibold leading-[24px]">
-              {item.name}
-            </h3>
+        {/* TESTIMONIAL CARDS */}
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+          {testimonials.map((testimonial, index) => (
+            <motion.article
+              key={`${testimonial.name}-${index}`}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              className="group rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#CCFF00]/30 hover:bg-white/[0.04] sm:p-8"
+            >
+              {/* QUOTE MARK */}
+              <div
+                aria-hidden="true"
+                className="text-4xl font-bold leading-none text-[#CCFF00]/40"
+              >
+                "
+              </div>
 
-            {/* ROLE */}
-            <p className="text-white/60 text-[13px] md:text-[14px] leading-[20px]">
-              {item.role}
-            </p>
+              {/* QUOTE */}
+              <blockquote className="mt-5 text-base leading-7 text-white/70">
+                {testimonial.quote}
+              </blockquote>
 
-            {/* TEXT */}
-            <p className="text-white text-[14px] md:text-[15px] leading-[22px] md:leading-[24px]">
-              "{item.text}"
-            </p>
+              {/* CLIENT */}
+              <div className="mt-8 border-t border-white/10 pt-5">
+                <p className="font-semibold text-white">{testimonial.name}</p>
 
-          </motion.div>
-        ))}
+                <p className="mt-1 text-sm text-white/40">{testimonial.role}</p>
 
+                <p className="mt-1 text-sm font-medium text-[#CCFF00]/70">
+                  {testimonial.company}
+                </p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        {/* CAPABILITY / RESULTS STRIP */}
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] lg:mt-16 lg:grid-cols-4"
+        >
+          {results.map((result, index) => (
+            <div
+              key={result.label}
+              className={`p-6 text-center sm:p-8 ${
+                index !== results.length - 1
+                  ? "border-b border-white/10 lg:border-b-0 lg:border-r"
+                  : ""
+              } ${index === 0 ? "border-r border-white/10" : ""} ${
+                index === 2 ? "lg:border-r" : ""
+              }`}
+            >
+              <p className="text-lg font-bold text-[#CCFF00] sm:text-xl">
+                {result.value}
+              </p>
+
+              <p className="mt-1 text-xs uppercase tracking-wider text-white/40 sm:text-sm">
+                {result.label}
+              </p>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* SUPPORTING SEO CONTENT */}
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="mx-auto mt-10 max-w-4xl text-center text-sm leading-6 text-white/35 sm:text-base sm:leading-7"
+        >
+          HipHipVideos provides professional video production services for
+          brands, startups and businesses, including commercial video
+          production, corporate films, product videos, explainer videos,
+          advertisements, brand films and motion graphics.
+        </motion.p>
       </div>
-
     </section>
   );
 }

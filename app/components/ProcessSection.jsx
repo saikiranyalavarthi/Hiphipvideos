@@ -1,337 +1,171 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import ConnectQuoteSection from "./ContactSection";
-
-// export default function ProcessPage() {
-//   return (
-//     <section className="bg-black text-white py-36 overflow-hidden">
-//       <div className="max-w-7xl mx-auto px-6">
-
-//         {/* ================= HEADER ================= */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 60 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 1, ease: "easeOut" }}
-//           viewport={{ once: true }}
-//           className="text-center max-w-4xl mx-auto mb-32"
-//         >
-//           <p className="uppercase tracking-widest text-sm text-[#CCFF00] mb-5">
-//             Our Process
-//           </p>
-
-//           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-8">
-//             A Process Built to <br />
-//             <span className="text-[#CCFF00]">Launch, Scale & Lead</span>
-//           </h1>
-
-//           <p className="text-gray-400 text-lg leading-relaxed">
-//             We follow a flexible, proven, and outcome-driven process designed to
-//             help businesses of all sizes move faster, build smarter, and scale
-//             with confidence. From strategy to execution, every step is crafted
-//             to deliver real business impact.
-//           </p>
-//         </motion.div>
-
-//         {/* ================= ENTERPRISE PROCESS ================= */}
-//         <div className="mb-40">
-//           <motion.div
-//             initial={{ opacity: 0, x: -60 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.9 }}
-//             viewport={{ once: true }}
-//             className="mb-14"
-//           >
-//             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-//               For SMEs & Conglomerates
-//             </h2>
-//             <p className="text-gray-400 max-w-2xl text-lg">
-//               An agile, long-term engagement model focused on stability,
-//               scalability, and continuous optimisation across digital products.
-//             </p>
-//           </motion.div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-//             {/* STEP 1 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.8 }}
-//               viewport={{ once: true }}
-//               className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#CCFF00] transition"
-//             >
-//               <span className="text-[#CCFF00] text-sm font-semibold">
-//                 Step 01
-//               </span>
-//               <h3 className="text-2xl font-bold mt-4 mb-6">Discover</h3>
-
-//               <p className="text-gray-400 mb-6">
-//                 We begin by deeply understanding your business, users, and
-//                 market landscape. This phase lays the strategic foundation for
-//                 everything that follows.
-//               </p>
-
-//               <ul className="text-gray-300 space-y-2 text-sm">
-//                 <li>• Business goals & vision alignment</li>
-//                 <li>• User needs & behavioural insights</li>
-//                 <li>• Market & competitor analysis</li>
-//               </ul>
-//             </motion.div>
-
-//             {/* STEP 2 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.9, delay: 0.1 }}
-//               viewport={{ once: true }}
-//               className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#CCFF00] transition"
-//             >
-//               <span className="text-[#CCFF00] text-sm font-semibold">
-//                 Step 02
-//               </span>
-//               <h3 className="text-2xl font-bold mt-4 mb-6">Design</h3>
-
-//               <p className="text-gray-400 mb-6">
-//                 Through an iterative and collaborative design process, we
-//                 translate strategy into intuitive and visually engaging digital
-//                 experiences.
-//               </p>
-
-//               <ul className="text-gray-300 space-y-2 text-sm">
-//                 <li>• Information architecture</li>
-//                 <li>• Wireframes & interaction design</li>
-//                 <li>• Visual design & prototyping</li>
-//               </ul>
-//             </motion.div>
-
-//             {/* STEP 3 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 1, delay: 0.2 }}
-//               viewport={{ once: true }}
-//               className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#CCFF00] transition"
-//             >
-//               <span className="text-[#CCFF00] text-sm font-semibold">
-//                 Step 03
-//               </span>
-//               <h3 className="text-2xl font-bold mt-4 mb-6">Build</h3>
-
-//               <p className="text-gray-400 mb-6">
-//                 Our engineering team brings designs to life using scalable,
-//                 secure, and performance-focused technologies.
-//               </p>
-
-//               <ul className="text-gray-300 space-y-2 text-sm">
-//                 <li>• Frontend & backend development</li>
-//                 <li>• System integrations</li>
-//                 <li>• Quality assurance & optimisation</li>
-//               </ul>
-//             </motion.div>
-//           </div>
-
-//           {/* META */}
-//           <div className="flex flex-wrap gap-10 mt-14 text-sm text-gray-400">
-//             <p><span className="text-white font-semibold">Suited for:</span> SMEs & Conglomerates</p>
-//             <p><span className="text-white font-semibold">Timeline:</span> 6–12 Months</p>
-//             <p><span className="text-white font-semibold">Engagement:</span> Retainer</p>
-//           </div>
-//         </div>
-
-//         {/* ================= STARTUP PROCESS ================= */}
-//         <div>
-//           <motion.div
-//             initial={{ opacity: 0, x: 60 }}
-//             whileInView={{ opacity: 1, x: 0 }}
-//             transition={{ duration: 0.9 }}
-//             viewport={{ once: true }}
-//             className="mb-14"
-//           >
-//             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-//               For Startups
-//             </h2>
-//             <p className="text-gray-400 max-w-2xl text-lg">
-//               A rapid execution model designed to help startups validate ideas,
-//               launch MVPs, and reach the market faster.
-//             </p>
-//           </motion.div>
-
-//           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-//             {/* STEP 1 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.8 }}
-//               viewport={{ once: true }}
-//               className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#CCFF00] transition"
-//             >
-//               <span className="text-[#CCFF00] text-sm font-semibold">
-//                 Step 01
-//               </span>
-//               <h3 className="text-2xl font-bold mt-4 mb-6">Build</h3>
-
-//               <p className="text-gray-400 mb-6">
-//                 We quickly transform ideas into tangible prototypes, allowing
-//                 you to test assumptions and gather real user feedback.
-//               </p>
-
-//               <ul className="text-gray-300 space-y-2 text-sm">
-//                 <li>• Discovery & strategy workshop</li>
-//                 <li>• Rapid prototyping</li>
-//                 <li>• Early validation</li>
-//               </ul>
-//             </motion.div>
-
-//             {/* STEP 2 */}
-//             <motion.div
-//               initial={{ opacity: 0, y: 50 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 0.9, delay: 0.1 }}
-//               viewport={{ once: true }}
-//               className="bg-[#111] border border-white/10 rounded-3xl p-10 hover:border-[#CCFF00] transition"
-//             >
-//               <span className="text-[#CCFF00] text-sm font-semibold">
-//                 Step 02
-//               </span>
-//               <h3 className="text-2xl font-bold mt-4 mb-6">Launch</h3>
-
-//               <p className="text-gray-400 mb-6">
-//                 We build, test, and deploy a production-ready MVP that is
-//                 scalable, secure, and market-ready.
-//               </p>
-
-//               <ul className="text-gray-300 space-y-2 text-sm">
-//                 <li>• Full-stack development</li>
-//                 <li>• QA & performance testing</li>
-//                 <li>• MVP launch & support</li>
-//               </ul>
-//             </motion.div>
-//           </div>
-
-//           {/* META */}
-//           <div className="flex flex-wrap gap-10 mt-14 text-sm text-gray-400">
-//             <p><span className="text-white font-semibold">Suited for:</span> Startups</p>
-//             <p><span className="text-white font-semibold">Timeline:</span> 2–3 Months</p>
-//             <p><span className="text-white font-semibold">Engagement:</span> Fixed Duration</p>
-//           </div>
-
-//           {/* CTA */}
-//           <div className="mt-20">
-//             <a
-//               href="#contact"
-//               className="inline-block bg-[#CCFF00] text-black font-semibold
-//                          px-14 py-4 rounded-full text-lg
-//                          hover:scale-105 hover:shadow-xl transition-all"
-//             >
-//               Get In Touch
-//             </a>
-//           </div>
-//         </div>
-
-//       </div>
-//       <ConnectQuoteSection/>
-//     </section>
-   
-//   );
-// }
-
-
-
 "use client";
 
 import { motion } from "framer-motion";
 import ConnectQuoteSection from "./ContactSection";
 
+const videoProcess = [
+  {
+    step: "Step 01",
+    title: "Discover & Understand",
+    desc: "We start by understanding your brand, audience, goals, message and video requirements so the production is built around a clear creative and business objective.",
+    points: [
+      "Brand & business goals",
+      "Target audience & message",
+      "Project requirements & references",
+    ],
+  },
+  {
+    step: "Step 02",
+    title: "Concept & Pre-Production",
+    desc: "Our creative team develops the concept and prepares the production through scripting, storyboards, locations, casting, shot planning and production scheduling.",
+    points: [
+      "Creative concept & script",
+      "Storyboards & shot planning",
+      "Locations, casting & production plan",
+    ],
+  },
+  {
+    step: "Step 03",
+    title: "Production & Filming",
+    desc: "We bring the approved concept to life through professional direction, cinematography, lighting, sound and on-set video production.",
+    points: [
+      "Professional filming",
+      "Direction & cinematography",
+      "Lighting & production execution",
+    ],
+  },
+];
+
+const postProduction = [
+  {
+    step: "Step 04",
+    title: "Editing & Post-Production",
+    desc: "Our editors shape the footage into a polished story using professional editing, pacing, color grading, sound design, music and visual effects.",
+  },
+  {
+    step: "Step 05",
+    title: "Motion Graphics & Finishing",
+    desc: "Where required, we add motion graphics, animation, titles, visual effects and branded elements to make the final video more engaging and effective.",
+  },
+  {
+    step: "Step 06",
+    title: "Review & Final Delivery",
+    desc: "We review the completed video with you, make the required refinements and deliver the final production in the formats required for your website, social media, advertising or campaigns.",
+  },
+  {
+    step: "Step 07",
+    title: "Launch & Content Support",
+    desc: "We help prepare your finished video for the platforms and marketing channels where your audience will see it, including digital campaigns, social media and brand communication.",
+  },
+];
+
 export default function ProcessPage() {
   return (
-    <section className="bg-black text-white py-28 md:py-36 overflow-hidden">
-
+    <section
+      aria-labelledby="process-heading"
+      className="bg-black text-white py-28 md:py-36 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6">
-
         {/* ================= HEADER ================= */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 0.9,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="text-center max-w-4xl mx-auto mb-24 md:mb-32"
         >
+          {/* LABEL */}
           <p className="uppercase tracking-widest text-xs md:text-sm text-[#CCFF00] mb-4">
-            Our Process
+            Our Video Production Process
           </p>
 
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6 md:mb-8">
-            A Process Built to <br />
-            <span className="gradient-text">Launch, Scale & Lead</span>
+          {/* SEO H1 */}
+          <h1
+            id="process-heading"
+            className="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-6 md:mb-8"
+          >
+            From Creative Idea to <br />
+            <span className="gradient-text">Finished Video</span>
           </h1>
 
+          {/* SEO DESCRIPTION */}
           <p className="text-gray-400 text-[14px] sm:text-[16px] md:text-lg leading-relaxed">
-            We follow a flexible, proven, and outcome-driven process designed to
-            help businesses move faster, build smarter, and scale with confidence.
+            Our video production process takes your idea from creative strategy
+            and pre-production through professional filming, editing,
+            post-production and final delivery. Every stage is planned to create
+            high-quality video content that communicates your brand message and
+            supports your marketing goals.
           </p>
         </motion.div>
 
-        {/* ================= ENTERPRISE ================= */}
+        {/* ================= VIDEO PRODUCTION PROCESS ================= */}
         <div className="mb-32 md:mb-40">
-
+          {/* SECTION INTRO */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              x: -60,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            viewport={{
+              once: true,
+            }}
             className="mb-12 md:mb-14"
           >
+            <p className="text-[#CCFF00] text-xs md:text-sm font-semibold uppercase tracking-widest mb-3">
+              Strategy to Production
+            </p>
+
             <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
-              For SMEs & Conglomerates
+              A Complete Video Production Workflow
             </h2>
+
             <p className="text-gray-400 max-w-2xl text-[14px] md:text-lg">
-              Agile long-term model focused on scalability and continuous optimisation.
+              From the first conversation to the final frame, we manage every
+              important stage of commercial, corporate, product, explainer and
+              branded video production.
             </p>
           </motion.div>
 
+          {/* PROCESS CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-
-            {[
-              {
-                step: "Step 01",
-                title: "Discover",
-                desc: "Understand business, users, and market deeply.",
-                points: [
-                  "Business goals & vision",
-                  "User insights",
-                  "Market analysis"
-                ]
-              },
-              {
-                step: "Step 02",
-                title: "Design",
-                desc: "Translate strategy into engaging experiences.",
-                points: [
-                  "Architecture",
-                  "Wireframes",
-                  "Visual design"
-                ]
-              },
-              {
-                step: "Step 03",
-                title: "Build",
-                desc: "Develop scalable and high-performance solutions.",
-                points: [
-                  "Frontend & backend",
-                  "Integrations",
-                  "QA & optimisation"
-                ]
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
+            {videoProcess.map((item, index) => (
+              <motion.article
+                key={item.step}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-10 hover:border-[#CCFF00]/40 hover:shadow-[0_0_25px_rgba(204,255,0,0.15)] transition-all"
               >
                 <span className="text-[#CCFF00] text-xs md:text-sm font-semibold">
@@ -342,67 +176,96 @@ export default function ProcessPage() {
                   {item.title}
                 </h3>
 
-                <p className="text-gray-400 mb-5 text-sm md:text-base">
+                <p className="text-gray-400 mb-5 text-sm md:text-base leading-6">
                   {item.desc}
                 </p>
 
-                <ul className="text-gray-300 space-y-1 text-sm">
-                  {item.points.map((p, i) => (
-                    <li key={i}>• {p}</li>
+                <ul className="text-gray-300 space-y-2 text-sm">
+                  {item.points.map((point, i) => (
+                    <li key={i}>• {point}</li>
                   ))}
                 </ul>
-              </motion.div>
+              </motion.article>
             ))}
-
           </div>
 
           {/* META */}
           <div className="flex flex-wrap gap-6 md:gap-10 mt-10 md:mt-14 text-xs md:text-sm text-gray-400">
-            <p><span className="text-white font-semibold">Suited for:</span> SMEs</p>
-            <p><span className="text-white font-semibold">Timeline:</span> 6–12 Months</p>
-            <p><span className="text-white font-semibold">Engagement:</span> Retainer</p>
+            <p>
+              <span className="text-white font-semibold">Services:</span>{" "}
+              Commercial, Corporate & Product Videos
+            </p>
+
+            <p>
+              <span className="text-white font-semibold">Production:</span>{" "}
+              Hyderabad & Across India
+            </p>
+
+            <p>
+              <span className="text-white font-semibold">Approach:</span>{" "}
+              End-to-End Video Production
+            </p>
           </div>
         </div>
 
-        {/* ================= STARTUP ================= */}
+        {/* ================= POST PRODUCTION ================= */}
         <div>
-
+          {/* SECTION INTRO */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              x: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
+            viewport={{
+              once: true,
+            }}
             className="mb-12 md:mb-14"
           >
+            <p className="text-[#CCFF00] text-xs md:text-sm font-semibold uppercase tracking-widest mb-3">
+              Post-Production & Delivery
+            </p>
+
             <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">
-              For Startups
+              Turning Footage Into a Finished Brand Story
             </h2>
-            <p className="text-gray-400 text-[14px] md:text-lg">
-              Rapid execution model for fast MVP launches.
+
+            <p className="text-gray-400 text-[14px] md:text-lg max-w-3xl">
+              Great video production does not end when filming is complete. Our
+              post-production team shapes the footage into a polished final
+              video ready for your marketing and communication channels.
             </p>
           </motion.div>
 
+          {/* POST PRODUCTION CARDS */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-
-            {[
-              {
-                step: "Step 01",
-                title: "Build",
-                desc: "Transform ideas into prototypes quickly.",
-              },
-              {
-                step: "Step 02",
-                title: "Launch",
-                desc: "Deploy scalable and market-ready MVP.",
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -8 }}
+            {postProduction.map((item, index) => (
+              <motion.article
+                key={item.step}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                whileHover={{
+                  y: -8,
+                }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-10 hover:border-[#CCFF00]/40 hover:shadow-[0_0_25px_rgba(204,255,0,0.15)] transition-all"
               >
                 <span className="text-[#CCFF00] text-xs md:text-sm font-semibold">
@@ -413,32 +276,56 @@ export default function ProcessPage() {
                   {item.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm md:text-base">
+                <p className="text-gray-400 text-sm md:text-base leading-6">
                   {item.desc}
                 </p>
-              </motion.div>
+              </motion.article>
             ))}
-
           </div>
+
+          {/* SUPPORTING SEO CONTENT */}
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+            viewport={{
+              once: true,
+            }}
+            className="mt-12 md:mt-16 max-w-4xl"
+          >
+            <p className="text-sm md:text-base leading-7 text-gray-400">
+              Whether you need a commercial advertisement, corporate film,
+              product launch video, SaaS explainer, pitch video, brand film or
+              promotional content, our production workflow is adapted to the
+              project's creative requirements, timeline and audience.
+            </p>
+          </motion.div>
 
           {/* CTA */}
           <div className="mt-16 md:mt-20 text-center">
             <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              href="/quote"
+              whileHover={{
+                scale: 1.05,
+              }}
+              whileTap={{
+                scale: 0.95,
+              }}
               className="inline-block bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black font-semibold px-10 md:px-14 py-3 md:py-4 rounded-full text-sm md:text-lg shadow-lg hover:shadow-[0_0_25px_#CCFF00] transition-all"
             >
-              Get In Touch
+              Start Your Video Project
             </motion.a>
           </div>
-
         </div>
-
       </div>
-
-      <ConnectQuoteSection />
-
     </section>
   );
 }

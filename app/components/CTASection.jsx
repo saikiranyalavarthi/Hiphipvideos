@@ -1,101 +1,60 @@
-// "use client";
-
-// export default function CTASection() {
-// return ( <section className="bg-black flex justify-center">
-
-//   {/* SECTION CONTAINER */}
-//   <div className="flex flex-col items-center justify-center px-6 lg:px-12 py-[48px] gap-[10px] w-full">
-
-//     {/* INNER WRAPPER */}
-//     <div className="w-full max-w-[1440px] flex flex-col items-center gap-[32px] md:gap-[48px]">
-
-//       {/* TITLE + TEXT */}
-//       <div className="flex flex-col items-center text-center gap-[16px]">
-
-//         <h2 className="text-white text-[28px] sm:text-[34px] md:text-[40px] font-bold leading-[36px] sm:leading-[42px] md:leading-[48px] tracking-[-0.32px]">
-//           Ready to turn your idea into a high-impact video in just one day?
-//         </h2>
-
-//         <p className="text-white text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] max-w-[640px]">
-//           Book a free expert consultation and explore your concept’s full potential.
-//         </p>
-
-//       </div>
-
-//       {/* BUTTON */}
-//       <button
-//         className="
-//           flex items-center justify-center
-//           px-[24px] py-[12px]
-//           rounded-[8px]
-//           bg-[#CCFF00]
-//           text-black
-//           text-[14px]
-//           font-semibold
-//           leading-[20px]
-//           hover:opacity-90
-//           transition
-//           whitespace-nowrap
-//         "
-//       >
-//         Free discovery call
-//       </button>
-
-//     </div>
-
-//   </div>
-
-// </section>
-
-// );
-// }
-
-
-
 "use client";
+
 import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <section className="bg-black flex justify-center overflow-hidden">
-
+    <section
+      aria-labelledby="final-cta-heading"
+      className="bg-black flex justify-center overflow-hidden"
+    >
       {/* SECTION CONTAINER */}
-      <div className="flex flex-col items-center justify-center px-6 lg:px-12 py-[40px] md:py-[48px] w-full">
-
+      <div className="flex flex-col items-center justify-center px-6 lg:px-12 py-[40px] md:py-[64px] w-full">
         {/* INNER WRAPPER */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          initial={{
+            opacity: 0,
+            scale: 0.95,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          viewport={{
+            once: true,
+          }}
           className="w-full max-w-[1440px] flex flex-col items-center gap-[28px] md:gap-[40px]"
         >
-
           {/* TITLE + TEXT */}
           <div className="flex flex-col items-center text-center gap-[14px] md:gap-[16px]">
-
-            <h2 className="text-white text-[24px] sm:text-[30px] md:text-[40px] font-bold leading-[34px] sm:leading-[40px] md:leading-[48px] tracking-tight">
-
-              Ready to turn your idea into a{" "}
-              
-              <span className="gradient-text">
-                high-impact video
-              </span>{" "}
-              
-              in just one day?
-
+            {/* SEO H2 */}
+            <h2
+              id="final-cta-heading"
+              className="text-white text-[24px] sm:text-[30px] md:text-[40px] font-bold leading-[34px] sm:leading-[40px] md:leading-[48px] tracking-tight max-w-[900px]"
+            >
+              Ready to Create Your{" "}
+              <span className="gradient-text">Next High-Impact Video?</span>
             </h2>
 
+            {/* SUPPORTING CONTENT */}
             <p className="text-white/80 text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] max-w-[640px]">
-              Book a free expert consultation and explore your concept’s full potential.
+              Talk to our video production team about your commercial,
+              corporate, product, advertising or branded video project.
             </p>
-
           </div>
 
-          {/* BUTTON */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          {/* CTA BUTTON */}
+          <motion.a
+            href="/quote"
+            whileHover={{
+              scale: 1.05,
+            }}
+            whileTap={{
+              scale: 0.95,
+            }}
             className="
               flex items-center justify-center
               px-[24px] py-[12px]
@@ -111,13 +70,33 @@ export default function CTASection() {
               whitespace-nowrap
             "
           >
-            Free discovery call
-          </motion.button>
+            Get a Free Discovery Call
+          </motion.a>
 
+          {/* LOCAL SIGNAL */}
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/40">
+            <span>Hyderabad, Telangana</span>
+
+            <span className="hidden sm:block text-white/20">•</span>
+
+            <a
+              href="tel:+916302111807"
+              className="hover:text-[#CCFF00] transition"
+            >
+              +91 63021 11807
+            </a>
+
+            <span className="hidden sm:block text-white/20">•</span>
+
+            <a
+              href="mailto:info@hiphipvideos.com"
+              className="hover:text-[#CCFF00] transition"
+            >
+              info@hiphipvideos.com
+            </a>
+          </div>
         </motion.div>
-
       </div>
-
     </section>
   );
 }
