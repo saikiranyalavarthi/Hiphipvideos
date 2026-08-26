@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { trackEvent } from "@/app/lib/analytics";
 
 export default function FloatingContactButtons() {
   const phoneNumber = "916302111807";
@@ -8,6 +9,18 @@ export default function FloatingContactButtons() {
   const whatsappMessage = encodeURIComponent(
     "Hello HipHipVideos, I am interested in your video production services. I would like to discuss my project.",
   );
+
+  const handleWhatsAppClick = () => {
+    trackEvent("whatsapp_click", {
+      location: "floating_button",
+    });
+  };
+
+  const handleCallClick = () => {
+    trackEvent("phone_click", {
+      location: "floating_button",
+    });
+  };
 
   return (
     <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-3">
@@ -17,6 +30,7 @@ export default function FloatingContactButtons() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with HipHipVideos on WhatsApp"
+        onClick={handleWhatsAppClick}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         className="
@@ -31,7 +45,6 @@ export default function FloatingContactButtons() {
           hover:shadow-[0_8px_30px_rgba(37,211,102,0.55)]
         "
       >
-        {/* WhatsApp SVG */}
         <svg
           viewBox="0 0 32 32"
           className="w-7 h-7"
@@ -42,7 +55,6 @@ export default function FloatingContactButtons() {
           <path d="M16.03 3C8.84 3 3 8.82 3 16c0 2.3.6 4.55 1.73 6.54L3 29l6.6-1.7A13 13 0 1 0 16.03 3zm0 23.6c-2.05 0-4.06-.55-5.82-1.59l-.42-.25-3.92 1.01 1.05-3.82-.27-.44A10.58 10.58 0 1 1 16.03 26.6z" />
         </svg>
 
-        {/* TOOLTIP */}
         <span
           className="
             pointer-events-none
@@ -68,6 +80,7 @@ export default function FloatingContactButtons() {
       <motion.a
         href="tel:+916302111807"
         aria-label="Call HipHipVideos"
+        onClick={handleCallClick}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
         className="
@@ -82,7 +95,6 @@ export default function FloatingContactButtons() {
           hover:shadow-[0_8px_30px_rgba(204,255,0,0.55)]
         "
       >
-        {/* PHONE SVG */}
         <svg
           viewBox="0 0 24 24"
           className="w-6 h-6"
@@ -108,7 +120,6 @@ export default function FloatingContactButtons() {
           />
         </svg>
 
-        {/* TOOLTIP */}
         <span
           className="
             pointer-events-none
