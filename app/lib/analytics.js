@@ -8,7 +8,6 @@
 
 //   window.gtag("event", eventName, parameters);
 // }
-
 export function trackEvent(eventName, parameters = {}) {
   if (typeof window === "undefined") {
     console.warn("Window is not available");
