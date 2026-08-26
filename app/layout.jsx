@@ -101,8 +101,9 @@ export const metadata = {
   },
 
   verification: {
-    // Add your Google Search Console verification code here later.
-    // google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    // Your current Google Search Console verification
+    // is using the HTML file method:
+    // public/googlec2c465a4409126ab.html
   },
 };
 
@@ -171,6 +172,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-black text-white`}>
+        {/* ============================= */}
+        {/* GOOGLE ANALYTICS 4 */}
+        {/* ============================= */}
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-6TK4Y60WKR"
           strategy="afterInteractive"
@@ -178,20 +183,35 @@ export default function RootLayout({ children }) {
 
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-6TK4Y60WKR');
-  `}
+            window.gtag = function() {
+              window.dataLayer.push(arguments);
+            };
+
+            window.gtag('js', new Date());
+
+            window.gtag('config', 'G-6TK4Y60WKR');
+          `}
         </Script>
+
+        {/* ============================= */}
+        {/* BUSINESS SCHEMA */}
+        {/* ============================= */}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(businessSchema),
           }}
         />
+
+        {/* ============================= */}
+        {/* WEBSITE */}
+        {/* ============================= */}
+
         <FloatingContactButtons />
+
         <Navbar />
 
         <main className="pt-28">{children}</main>
