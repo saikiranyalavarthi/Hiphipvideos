@@ -137,14 +137,13 @@ ${message}
     });
 
   } catch (error) {
-    console.error("CONTACT FORM ERROR:", error);
+  console.error("CONTACT FORM ERROR:", error);
 
-    return NextResponse.json(
-      {
-        success: false,
-        message: "Unable to send your enquiry.",
-      },
-      { status: 500 }
-    );
-  }
+  return NextResponse.json(
+    {
+      success: false,
+      message: error?.message || "Email sending failed",
+    },
+    { status: 500 }
+  );
 }
