@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request: Request) {
+export async function POST(request) {
   try {
     const data = await request.json();
 
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       message,
     } = data;
 
-    // Validate required fields
+    // Check required fields
     if (
       !firstName ||
       !lastName ||
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create GoDaddy SMTP transporter
+    // GoDaddy SMTP
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
@@ -45,16 +45,10 @@ export async function POST(request: Request) {
       },
     });
 
-    // Optional SMTP connection test
-    await transporter.verify();
-
     // Send email
     await transporter.sendMail({
       from: `"HipHipVideos Website" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_TO,
-
-      // When you click Reply in Webmail,
-      // reply will go to the customer's email.
       replyTo: email,
 
       subject: `New Video Project Enquiry - ${firstName} ${lastName}`,
@@ -62,23 +56,13 @@ export async function POST(request: Request) {
       text: `
 NEW VIDEO PROJECT ENQUIRY
 
-Name:
-${firstName} ${lastName}
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone || "Not provided"}
 
-Email:
-${email}
-
-Phone:
-${phone || "Not provided"}
-
-Project Type:
-${projectType}
-
-Industry:
-${industry}
-
-Estimated Budget:
-${budget || "Not provided"}
+Project Type: ${projectType}
+Industry: ${industry}
+Budget: ${budget || "Not provided"}
 
 Message:
 ${message}
@@ -95,9 +79,7 @@ ${message}
 
           <div style="padding:30px; border:1px solid #ddd;">
 
-            <h2 style="margin-top:0;">
-              Customer Details
-            </h2>
+            <h2>Customer Details</h2>
 
             <p>
               <strong>Name:</strong><br>
@@ -142,9 +124,7 @@ ${message}
           </div>
 
           <div style="background:#f5f5f5; padding:15px; text-align:center;">
-            <p style="margin:0;">
-              Submitted from HipHipVideos website
-            </p>
+            Submitted from HipHipVideos website
           </div>
 
         </div>
@@ -155,13 +135,14 @@ ${message}
       success: true,
       message: "Your enquiry has been sent successfully!",
     });
+
   } catch (error) {
     console.error("CONTACT FORM ERROR:", error);
 
     return NextResponse.json(
       {
         success: false,
-        message: "Unable to send your enquiry. Please try again.",
+        message: "Unable to send your enquiry.",
       },
       { status: 500 }
     );
