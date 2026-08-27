@@ -281,6 +281,9 @@ export default function ConnectQuoteSection() {
                   <option value="Electronics & Gadgets">
                     Electronics & Gadgets
                   </option>
+                    <option value="Electronics & Gadgets">
+                  Food & Beverages
+                  </option>
 
                   <option value="Industrial & Manufacturing">
                     Industrial & Manufacturing
