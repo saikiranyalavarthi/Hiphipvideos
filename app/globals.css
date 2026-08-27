@@ -49,10 +49,10 @@ body {
   box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.35);
 }
 
-
 .text-glow {
-  text-shadow: 0 0 8px rgba(204, 255, 0, 0.7),
-               0 0 16px rgba(204, 255, 0, 0.5);
+  text-shadow:
+    0 0 8px rgba(204, 255, 0, 0.7),
+    0 0 16px rgba(204, 255, 0, 0.5);
 }
 
 .label-style {
@@ -64,7 +64,7 @@ body {
 }
 
 .req {
-  color: rgba(251,94,42,0.9);
+  color: rgba(251, 94, 42, 0.9);
   margin-left: 4px;
 }
 
@@ -74,7 +74,7 @@ body {
   padding: 14px 16px;
   border: 1px solid #757575;
   border-radius: 6px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   color: white;
   font-size: 14px;
   outline: none;
@@ -82,6 +82,12 @@ body {
 }
 
 .input-style:focus {
-  border-color: #CCFF00;
-  box-shadow: 0 0 10px rgba(204,255,0,0.3);
+  border-color: #ccff00;
+  box-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+}
+
+/* SELECT DROPDOWN */
+.input-style option {
+  background-color: #fff;
+  color: #000;
 }
