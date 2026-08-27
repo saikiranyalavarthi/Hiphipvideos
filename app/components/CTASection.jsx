@@ -80,7 +80,7 @@ export default function CTASection() {
             <span className="hidden sm:block text-white/20">•</span>
 
             <a
-              href="tel:+916302111807"
+              href="tel:+916301022795"
               className="hover:text-[#CCFF00] transition"
             >
               +91 63021 11807

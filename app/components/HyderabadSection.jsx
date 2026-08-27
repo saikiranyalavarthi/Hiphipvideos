@@ -153,7 +153,7 @@ export default function HyderabadSection() {
               </p>
 
               <a
-                href="tel:+916302111807"
+                href="tel:+916301022795"
                 className="mt-2 block text-base font-semibold text-white transition-colors hover:text-[#CCFF00]"
                 aria-label="Call HipHipVideos"
               >

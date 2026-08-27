@@ -282,7 +282,7 @@ export default function Terms() {
 
                 <p>
                   <a
-                    href="tel:+916302111807"
+                    href="tel:+916301022795"
                     className="transition-colors hover:text-[#CCFF00]"
                   >
                     +91 63021 11807

@@ -125,7 +125,7 @@ export default function RootLayout({ children }) {
     description:
       "HipHipVideos is a video production company creating commercial, corporate, product, SaaS, pitch, fashion, D2C, real estate, electronics and industrial videos.",
 
-    telephone: "+916302111807",
+    telephone: "+916301022795",
 
     email: "info@hiphipvideos.com",
 

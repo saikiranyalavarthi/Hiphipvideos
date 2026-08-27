@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { trackEvent } from "@/app/lib/analytics";
 
 export default function FloatingContactButtons() {
-  const phoneNumber = "916302111807";
+  const phoneNumber = "916301022795";
 
   const whatsappMessage = encodeURIComponent(
     "Hello HipHipVideos, I am interested in your video production services. I would like to discuss my project.",
@@ -89,7 +89,7 @@ export default function FloatingContactButtons() {
 
       {/* CALL BUTTON */}
       <motion.a
-        href="tel:+916302111807"
+        href="tel:+916301022795"
         aria-label="Call HipHipVideos"
         onClick={handleCallClick}
         whileHover={{ scale: 1.08 }}

@@ -530,7 +530,7 @@ export default function AboutPage() {
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="tel:+916302111807"
+              href="tel:+916301022795"
               className="text-sm font-semibold text-white transition-colors hover:text-[#CCFF00]"
             >
               +91 63021 11807

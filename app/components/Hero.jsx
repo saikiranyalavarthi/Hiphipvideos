@@ -165,7 +165,7 @@ export default function Hero() {
             <span className="hidden sm:block text-white/30">•</span>
 
             <a
-              href="tel:+916302111807"
+              href="tel:+916301022795"
               className="hover:text-[#CCFF00] transition"
               aria-label="Call HipHipVideos at +91 63021 11807"
             >

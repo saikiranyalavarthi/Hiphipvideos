@@ -143,7 +143,7 @@ export default function Footer() {
             {/* CONTACT */}
             <div className="mt-6 space-y-2">
               <a
-                href="tel:+916302111807"
+                href="tel:+916301022795"
                 className="block text-sm text-white/60 transition hover:text-[#CCFF00]"
               >
                 +91 63021 11807

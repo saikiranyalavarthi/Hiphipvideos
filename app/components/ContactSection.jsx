@@ -110,7 +110,7 @@ export default function ConnectQuoteSection() {
 
             <div className="mt-8 space-y-3 border-t border-white/10 pt-6">
               <a
-                href="tel:+916302111807"
+                href="tel:+916301022795"
                 className="block text-sm sm:text-base text-white/60 hover:text-[#CCFF00] transition"
               >
                 +91 63021 11807
