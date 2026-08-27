@@ -7,9 +7,7 @@ export default function ConnectQuoteSection() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
@@ -44,16 +42,14 @@ export default function ConnectQuoteSection() {
         throw new Error(result.message || "Failed to send");
       }
 
-      setStatus(
-        "Thank you! Your enquiry has been sent successfully."
-      );
+      setStatus("Thank you! Your enquiry has been sent successfully.");
 
       form.reset();
     } catch (error) {
       console.error(error);
 
       setStatus(
-        "Something went wrong. Please try again or contact us directly."
+        "Something went wrong. Please try again or contact us directly.",
       );
     } finally {
       setLoading(false);
@@ -67,7 +63,6 @@ export default function ConnectQuoteSection() {
     >
       <div className="w-full max-w-[1440px] px-6 lg:px-12 flex justify-center">
         <div className="flex flex-col lg:flex-row w-full max-w-[1050px] justify-between items-start gap-[40px] lg:gap-[100px]">
-
           {/* LEFT CONTENT */}
           <motion.div
             initial={{
@@ -95,26 +90,22 @@ export default function ConnectQuoteSection() {
               className="text-[28px] sm:text-[34px] md:text-[42px] font-bold leading-[36px] md:leading-[48px] mb-[18px]"
             >
               Let's Create Your{" "}
-              <span className="text-[#CCFF00]">
-                Next Video
-              </span>
+              <span className="text-[#CCFF00]">Next Video</span>
             </h2>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70 mb-[14px]">
-              Looking for a video production company for your
-              next campaign, product launch, corporate film,
-              advertisement or branded content?
+              Looking for a video production company for your next campaign,
+              product launch, corporate film, advertisement or branded content?
             </p>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70 mb-[14px]">
-              HipHipVideos works with brands, startups and
-              businesses to develop video concepts and turn
-              ideas into high-quality visual content.
+              HipHipVideos works with brands, startups and businesses to develop
+              video concepts and turn ideas into high-quality visual content.
             </p>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70">
-              Tell us about your project and our team will get
-              back to you to discuss the next steps.
+              Tell us about your project and our team will get back to you to
+              discuss the next steps.
             </p>
 
             <div className="mt-8 space-y-3 border-t border-white/10 pt-6">
@@ -157,15 +148,10 @@ export default function ConnectQuoteSection() {
             }}
             className="flex flex-col gap-[18px] md:gap-[22px] w-full max-w-[500px]"
           >
-
             {/* FIRST + LAST NAME */}
             <div className="flex flex-col sm:flex-row gap-[14px] sm:gap-[18px]">
-
               <div className="flex flex-col w-full gap-[6px]">
-                <label
-                  htmlFor="first-name"
-                  className="label-style"
-                >
+                <label htmlFor="first-name" className="label-style">
                   FIRST NAME <span className="req">*</span>
                 </label>
 
@@ -181,10 +167,7 @@ export default function ConnectQuoteSection() {
               </div>
 
               <div className="flex flex-col w-full gap-[6px]">
-                <label
-                  htmlFor="last-name"
-                  className="label-style"
-                >
+                <label htmlFor="last-name" className="label-style">
                   LAST NAME <span className="req">*</span>
                 </label>
 
@@ -198,15 +181,11 @@ export default function ConnectQuoteSection() {
                   className="input-style"
                 />
               </div>
-
             </div>
 
             {/* EMAIL */}
             <div className="flex flex-col gap-[6px]">
-              <label
-                htmlFor="email"
-                className="label-style"
-              >
+              <label htmlFor="email" className="label-style">
                 EMAIL <span className="req">*</span>
               </label>
 
@@ -223,10 +202,7 @@ export default function ConnectQuoteSection() {
 
             {/* PHONE */}
             <div className="flex flex-col gap-[6px]">
-              <label
-                htmlFor="phone"
-                className="label-style"
-              >
+              <label htmlFor="phone" className="label-style">
                 PHONE NUMBER
               </label>
 
@@ -242,12 +218,8 @@ export default function ConnectQuoteSection() {
 
             {/* PROJECT TYPE + INDUSTRY */}
             <div className="flex flex-col sm:flex-row gap-[14px] sm:gap-[18px]">
-
               <div className="flex flex-col gap-[6px] w-full">
-                <label
-                  htmlFor="project-type"
-                  className="label-style"
-                >
+                <label htmlFor="project-type" className="label-style">
                   PROJECT TYPE <span className="req">*</span>
                 </label>
 
@@ -262,45 +234,26 @@ export default function ConnectQuoteSection() {
                     Select Project Type
                   </option>
 
-                  <option value="Commercial Video">
-                    Commercial Video
-                  </option>
+                  <option value="Commercial Video">Commercial Video</option>
 
-                  <option value="Corporate Video">
-                    Corporate Video
-                  </option>
+                  <option value="Corporate Video">Corporate Video</option>
 
-                  <option value="Product Video">
-                    Product Video
-                  </option>
+                  <option value="Product Video">Product Video</option>
 
-                  <option value="Explainer Video">
-                    Explainer Video
-                  </option>
+                  <option value="Explainer Video">Explainer Video</option>
 
-                  <option value="Advertisement">
-                    Advertisement
-                  </option>
+                  <option value="Advertisement">Advertisement</option>
 
-                  <option value="Pitch Video">
-                    Pitch Video
-                  </option>
+                  <option value="Pitch Video">Pitch Video</option>
 
-                  <option value="Brand Film">
-                    Brand Film
-                  </option>
+                  <option value="Brand Film">Brand Film</option>
 
-                  <option value="Other">
-                    Other
-                  </option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
               <div className="flex flex-col gap-[6px] w-full">
-                <label
-                  htmlFor="industry"
-                  className="label-style"
-                >
+                <label htmlFor="industry" className="label-style">
                   INDUSTRY <span className="req">*</span>
                 </label>
 
@@ -315,25 +268,15 @@ export default function ConnectQuoteSection() {
                     Select Industry
                   </option>
 
-                  <option value="Apps & SaaS">
-                    Apps & SaaS
-                  </option>
+                  <option value="Apps & SaaS">Apps & SaaS</option>
 
-                  <option value="D2C Brands">
-                    D2C Brands
-                  </option>
+                  <option value="D2C Brands">D2C Brands</option>
 
-                  <option value="Fashion">
-                    Fashion
-                  </option>
+                  <option value="Fashion">Fashion</option>
 
-                  <option value="Real Estate">
-                    Real Estate
-                  </option>
+                  <option value="Real Estate">Real Estate</option>
 
-                  <option value="Corporate">
-                    Corporate
-                  </option>
+                  <option value="Corporate">Corporate</option>
 
                   <option value="Electronics & Gadgets">
                     Electronics & Gadgets
@@ -343,24 +286,16 @@ export default function ConnectQuoteSection() {
                     Industrial & Manufacturing
                   </option>
 
-                  <option value="Franchise">
-                    Franchise
-                  </option>
+                  <option value="Franchise">Franchise</option>
 
-                  <option value="Other">
-                    Other
-                  </option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
-
             </div>
 
             {/* BUDGET */}
             <div className="flex flex-col gap-[6px]">
-              <label
-                htmlFor="budget"
-                className="label-style"
-              >
+              <label htmlFor="budget" className="label-style">
                 ESTIMATED BUDGET
               </label>
 
@@ -374,40 +309,26 @@ export default function ConnectQuoteSection() {
                   Select Budget Range
                 </option>
 
-                <option value="Under ₹1 Lakh">
-                  Under ₹1 Lakh
-                </option>
+                <option value="Under ₹1 Lakh">Under ₹1 Lakh</option>
 
-                <option value="₹1 Lakh – ₹3 Lakhs">
-                  ₹1 Lakh – ₹3 Lakhs
-                </option>
+                <option value="₹1 Lakh – ₹3 Lakhs">₹1 Lakh – ₹3 Lakhs</option>
 
-                <option value="₹3 Lakhs – ₹5 Lakhs">
-                  ₹3 Lakhs – ₹5 Lakhs
-                </option>
+                <option value="₹3 Lakhs – ₹5 Lakhs">₹3 Lakhs – ₹5 Lakhs</option>
 
                 <option value="₹5 Lakhs – ₹10 Lakhs">
                   ₹5 Lakhs – ₹10 Lakhs
                 </option>
 
-                <option value="₹10 Lakhs+">
-                  ₹10 Lakhs+
-                </option>
+                <option value="₹10 Lakhs+">₹10 Lakhs+</option>
 
-                <option value="Let's Discuss">
-                  Let's Discuss
-                </option>
+                <option value="Let's Discuss">Let's Discuss</option>
               </select>
             </div>
 
             {/* MESSAGE */}
             <div className="flex flex-col gap-[6px]">
-              <label
-                htmlFor="message"
-                className="label-style"
-              >
-                TELL US ABOUT YOUR VIDEO NEEDS{" "}
-                <span className="req">*</span>
+              <label htmlFor="message" className="label-style">
+                TELL US ABOUT YOUR VIDEO NEEDS <span className="req">*</span>
               </label>
 
               <textarea
@@ -446,7 +367,6 @@ export default function ConnectQuoteSection() {
             >
               {loading ? "SENDING..." : "GET A FREE QUOTE"}
             </motion.button>
-
           </motion.form>
         </div>
       </div>
