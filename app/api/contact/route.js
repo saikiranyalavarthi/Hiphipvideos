@@ -30,7 +30,7 @@ export async function POST(request) {
           success: false,
           message: "Please fill all required fields.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -135,16 +135,15 @@ ${message}
       success: true,
       message: "Your enquiry has been sent successfully!",
     });
-
   } catch (error) {
-  console.error("CONTACT FORM ERROR:", error);
+    console.error("CONTACT FORM ERROR:", error);
 
-  return NextResponse.json(
-    {
-      success: false,
-      message: error?.message || "Email sending failed",
-    },
-    { status: 500 }
-  );
-}
+    return NextResponse.json(
+      {
+        success: false,
+        message: error?.message || "Email sending failed",
+      },
+      { status: 500 },
+    );
+  }
 }
