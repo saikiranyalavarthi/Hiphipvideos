@@ -11,6 +11,8 @@ import HyderabadSection from "./components/HyderabadSection";
 import ProcessSection from "./components/ProcessSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
+import BestCreations from "./components/BestCreations";
+import CinematicVideoSection from "./components/CinematicVideoSection";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <IndustriesSection />
       <ClientsSection />
       <CaseStudies />
+      <BestCreations />
+      <CinematicVideoSection />
       <WhyHipHipVideos />
       <ProcessSection />
       <HyderabadSection />
