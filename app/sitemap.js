@@ -1,268 +1,122 @@
+import { locations, slugify } from "./locations/data";
+
 const baseUrl = "https://hiphipvideos.com";
 
 export default function sitemap() {
   const now = new Date();
 
-  return [
-    // =========================
-    // MAIN PAGES
-    // =========================
-    {
-      url: `${baseUrl}/`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/process`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/quote`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/portfolio`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
+  // Main website pages
+  const mainPages = [
+    "",
+    "/about",
+    "/process",
+    "/contact",
+    "/quote",
+    "/portfolio",
+    "/case-studies",
+    "/services",
+    "/industries",
+    "/blog",
+    "/locations",
+  ].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: path === "" ? 1.0 : 0.8,
+  }));
 
-    // =========================
-    // SERVICES
-    // =========================
-    {
-      url: `${baseUrl}/services`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/commercial-video-production`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/corporate-video-production`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/product-video-production`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/explainer-videos`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/3d-product-animation`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services/motion-graphics`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+  // Services
+  const services = [
+    "commercial-video-production",
+    "corporate-video-production",
+    "product-video-production",
+    "explainer-videos",
+    "pitch-videos",
+    "franchise-videos",
+    "fashion-video-production",
+    "real-estate-video-production",
+    "d2c-video-production",
+    "saas-video-production",
+    "3d-product-animation",
+    "motion-graphics",
+  ].map((slug) => ({
+    url: `${baseUrl}/services/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }));
 
-    // =========================
-    // INDUSTRIES
-    // =========================
-    {
-      url: `${baseUrl}/industries`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/apps-saas`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/pitch-videos`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/franchise-videos`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/fashion`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/d2c-brands`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/real-estate`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/corporate`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/electronics-gadgets`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/industrial-manufacturing`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/healthcare`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/education-edtech`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/automotive`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/industries/consumer-products`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
+  // Industries
+  const industries = [
+    "apps-saas",
+    "d2c-brands",
+    "real-estate",
+    "fashion",
+    "electronics-gadgets",
+    "industrial-manufacturing",
+    "corporate",
+    "healthcare",
+    "education-edtech",
+    "automotive",
+    "consumer-products",
+  ].map((slug) => ({
+    url: `${baseUrl}/industries/${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
 
-    // =========================
-    // BLOG
-    // =========================
+  // Blog pages
+  const blogSlugs = [
+    "video-production-process",
+    "how-to-choose-video-production-company-hyderabad",
+    "how-much-does-video-production-cost-in-hyderabad",
+    "commercial-video-production-guide",
+    "product-video-production-guide",
+    "explainer-video-guide",
+    "corporate-video-production-guide",
+    "3d-product-animation-guide",
+    "motion-graphics-guide",
+    "video-marketing-for-business",
+    "video-marketing-for-startups",
+    "product-launch-video-guide",
+  ];
+
+  const blogs = [
     {
       url: `${baseUrl}/blog`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/blog/video-production-process`,
+    ...blogSlugs.map((slug) => ({
+      url: `${baseUrl}/blog/${slug}`,
       lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-choose-video-production-company-hyderabad`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/how-much-does-video-production-cost-in-hyderabad`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/commercial-video-production-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/product-video-production-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/explainer-video-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/corporate-video-production-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/3d-product-animation-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/motion-graphics-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/video-marketing-for-business`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/video-marketing-for-startups`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/blog/product-launch-video-guide`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
+    })),
+  ];
 
-    // =========================
-    // LEGAL
-    // =========================
+  // Country location pages
+  const countryPages = locations.map((country) => ({
+    url: `${baseUrl}/locations/${country.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.8,
+  }));
+
+  // City location pages
+  const cityPages = locations.flatMap((country) =>
+    country.cities.map((city) => ({
+      url: `${baseUrl}/locations/${country.slug}/${slugify(city)}`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
+  );
+
+  // Legal pages
+  const legalPages = [
     {
       url: `${baseUrl}/Terms`,
       lastModified: now,
@@ -275,5 +129,15 @@ export default function sitemap() {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+  ];
+
+  return [
+    ...mainPages,
+    ...services,
+    ...industries,
+    ...blogs,
+    ...countryPages,
+    ...cityPages,
+    ...legalPages,
   ];
 }

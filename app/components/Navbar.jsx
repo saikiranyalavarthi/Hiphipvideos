@@ -6,30 +6,12 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  {
-    name: "Home",
-    href: "/",
-  },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "Portfolio",
-    href: "/portfolio",
-  },
-  {
-    name: "Case Studies",
-    href: "/case-studies",
-  },
-  {
-    name: "Process",
-    href: "/process",
-  },
-  {
-    name: "Blog",
-    href: "/blog",
-  },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Process", href: "/process" },
+  { name: "Blog", href: "/blog" },
 ];
 
 const services = [
@@ -45,18 +27,9 @@ const services = [
     name: "Product Video Production",
     href: "/services/product-video-production",
   },
-  {
-    name: "Explainer Videos",
-    href: "/services/explainer-videos",
-  },
-  {
-    name: "Pitch Videos",
-    href: "/services/pitch-videos",
-  },
-  {
-    name: "Franchise Videos",
-    href: "/services/franchise-videos",
-  },
+  { name: "Explainer Videos", href: "/services/explainer-videos" },
+  { name: "Pitch Videos", href: "/services/pitch-videos" },
+  { name: "Franchise Videos", href: "/services/franchise-videos" },
   {
     name: "Fashion Video Production",
     href: "/services/fashion-video-production",
@@ -65,68 +38,203 @@ const services = [
     name: "Real Estate Video Production",
     href: "/services/real-estate-video-production",
   },
-  {
-    name: "D2C Video Production",
-    href: "/services/d2c-video-production",
-  },
-  {
-    name: "SaaS Video Production",
-    href: "/services/saas-video-production",
-  },
-  {
-    name: "3D Product Animation",
-    href: "/services/3d-product-animation",
-  },
-  {
-    name: "Motion Graphics",
-    href: "/services/motion-graphics",
-  },
+  { name: "D2C Video Production", href: "/services/d2c-video-production" },
+  { name: "SaaS Video Production", href: "/services/saas-video-production" },
+  { name: "3D Product Animation", href: "/services/3d-product-animation" },
+  { name: "Motion Graphics", href: "/services/motion-graphics" },
 ];
 
 const industries = [
-  {
-    name: "Apps & SaaS",
-    href: "/industries/apps-saas",
-  },
-  {
-    name: "D2C Brands",
-    href: "/industries/d2c-brands",
-  },
-  {
-    name: "Real Estate",
-    href: "/industries/real-estate",
-  },
-  {
-    name: "Fashion",
-    href: "/industries/fashion",
-  },
-  {
-    name: "Electronics & Gadgets",
-    href: "/industries/electronics-gadgets",
-  },
+  { name: "Apps & SaaS", href: "/industries/apps-saas" },
+  { name: "D2C Brands", href: "/industries/d2c-brands" },
+  { name: "Real Estate", href: "/industries/real-estate" },
+  { name: "Fashion", href: "/industries/fashion" },
+  { name: "Electronics & Gadgets", href: "/industries/electronics-gadgets" },
   {
     name: "Industrial & Manufacturing",
     href: "/industries/industrial-manufacturing",
   },
+  { name: "Corporate", href: "/industries/corporate" },
+  { name: "Healthcare", href: "/industries/healthcare" },
+  { name: "Education & EdTech", href: "/industries/education-edtech" },
+  { name: "Automotive", href: "/industries/automotive" },
+  { name: "Consumer Products", href: "/industries/consumer-products" },
+];
+
+const locations = [
   {
-    name: "Corporate",
-    href: "/industries/corporate",
+    name: "India",
+    href: "/locations/india",
+    cities: [
+      { name: "Hyderabad", href: "/locations/india/hyderabad" },
+      { name: "Mumbai", href: "/locations/india/mumbai" },
+      { name: "Bangalore", href: "/locations/india/bangalore" },
+      { name: "Chennai", href: "/locations/india/chennai" },
+      { name: "Delhi", href: "/locations/india/delhi" },
+      { name: "Pune", href: "/locations/india/pune" },
+      { name: "Kolkata", href: "/locations/india/kolkata" },
+      { name: "Ahmedabad", href: "/locations/india/ahmedabad" },
+      { name: "Jaipur", href: "/locations/india/jaipur" },
+      { name: "Lucknow", href: "/locations/india/lucknow" },
+      { name: "Chandigarh", href: "/locations/india/chandigarh" },
+      { name: "Indore", href: "/locations/india/indore" },
+      { name: "Nagpur", href: "/locations/india/nagpur" },
+      { name: "Kochi", href: "/locations/india/kochi" },
+      { name: "Coimbatore", href: "/locations/india/coimbatore" },
+      { name: "Surat", href: "/locations/india/surat" },
+      { name: "Visakhapatnam", href: "/locations/india/visakhapatnam" },
+      { name: "Bhopal", href: "/locations/india/bhopal" },
+      { name: "Vadodara", href: "/locations/india/vadodara" },
+      { name: "Noida", href: "/locations/india/noida" },
+      { name: "Gurugram", href: "/locations/india/gurugram" },
+    ],
   },
   {
-    name: "Healthcare",
-    href: "/industries/healthcare",
+    name: "USA",
+    href: "/locations/usa",
+    cities: [
+      { name: "New York", href: "/locations/usa/new-york" },
+      { name: "Los Angeles", href: "/locations/usa/los-angeles" },
+      { name: "Chicago", href: "/locations/usa/chicago" },
+      { name: "San Francisco", href: "/locations/usa/san-francisco" },
+      { name: "Miami", href: "/locations/usa/miami" },
+      { name: "Seattle", href: "/locations/usa/seattle" },
+      { name: "Austin", href: "/locations/usa/austin" },
+      { name: "Boston", href: "/locations/usa/boston" },
+      { name: "Dallas", href: "/locations/usa/dallas" },
+      { name: "Atlanta", href: "/locations/usa/atlanta" },
+      { name: "Houston", href: "/locations/usa/houston" },
+      { name: "Washington DC", href: "/locations/usa/washington-dc" },
+    ],
   },
   {
-    name: "Education & EdTech",
-    href: "/industries/education-edtech",
+    name: "United Kingdom",
+    href: "/locations/uk",
+    cities: [
+      { name: "London", href: "/locations/uk/london" },
+      { name: "Manchester", href: "/locations/uk/manchester" },
+      { name: "Birmingham", href: "/locations/uk/birmingham" },
+      { name: "Leeds", href: "/locations/uk/leeds" },
+      { name: "Glasgow", href: "/locations/uk/glasgow" },
+      { name: "Edinburgh", href: "/locations/uk/edinburgh" },
+      { name: "Bristol", href: "/locations/uk/bristol" },
+      { name: "Liverpool", href: "/locations/uk/liverpool" },
+    ],
   },
   {
-    name: "Automotive",
-    href: "/industries/automotive",
+    name: "Saudi Arabia",
+    href: "/locations/saudi-arabia",
+    cities: [
+      { name: "Riyadh", href: "/locations/saudi-arabia/riyadh" },
+      { name: "Jeddah", href: "/locations/saudi-arabia/jeddah" },
+      { name: "Dammam", href: "/locations/saudi-arabia/dammam" },
+      { name: "Mecca", href: "/locations/saudi-arabia/mecca" },
+      { name: "Medina", href: "/locations/saudi-arabia/medina" },
+      { name: "Khobar", href: "/locations/saudi-arabia/khobar" },
+    ],
   },
   {
-    name: "Consumer Products",
-    href: "/industries/consumer-products",
+    name: "UAE",
+    href: "/locations/uae",
+    cities: [
+      { name: "Dubai", href: "/locations/uae/dubai" },
+      { name: "Abu Dhabi", href: "/locations/uae/abu-dhabi" },
+      { name: "Sharjah", href: "/locations/uae/sharjah" },
+      { name: "Ajman", href: "/locations/uae/ajman" },
+    ],
+  },
+  {
+    name: "Canada",
+    href: "/locations/canada",
+    cities: [
+      { name: "Toronto", href: "/locations/canada/toronto" },
+      { name: "Vancouver", href: "/locations/canada/vancouver" },
+      { name: "Montreal", href: "/locations/canada/montreal" },
+      { name: "Calgary", href: "/locations/canada/calgary" },
+      { name: "Ottawa", href: "/locations/canada/ottawa" },
+    ],
+  },
+  {
+    name: "Australia",
+    href: "/locations/australia",
+    cities: [
+      { name: "Sydney", href: "/locations/australia/sydney" },
+      { name: "Melbourne", href: "/locations/australia/melbourne" },
+      { name: "Brisbane", href: "/locations/australia/brisbane" },
+      { name: "Perth", href: "/locations/australia/perth" },
+      { name: "Adelaide", href: "/locations/australia/adelaide" },
+    ],
+  },
+  {
+    name: "Singapore",
+    href: "/locations/singapore",
+    cities: [
+      { name: "Singapore City", href: "/locations/singapore/singapore-city" },
+    ],
+  },
+  {
+    name: "Germany",
+    href: "/locations/germany",
+    cities: [
+      { name: "Berlin", href: "/locations/germany/berlin" },
+      { name: "Munich", href: "/locations/germany/munich" },
+      { name: "Frankfurt", href: "/locations/germany/frankfurt" },
+      { name: "Hamburg", href: "/locations/germany/hamburg" },
+    ],
+  },
+  {
+    name: "France",
+    href: "/locations/france",
+    cities: [
+      { name: "Paris", href: "/locations/france/paris" },
+      { name: "Lyon", href: "/locations/france/lyon" },
+      { name: "Marseille", href: "/locations/france/marseille" },
+    ],
+  },
+  {
+    name: "Netherlands",
+    href: "/locations/netherlands",
+    cities: [
+      { name: "Amsterdam", href: "/locations/netherlands/amsterdam" },
+      { name: "Rotterdam", href: "/locations/netherlands/rotterdam" },
+    ],
+  },
+  {
+    name: "New Zealand",
+    href: "/locations/new-zealand",
+    cities: [
+      { name: "Auckland", href: "/locations/new-zealand/auckland" },
+      { name: "Wellington", href: "/locations/new-zealand/wellington" },
+    ],
+  },
+  {
+    name: "South Africa",
+    href: "/locations/south-africa",
+    cities: [
+      { name: "Johannesburg", href: "/locations/south-africa/johannesburg" },
+      { name: "Cape Town", href: "/locations/south-africa/cape-town" },
+      { name: "Durban", href: "/locations/south-africa/durban" },
+    ],
+  },
+  {
+    name: "Qatar",
+    href: "/locations/qatar",
+    cities: [{ name: "Doha", href: "/locations/qatar/doha" }],
+  },
+  {
+    name: "Kuwait",
+    href: "/locations/kuwait",
+    cities: [{ name: "Kuwait City", href: "/locations/kuwait/kuwait-city" }],
+  },
+  {
+    name: "Oman",
+    href: "/locations/oman",
+    cities: [{ name: "Muscat", href: "/locations/oman/muscat" }],
+  },
+  {
+    name: "Bahrain",
+    href: "/locations/bahrain",
+    cities: [{ name: "Manama", href: "/locations/bahrain/manama" }],
   },
 ];
 
@@ -134,12 +242,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [mobileServices, setMobileServices] = useState(false);
   const [mobileIndustries, setMobileIndustries] = useState(false);
+  const [mobileLocations, setMobileLocations] = useState(false);
+  const [openCountry, setOpenCountry] = useState(null);
   const [desktopMenu, setDesktopMenu] = useState(null);
 
   const closeMobileMenu = () => {
     setOpen(false);
     setMobileServices(false);
     setMobileIndustries(false);
+    setMobileLocations(false);
+    setOpenCountry(null);
   };
 
   return (
@@ -170,7 +282,6 @@ export default function Navbar() {
 
         {/* DESKTOP NAVIGATION */}
         <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-white text-[14px] lg:text-[16px] font-medium">
-          {/* HOME */}
           <li className="relative group">
             <Link
               href="/"
@@ -178,11 +289,9 @@ export default function Navbar() {
             >
               Home
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
 
-          {/* ABOUT */}
           <li className="relative group">
             <Link
               href="/about"
@@ -190,11 +299,9 @@ export default function Navbar() {
             >
               About
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
 
-          {/* PORTFOLIO */}
           <li className="relative group">
             <Link
               href="/portfolio"
@@ -202,7 +309,6 @@ export default function Navbar() {
             >
               Portfolio
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
 
@@ -223,21 +329,10 @@ export default function Navbar() {
             <AnimatePresence>
               {desktopMenu === "services" && (
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 10,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: 10,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                  }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
                   className="absolute top-8 left-1/2 -translate-x-1/2 w-[320px] bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
                 >
                   <Link
@@ -246,7 +341,6 @@ export default function Navbar() {
                   >
                     All Services
                   </Link>
-
                   {services.map((service) => (
                     <Link
                       key={service.href}
@@ -278,21 +372,10 @@ export default function Navbar() {
             <AnimatePresence>
               {desktopMenu === "industries" && (
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    y: 10,
-                  }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                  }}
-                  exit={{
-                    opacity: 0,
-                    y: 10,
-                  }}
-                  transition={{
-                    duration: 0.2,
-                  }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
                   className="absolute top-8 left-1/2 -translate-x-1/2 w-[330px] bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
                 >
                   <Link
@@ -301,7 +384,6 @@ export default function Navbar() {
                   >
                     All Industries
                   </Link>
-
                   {industries.map((industry) => (
                     <Link
                       key={industry.href}
@@ -316,7 +398,61 @@ export default function Navbar() {
             </AnimatePresence>
           </li>
 
-          {/* CASE STUDIES */}
+          {/* LOCATIONS */}
+          <li
+            className="relative"
+            onMouseEnter={() => setDesktopMenu("locations")}
+            onMouseLeave={() => setDesktopMenu(null)}
+          >
+            <Link
+              href="/locations"
+              className="relative group transition duration-300 hover:text-[#CCFF00] whitespace-nowrap"
+            >
+              Locations
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            </Link>
+
+            <AnimatePresence>
+              {desktopMenu === "locations" && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[340px] max-h-[75vh] overflow-y-auto bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
+                >
+                  <Link
+                    href="/locations"
+                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-[#CCFF00] hover:bg-white/5"
+                  >
+                    All Global Locations →
+                  </Link>
+                  {locations.map((country) => (
+                    <div key={country.href} className="mb-2">
+                      <Link
+                        href={country.href}
+                        className="block px-4 py-2 text-sm font-bold text-[#CCFF00] hover:bg-white/5 rounded-lg"
+                      >
+                        {country.name}
+                      </Link>
+                      <div className="grid grid-cols-2 gap-1 px-3">
+                        {country.cities.map((city) => (
+                          <Link
+                            key={city.href}
+                            href={city.href}
+                            className="px-2 py-2 text-xs text-gray-300 hover:text-[#CCFF00] hover:bg-white/5 rounded-md transition"
+                          >
+                            {city.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </li>
+
           <li className="relative group">
             <Link
               href="/case-studies"
@@ -324,11 +460,9 @@ export default function Navbar() {
             >
               Case Studies
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
 
-          {/* PROCESS */}
           <li className="relative group">
             <Link
               href="/process"
@@ -336,11 +470,9 @@ export default function Navbar() {
             >
               Process
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
 
-          {/* BLOG */}
           <li className="relative group">
             <Link
               href="/blog"
@@ -348,18 +480,12 @@ export default function Navbar() {
             >
               Blog
             </Link>
-
             <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
           </li>
         </ul>
 
         {/* DESKTOP CTA */}
-        <motion.div
-          whileHover={{
-            scale: 1.05,
-          }}
-          className="shrink-0"
-        >
+        <motion.div whileHover={{ scale: 1.05 }} className="shrink-0">
           <Link
             href="/quote"
             className="hidden lg:flex h-[40px] px-[16px] items-center justify-center rounded-[8px] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black text-[13px] font-semibold shadow-md hover:shadow-[0_0_15px_#CCFF00] transition-all whitespace-nowrap"
@@ -384,25 +510,13 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{
-              opacity: 0,
-              y: -20,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              y: -20,
-            }}
-            transition={{
-              duration: 0.3,
-            }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
             className="absolute top-[72px] left-0 w-full bg-black/95 backdrop-blur-md border-t border-white/10 md:hidden max-h-[calc(100vh-72px)] overflow-y-auto"
           >
             <ul className="flex flex-col items-center gap-6 p-8 text-white text-lg">
-              {/* HOME */}
               <li>
                 <Link
                   href="/"
@@ -412,8 +526,6 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
-
-              {/* ABOUT */}
               <li>
                 <Link
                   href="/about"
@@ -423,8 +535,6 @@ export default function Navbar() {
                   About
                 </Link>
               </li>
-
-              {/* PORTFOLIO */}
               <li>
                 <Link
                   href="/portfolio"
@@ -445,25 +555,13 @@ export default function Navbar() {
                 >
                   Services
                 </button>
-
                 <AnimatePresence>
                   {mobileServices && (
                     <motion.div
-                      initial={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                        opacity: 1,
-                      }}
-                      exit={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      transition={{
-                        duration: 0.25,
-                      }}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
                       <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
@@ -474,7 +572,6 @@ export default function Navbar() {
                         >
                           All Services
                         </Link>
-
                         {services.map((service) => (
                           <Link
                             key={service.href}
@@ -501,25 +598,13 @@ export default function Navbar() {
                 >
                   Industries
                 </button>
-
                 <AnimatePresence>
                   {mobileIndustries && (
                     <motion.div
-                      initial={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                        opacity: 1,
-                      }}
-                      exit={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      transition={{
-                        duration: 0.25,
-                      }}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
                       <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
@@ -530,7 +615,6 @@ export default function Navbar() {
                         >
                           All Industries
                         </Link>
-
                         {industries.map((industry) => (
                           <Link
                             key={industry.href}
@@ -547,7 +631,94 @@ export default function Navbar() {
                 </AnimatePresence>
               </li>
 
-              {/* CASE STUDIES */}
+              {/* ✅ LOCATIONS MOBILE DROPDOWN — NEWLY ADDED */}
+              <li className="w-full max-w-[320px]">
+                <button
+                  type="button"
+                  onClick={() => setMobileLocations(!mobileLocations)}
+                  className="w-full flex items-center justify-center py-1 hover:text-[#CCFF00] transition"
+                  aria-expanded={mobileLocations}
+                >
+                  Locations
+                </button>
+                <AnimatePresence>
+                  {mobileLocations && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
+                        <Link
+                          href="/locations"
+                          onClick={closeMobileMenu}
+                          className="text-center text-sm font-semibold text-[#CCFF00] py-2"
+                        >
+                          All Global Locations →
+                        </Link>
+                        {locations.map((country) => (
+                          <div
+                            key={country.href}
+                            className="border-b border-white/5 last:border-none pb-1"
+                          >
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setOpenCountry(
+                                  openCountry === country.name
+                                    ? null
+                                    : country.name,
+                                )
+                              }
+                              className="w-full flex items-center justify-between px-3 py-2 text-sm text-white hover:text-[#CCFF00] transition"
+                              aria-expanded={openCountry === country.name}
+                            >
+                              <span>{country.name}</span>
+                              <span className="text-[#CCFF00] text-xs">
+                                {openCountry === country.name ? "−" : "+"}
+                              </span>
+                            </button>
+                            <AnimatePresence>
+                              {openCountry === country.name && (
+                                <motion.div
+                                  initial={{ height: 0, opacity: 0 }}
+                                  animate={{ height: "auto", opacity: 1 }}
+                                  exit={{ height: 0, opacity: 0 }}
+                                  transition={{ duration: 0.2 }}
+                                  className="overflow-hidden"
+                                >
+                                  <div className="grid grid-cols-2 gap-1 px-2 pb-2">
+                                    <Link
+                                      href={country.href}
+                                      onClick={closeMobileMenu}
+                                      className="col-span-2 text-center text-xs font-semibold text-[#CCFF00] py-1.5 rounded-md hover:bg-white/5"
+                                    >
+                                      All {country.name} Locations
+                                    </Link>
+                                    {country.cities.map((city) => (
+                                      <Link
+                                        key={city.href}
+                                        href={city.href}
+                                        onClick={closeMobileMenu}
+                                        className="text-center text-xs text-gray-300 py-1.5 rounded-md hover:text-[#CCFF00] hover:bg-white/5 transition"
+                                      >
+                                        {city.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+
               <li>
                 <Link
                   href="/case-studies"
@@ -557,8 +728,6 @@ export default function Navbar() {
                   Case Studies
                 </Link>
               </li>
-
-              {/* PROCESS */}
               <li>
                 <Link
                   href="/process"
@@ -568,8 +737,6 @@ export default function Navbar() {
                   Process
                 </Link>
               </li>
-
-              {/* BLOG */}
               <li>
                 <Link
                   href="/blog"
@@ -580,7 +747,6 @@ export default function Navbar() {
                 </Link>
               </li>
 
-              {/* MOBILE CTA */}
               <li className="w-full max-w-[260px] pt-2">
                 <Link
                   href="/quote"
