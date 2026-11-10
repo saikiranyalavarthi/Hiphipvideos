@@ -269,13 +269,27 @@ export default function CommercialVideoProductionPage() {
       </nav>
 
       {/* HERO */}
-      <section className="relative overflow-hidden py-24 sm:py-28 md:py-36">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-[#CCFF00]/5 blur-[150px]"
-        />
 
-        <div className="relative mx-auto max-w-[1440px] px-6 text-center lg:px-12">
+      {/* HERO WITH BACKGROUND VIDEO */}
+      <section className="relative isolate min-h-[650px] overflow-hidden flex items-center justify-center">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/commercial-banner-poster.jpg"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        >
+          <source src="/videos/Commercial video.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 -z-10 bg-black/65" />
+
+        {/* Content */}
+        <div className="relative mx-auto max-w-[1440px] px-6 py-28 text-center lg:px-12">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
             Commercial Video Production
           </p>
@@ -285,24 +299,23 @@ export default function CommercialVideoProductionPage() {
             <span className="text-[#CCFF00]">Sell the Message</span>
           </h1>
 
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
             HipHipVideos produces commercial videos and advertisements for
             brands in Hyderabad and across India — built for TV, YouTube, Meta
-            and every screen your campaign runs on, from concept to final
-            delivery.
+            and every screen your campaign runs on.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center rounded-lg bg-[#CCFF00] px-7 py-3 font-bold text-black transition hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
+              className="inline-flex justify-center rounded-lg bg-[#CCFF00] px-7 py-3 font-bold text-black transition hover:-translate-y-1"
             >
               Get a Free Discovery Call
             </Link>
 
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center rounded-lg border border-white/15 px-7 py-3 font-semibold text-white transition hover:border-[#CCFF00] hover:text-[#CCFF00]"
+              className="inline-flex justify-center rounded-lg border border-white/30 px-7 py-3 font-semibold text-white transition hover:border-[#CCFF00] hover:text-[#CCFF00]"
             >
               View Our Portfolio
             </Link>

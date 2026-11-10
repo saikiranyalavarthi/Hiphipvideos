@@ -167,13 +167,27 @@ export default function ExplainerVideosPage() {
   return (
     <main className="bg-black text-white">
       {/* HERO */}
-      <section className="relative overflow-hidden py-24 sm:py-28 md:py-36">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-[#CCFF00]/5 blur-[150px]"
-        />
 
-        <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
+      {/* HERO WITH BACKGROUND VIDEO */}
+      <section className="relative isolate flex min-h-[650px] items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/explainer-banner-poster.jpg"
+          className="absolute inset-0 -z-20 h-full w-full object-cover"
+        >
+          <source src="/videos/explainer-banner.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 -z-10 bg-black/65" />
+
+        {/* Hero Content */}
+        <div className="relative mx-auto w-full max-w-[1440px] px-6 py-28 lg:px-12">
           <div className="mx-auto max-w-5xl text-center">
             <p className="mb-5 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
               Explainer Video Production
@@ -184,7 +198,7 @@ export default function ExplainerVideosPage() {
               <span className="text-[#CCFF00]">Make Complex Ideas Simple</span>
             </h1>
 
-            <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
+            <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-white/80 sm:text-lg sm:leading-8">
               HipHipVideos creates engaging explainer videos that help
               businesses communicate products, services, technology and complex
               ideas clearly. From animated explainers and SaaS videos to product
@@ -192,7 +206,7 @@ export default function ExplainerVideosPage() {
               easy-to-understand visual stories.
             </p>
 
-            <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-white/40 sm:text-base">
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-white/70 sm:text-base">
               Explainer video production in Hyderabad and across India.
             </p>
 
@@ -206,7 +220,7 @@ export default function ExplainerVideosPage() {
 
               <Link
                 href="/portfolio"
-                className="inline-flex items-center justify-center rounded-lg border border-white/15 px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-[#CCFF00] hover:text-[#CCFF00]"
+                className="inline-flex items-center justify-center rounded-lg border border-white/30 px-7 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-[#CCFF00] hover:text-[#CCFF00]"
               >
                 View Our Portfolio
               </Link>
