@@ -13,7 +13,6 @@
 
 // return ( <section className="bg-black flex flex-col justify-center items-center gap-[10px]">
 
-
 //   {/* CONTAINER */}
 //   <div className="w-full max-w-[1440px] px-6 lg:px-12 py-[60px] flex flex-col items-center gap-[16px]">
 
@@ -44,17 +43,13 @@
 
 // </section>
 
-
 // );
 // }
-
-
 
 "use client";
 import { motion } from "framer-motion";
 
 export default function ClientsSection() {
-
   const clients = [
     "/clients/img1.png",
     "/clients/img2.png",
@@ -66,10 +61,8 @@ export default function ClientsSection() {
 
   return (
     <section className="bg-black flex flex-col justify-center items-center overflow-hidden">
-
       {/* CONTAINER */}
       <div className="w-full max-w-[1440px] px-6 lg:px-12 py-[50px] md:py-[60px] flex flex-col items-center gap-[16px]">
-
         {/* TITLE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -88,7 +81,6 @@ export default function ClientsSection() {
 
         {/* LOGOS */}
         <div className="w-full flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-10 pt-6">
-
           {clients.map((logo, index) => (
             <motion.div
               key={index}
@@ -106,11 +98,8 @@ export default function ClientsSection() {
               />
             </motion.div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
