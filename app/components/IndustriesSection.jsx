@@ -1,233 +1,3 @@
-// "use client";
-
-// import { useState } from "react";
-
-// export default function IndustriesSection() {
-
-// const industries = [
-// "Featured","Products","Gadgets","Automobiles","Real Estate",
-// "Fashion","Industrial","Corporate","Explainers","Documentaries","Tech"
-// ];
-
-// const projects = [
-// { title:"Open Cinema", length:"60 Seconds", industry:"Explainers", type:"Explainer Video Production", image:"/image1 (2).jpeg"},
-// { title:"App Launch", length:"45 Seconds", industry:"Tech", type:"Product Video", image:"/image1 (3).jpeg"},
-// { title:"Healthcare Story", length:"90 Seconds", industry:"Corporate", type:"Brand Film", image:"/image1 (4).jpeg"},
-// { title:"Education Platform", length:"60 Seconds", industry:"Products", type:"Explainer Video", image:"/image1 (5).jpeg"},
-// { title:"Startup Pitch", length:"30 Seconds", industry:"Gadgets", type:"Promo Video", image:"/image1 (6).jpeg"},
-// { title:"Biotech Visual", length:"75 Seconds", industry:"Industrial", type:"Animated Video", image:"/image1 (7).jpeg"},
-// { title:"Finance Campaign", length:"45 Seconds", industry:"Real Estate", type:"Ad Film", image:"/image1 (8).jpeg"},
-// { title:"Corporate Film", length:"2 Minutes", industry:"Corporate", type:"Company Profile", image:"/image1 (9).jpeg"},
-// { title:"Creative Motion", length:"50 Seconds", industry:"Featured", type:"Motion Graphics", image:"/image1 (10).jpeg"},
-// ];
-
-// const [activeIndustry, setActiveIndustry] = useState("Featured");
-
-// const filteredProjects =
-// activeIndustry === "Featured"
-// ? projects
-// : projects.filter((item) => item.industry === activeIndustry);
-
-// return ( <section className="bg-black text-white flex justify-center">
-
-//   {/* SECTION CONTAINER */}
-//   <div className="w-full max-w-[1440px] px-6 lg:px-12 py-[48px] flex flex-col items-center gap-[10px]">
-
-//     {/* HEADER */}
-//     <div className="w-full">
-//       <h2 className="text-[28px] md:text-[32px] font-semibold leading-[40px] tracking-[-0.16px]">
-//         See what we have made
-//       </h2>
-//     </div>
-
-//     {/* FILTER BUTTONS */}
-//     <div className="w-full flex flex-wrap gap-[12px] mb-[40px] py-2">
-//       {industries.map((item,index)=>(
-//         <button
-//           key={index}
-//           onClick={()=>setActiveIndustry(item)}
-//           className={`px-[18px] py-[12px] rounded-[12px] border text-[14px] transition
-//           ${
-//             activeIndustry === item
-//             ? "bg-[#CCFF00] text-black border-[#CCFF00]"
-//             : "border-[#757575] text-white hover:border-[#CCFF00]"
-//           }`}
-//         >
-//           {item}
-//         </button>
-//       ))}
-//     </div>
-
-//     {/* GRID */}
-//     <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
-
-//       {filteredProjects.map((item,index)=>(
-//         <div
-//           key={index}
-//           className="relative w-full h-[220px] md:h-[250px] lg:h-[261px] rounded-[12px] overflow-hidden group"
-//         >
-
-//           {/* IMAGE */}
-//           <img
-//             src={item.image}
-//             alt={item.title}
-//             className="w-full h-full object-cover"
-//           />
-
-//           {/* OVERLAY */}
-//           <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition"></div>
-
-//           {/* INFO */}
-//           <div className="absolute inset-0 flex flex-col justify-center px-6 opacity-0 group-hover:opacity-100 transition">
-//             <h3 className="text-[18px] font-semibold mb-2">{item.title}</h3>
-//             <p className="text-[14px]">Length: {item.length}</p>
-//             <p className="text-[14px]">Industry: {item.industry}</p>
-//             <p className="text-[14px]">{item.type}</p>
-//           </div>
-
-//           {/* PLAY BUTTON */}
-//           <div className="absolute inset-0 flex items-center justify-center">
-//             <div className="w-[100px] h-[52px] rounded-[999px] bg-[#CCFF00]/90 flex items-center justify-center text-black font-bold">
-//               ▶
-//             </div>
-//           </div>
-
-//         </div>
-//       ))}
-
-//     </div>
-
-//   </div>
-
-// </section>
-
-// );
-// }
-
-// "use client";
-
-// import { useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-
-// export default function IndustriesSection() {
-
-//   const industries = [
-//     "Featured","Products","Gadgets","Automobiles","Real Estate",
-//     "Fashion","Industrial","Corporate","Explainers","Documentaries","Tech"
-//   ];
-
-//   const projects = [
-//     { title:"Open Cinema", length:"60 Seconds", industry:"Explainers", type:"Explainer Video Production", image:"/image1 (2).jpeg"},
-//     { title:"App Launch", length:"45 Seconds", industry:"Tech", type:"Product Video", image:"/image1 (3).jpeg"},
-//     { title:"Healthcare Story", length:"90 Seconds", industry:"Corporate", type:"Brand Film", image:"/image1 (4).jpeg"},
-//     { title:"Education Platform", length:"60 Seconds", industry:"Products", type:"Explainer Video", image:"/image1 (5).jpeg"},
-//     { title:"Startup Pitch", length:"30 Seconds", industry:"Gadgets", type:"Promo Video", image:"/image1 (6).jpeg"},
-//     { title:"Biotech Visual", length:"75 Seconds", industry:"Industrial", type:"Animated Video", image:"/image1 (7).jpeg"},
-//     { title:"Finance Campaign", length:"45 Seconds", industry:"Real Estate", type:"Ad Film", image:"/image1 (8).jpeg"},
-//     { title:"Corporate Film", length:"2 Minutes", industry:"Corporate", type:"Company Profile", image:"/image1 (9).jpeg"},
-//     { title:"Creative Motion", length:"50 Seconds", industry:"Featured", type:"Motion Graphics", image:"/image1 (10).jpeg"},
-//   ];
-
-//   const [activeIndustry, setActiveIndustry] = useState("Featured");
-
-//   const filteredProjects =
-//     activeIndustry === "Featured"
-//       ? projects
-//       : projects.filter((item) => item.industry === activeIndustry);
-
-//   return (
-//     <section className="bg-black text-white flex justify-center overflow-hidden">
-
-//       <div className="w-full max-w-[1440px] px-6 lg:px-12 py-[40px] md:py-[48px] flex flex-col items-center">
-
-//         {/* HEADER */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 30 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           viewport={{ once: true }}
-//           className="w-full mb-[20px]"
-//         >
-//           <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-semibold leading-[36px] md:leading-[40px]">
-//             See what we have made
-//           </h2>
-
-//           <div className="w-[60px] h-[3px] bg-gradient-to-r from-[#CCFF00] to-transparent mt-2 rounded-full"></div>
-//         </motion.div>
-
-//         {/* FILTERS */}
-//         <div className="w-full flex flex-wrap gap-[10px] md:gap-[12px] mb-[30px] md:mb-[40px]">
-
-//           {industries.map((item,index)=>(
-//             <motion.button
-//               key={index}
-//               onClick={()=>setActiveIndustry(item)}
-//               whileTap={{ scale: 0.95 }}
-//               className={`px-[16px] py-[10px] rounded-[10px] border text-[13px] md:text-[14px] transition-all
-//               ${
-//                 activeIndustry === item
-//                 ? "bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black border-[#CCFF00] shadow-[0_0_10px_#CCFF00]"
-//                 : "border-[#757575] text-white hover:border-[#CCFF00]"
-//               }`}
-//             >
-//               {item}
-//             </motion.button>
-//           ))}
-
-//         </div>
-
-//         {/* GRID */}
-//         <motion.div layout className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[24px]">
-
-//           <AnimatePresence>
-//             {filteredProjects.map((item,index)=>(
-//               <motion.div
-//                 key={item.title}
-//                 layout
-//                 initial={{ opacity: 0, scale: 0.9 }}
-//                 animate={{ opacity: 1, scale: 1 }}
-//                 exit={{ opacity: 0, scale: 0.9 }}
-//                 transition={{ duration: 0.4 }}
-//                 whileHover={{ y: -6 }}
-//                 className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] lg:h-[260px] rounded-[12px] overflow-hidden group"
-//               >
-
-//                 {/* IMAGE */}
-//                 <img
-//                   src={item.image}
-//                   alt={item.title}
-//                   className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-//                 />
-
-//                 {/* OVERLAY */}
-//                 <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-//                 {/* INFO */}
-//                 <div className="absolute inset-0 flex flex-col justify-center px-6 opacity-0 group-hover:opacity-100 transition duration-300">
-//                   <h3 className="text-[16px] md:text-[18px] font-semibold mb-2">{item.title}</h3>
-//                   <p className="text-[13px] md:text-[14px]">Length: {item.length}</p>
-//                   <p className="text-[13px] md:text-[14px]">Industry: {item.industry}</p>
-//                   <p className="text-[13px] md:text-[14px]">{item.type}</p>
-//                 </div>
-
-//                 {/* PLAY BUTTON */}
-//                 <div className="absolute inset-0 flex items-center justify-center">
-//                   <div className="w-[90px] h-[48px] rounded-full bg-[#CCFF00]/90 flex items-center justify-center text-black font-bold animate-pulse">
-//                     ▶
-//                   </div>
-//                 </div>
-
-//               </motion.div>
-//             ))}
-//           </AnimatePresence>
-
-//         </motion.div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import { useState } from "react";
@@ -249,69 +19,85 @@ export default function IndustriesSection() {
     "Tech",
   ];
 
+  // Replace these sample video filenames with your actual MP4 filenames.
+
   const projects = [
     {
-      title: "Open Cinema",
-      length: "60 Seconds",
-      industry: "Explainers",
-      type: "Explainer Video Production",
-      image: "/image1 (2).jpeg",
-    },
-    {
-      title: "App Launch",
-      length: "45 Seconds",
-      industry: "Tech",
-      type: "Product Video Production",
-      image: "/image1 (3).jpeg",
-    },
-    {
-      title: "Healthcare Story",
-      length: "90 Seconds",
-      industry: "Corporate",
-      type: "Corporate Brand Film",
-      image: "/image1 (4).jpeg",
-    },
-    {
-      title: "Education Platform",
-      length: "60 Seconds",
+      title: "BlueStone",
+      length: "Duration not specified",
       industry: "Products",
-      type: "Explainer Video",
-      image: "/image1 (5).jpeg",
+      type: "Jewellery Brand Commercial",
+      video: "/videos/BlueStone.mp4",
     },
     {
-      title: "Startup Pitch",
-      length: "30 Seconds",
-      industry: "Gadgets",
-      type: "Promotional Video",
-      image: "/image1 (6).jpeg",
+      title: "Borosil",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Home & Kitchen Product Video",
+      video: "/videos/borosil.mp4",
     },
     {
-      title: "Biotech Visual",
-      length: "75 Seconds",
-      industry: "Industrial",
-      type: "Animated Video",
-      image: "/image1 (7).jpeg",
+      title: "FabIndia",
+      length: "Duration not specified",
+      industry: "Fashion",
+      type: "Fashion & Lifestyle Film",
+      video: "/videos/Fab India.mp4",
     },
     {
-      title: "Finance Campaign",
-      length: "45 Seconds",
-      industry: "Real Estate",
-      type: "Advertising Film",
-      image: "/image1 (8).jpeg",
+      title: "Hidesign",
+      length: "Duration not specified",
+      industry: "Fashion",
+      type: "Luxury Fashion Commercial",
+      video: "/videos/Hidesign.mp4",
     },
     {
-      title: "Corporate Film",
-      length: "2 Minutes",
-      industry: "Corporate",
-      type: "Company Profile Video",
-      image: "/image1 (9).jpeg",
+      title: "Neeman's",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Footwear Brand Commercial",
+      video: "/videos/neeman.mp4",
     },
     {
-      title: "Creative Motion",
-      length: "50 Seconds",
-      industry: "Featured",
-      type: "Motion Graphics",
-      image: "/image1 (10).jpeg",
+      title: "Sleepy Owl",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Coffee Brand Commercial",
+      video: "/videos/sleepyowl.mp4",
+    },
+    {
+      title: "Slurrp Farm",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Food & Nutrition Commercial",
+      video: "/videos/Slurrp Farm.mp4",
+    },
+    {
+      title: "Supertails",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Pet Care Brand Commercial",
+      video: "/videos/Supertails.mp4",
+    },
+    {
+      title: "The Summer House",
+      length: "Duration not specified",
+      industry: "Fashion",
+      type: "Fashion & Lifestyle Commercial",
+      video: "/videos/The Summer House.mp4",
+    },
+    {
+      title: "Vaya",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Lifestyle Product Commercial",
+      video: "/videos/vaya.mp4",
+    },
+    {
+      title: "Yoga Bar",
+      length: "Duration not specified",
+      industry: "Products",
+      type: "Food & Nutrition Commercial",
+      video: "/videos/Yoga Bar .mp4",
     },
   ];
 
@@ -325,53 +111,40 @@ export default function IndustriesSection() {
   return (
     <section
       aria-labelledby="portfolio-heading"
-      className="bg-black text-white flex justify-center overflow-hidden"
+      className="flex justify-center overflow-hidden bg-black text-white"
     >
-      <div className="w-full max-w-[1440px] px-6 lg:px-12 py-[40px] md:py-[48px] flex flex-col items-center">
+      <div className="flex w-full max-w-[1440px] flex-col items-center px-6 py-[40px] md:px-12 md:py-[48px]">
         {/* HEADER */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="w-full mb-[20px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-[20px] w-full"
         >
-          {/* SEO LABEL */}
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] text-[#CCFF00] mb-3">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#CCFF00] sm:text-sm">
             Our Work
           </p>
 
-          {/* SEO H2 */}
           <h2
             id="portfolio-heading"
-            className="text-[24px] sm:text-[28px] md:text-[32px] font-semibold leading-[36px] md:leading-[40px]"
+            className="text-[24px] font-semibold leading-[36px] sm:text-[28px] md:text-[32px] md:leading-[40px]"
           >
             Video Production Portfolio
           </h2>
 
-          <div className="w-[60px] h-[3px] bg-gradient-to-r from-[#CCFF00] to-transparent mt-2 rounded-full"></div>
+          <div className="mt-2 h-[3px] w-[60px] rounded-full bg-gradient-to-r from-[#CCFF00] to-transparent" />
 
-          {/* SEO SUPPORTING TEXT */}
-          <p className="mt-5 max-w-3xl text-[14px] sm:text-[16px] leading-6 sm:leading-7 text-white/60">
+          <p className="mt-5 max-w-3xl text-[14px] leading-6 text-white/60 sm:text-[16px] sm:leading-7">
             Explore selected commercial videos, product videos, corporate films,
             explainer videos, promotional films, motion graphics and branded
             content created by HipHipVideos for businesses and brands.
           </p>
         </motion.div>
 
-        {/* FILTERS */}
+        {/* CATEGORY FILTERS */}
         <div
-          className="w-full flex flex-wrap gap-[10px] md:gap-[12px] mb-[30px] md:mb-[40px]"
+          className="mb-[30px] flex w-full flex-wrap gap-[10px] md:mb-[40px] md:gap-[12px]"
           role="tablist"
           aria-label="Filter video portfolio by category"
         >
@@ -380,14 +153,12 @@ export default function IndustriesSection() {
               key={index}
               type="button"
               onClick={() => setActiveIndustry(item)}
-              whileTap={{
-                scale: 0.95,
-              }}
+              whileTap={{ scale: 0.95 }}
               role="tab"
               aria-selected={activeIndustry === item}
-              className={`px-[16px] py-[10px] rounded-[10px] border text-[13px] md:text-[14px] transition-all ${
+              className={`rounded-[10px] border px-[16px] py-[10px] text-[13px] transition-all md:text-[14px] ${
                 activeIndustry === item
-                  ? "bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black border-[#CCFF00] shadow-[0_0_10px_#CCFF00]"
+                  ? "border-[#CCFF00] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black shadow-[0_0_10px_#CCFF00]"
                   : "border-[#757575] text-white hover:border-[#CCFF00]"
               }`}
             >
@@ -396,69 +167,57 @@ export default function IndustriesSection() {
           ))}
         </div>
 
-        {/* GRID */}
+        {/* VIDEO GRID */}
         <motion.div
           layout
-          className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[24px]"
+          className="grid w-full grid-cols-1 gap-[20px] sm:grid-cols-2 md:gap-[24px] lg:grid-cols-3"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((item) => (
               <motion.div
                 key={item.title}
                 layout
-                initial={{
-                  opacity: 0,
-                  scale: 0.9,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                exit={{
-                  opacity: 0,
-                  scale: 0.9,
-                }}
-                transition={{
-                  duration: 0.4,
-                }}
-                whileHover={{
-                  y: -6,
-                }}
-                className="relative w-full h-[200px] sm:h-[220px] md:h-[250px] lg:h-[260px] rounded-[12px] overflow-hidden group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.4 }}
+                whileHover={{ y: -6 }}
+                className="group relative w-full overflow-hidden rounded-[12px] border border-white/10 bg-[#111] transition-all duration-300 hover:border-[#CCFF00]/50"
               >
-                {/* IMAGE */}
-                <img
-                  src={item.image}
-                  alt={`${item.title} - ${item.type} by HipHipVideos`}
-                  loading="lazy"
-                  className="w-full h-full object-cover transition duration-500 group-hover:scale-110"
-                />
+                {/* VIDEO PLAYER */}
+                <div className="relative aspect-video w-full overflow-hidden bg-black">
+                  <video
+                    src={item.video}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="h-full w-full object-cover"
+                    aria-label={`${item.title} - ${item.type}`}
+                  >
+                    Your browser does not support HTML video.
+                  </video>
 
-                {/* OVERLAY */}
-                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition duration-300"></div>
-
-                {/* INFO */}
-                <div className="absolute inset-0 flex flex-col justify-center px-6 opacity-0 group-hover:opacity-100 transition duration-300">
-                  <h3 className="text-[16px] md:text-[18px] font-semibold mb-2">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-[13px] md:text-[14px]">
-                    Length: {item.length}
-                  </p>
-
-                  <p className="text-[13px] md:text-[14px]">
-                    Industry: {item.industry}
-                  </p>
-
-                  <p className="text-[13px] md:text-[14px]">{item.type}</p>
+                  {/* CATEGORY LABEL */}
+                  <div className="pointer-events-none absolute left-3 top-3 rounded-full border border-[#CCFF00]/40 bg-black/75 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#CCFF00] sm:text-xs">
+                    {item.industry}
+                  </div>
                 </div>
 
-                {/* PLAY BUTTON */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <div className="w-[90px] h-[48px] rounded-full bg-[#CCFF00]/90 flex items-center justify-center text-black font-bold animate-pulse">
-                    ▶
+                {/* VIDEO DETAILS */}
+                <div className="p-4 sm:p-5">
+                  <div className="mb-2 flex items-start justify-between gap-3">
+                    <h3 className="text-[16px] font-semibold text-white transition-colors group-hover:text-[#CCFF00] md:text-[18px]">
+                      {item.title}
+                    </h3>
+
+                    <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-[10px] text-white/60 sm:text-xs">
+                      {item.length}
+                    </span>
                   </div>
+
+                  <p className="text-[13px] leading-6 text-white/50 sm:text-[14px]">
+                    {item.type}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -467,25 +226,15 @@ export default function IndustriesSection() {
 
         {/* PORTFOLIO CTA */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          viewport={{
-            once: true,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
           className="mt-[35px] md:mt-[45px]"
         >
           <Link
             href="/portfolio"
-            className="inline-flex items-center justify-center rounded-[8px] border border-[#CCFF00]/40 px-6 py-3 text-sm md:text-base font-semibold text-[#CCFF00] transition-all duration-300 hover:bg-[#CCFF00] hover:text-black"
+            className="inline-flex items-center justify-center rounded-[8px] border border-[#CCFF00]/40 px-6 py-3 text-sm font-semibold text-[#CCFF00] transition-all duration-300 hover:bg-[#CCFF00] hover:text-black md:text-base"
           >
             View Full Video Portfolio →
           </Link>
