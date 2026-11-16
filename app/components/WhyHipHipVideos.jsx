@@ -54,7 +54,7 @@ export default function WhyHipHipVideos() {
         className="pointer-events-none absolute right-[-180px] top-1/3 h-[500px] w-[500px] rounded-full bg-[#CCFF00]/5 blur-[150px]"
       />
 
-      <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+      <div className="relative mx-auto w-full max-w-360 px-6 lg:px-12">
         {/* HEADER */}
         <motion.div
           initial={{
