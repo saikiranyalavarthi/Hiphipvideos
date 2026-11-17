@@ -265,18 +265,21 @@ export default function Navbar() {
       {/* CONTAINER */}
       <div className="flex w-full max-w-[1440px] h-[72px] md:h-[80px] items-center justify-between px-6 lg:px-12">
         {/* LOGO */}
+
         <Link
           href="/"
-          className="flex items-center shrink-0"
+          className="flex shrink-0 items-center"
           aria-label="HipHipVideos - Video Production Company"
         >
           <Image
-            src="/hiphiplogo.svg"
+            src="/hip hip new logo.png"
             alt="HipHipVideos - Video Production Company"
-            width={32}
-            height={32}
+            width={300}
+            height={100}
             priority
-            className="w-[120px] md:w-[150px] h-[40px]"
+            quality={100}
+            sizes="(max-width: 768px) 120px, 150px"
+            className="h-auto w-[120px] object-contain md:w-[150px]"
           />
         </Link>
 
