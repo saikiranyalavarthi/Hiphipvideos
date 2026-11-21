@@ -10,6 +10,8 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ContactSection from "./components/ContactSection";
 import FAQSection from "./components/FAQSection";
 import CTASection from "./components/CTASection";
+import CinematicVideoSection from "./components/CinematicVideoSection";
+import IndustriesSection from "./components/IndustriesSection";
 
 export default function Home() {
   return (
@@ -29,8 +31,12 @@ export default function Home() {
       {/* 05. Our Services - Product & business video services */}
       <AboutServices />
 
+      <CinematicVideoSection />
+
       {/* 06. Our Process - Creative video creation workflow */}
       <ProcessSection />
+
+      <IndustriesSection />
 
       {/* 07. Case Studies - Projects, solutions & creative results */}
       <CaseStudies />

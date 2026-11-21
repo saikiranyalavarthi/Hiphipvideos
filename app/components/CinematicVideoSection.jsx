@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 
 export default function CinematicVideoSection() {
   return (
-    <section className="relative w-full h-[650px] md:h-[780px] overflow-hidden bg-black">
+    <section
+      className="relative w-full h-[650px] md:h-[780px] overflow-hidden bg-black"
+      aria-label="Product and business video creation"
+    >
       {/* FULL SCREEN VIDEO */}
       <video
         autoPlay
@@ -13,6 +16,7 @@ export default function CinematicVideoSection() {
         playsInline
         preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
+        aria-hidden="true"
       >
         <source src="/videos/cinematic-video.mp4" type="video/mp4" />
       </video>
@@ -44,19 +48,20 @@ export default function CinematicVideoSection() {
         >
           {/* SMALL LABEL */}
           <p className="mb-4 text-[9px] uppercase tracking-[0.35em] text-white/60">
-            CREATIVE VIDEO PRODUCTION
+            PRODUCT & BUSINESS VIDEO CREATION
           </p>
 
           {/* MAIN TITLE */}
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-            We create films that make brands unforgettable
+            We Create Videos That Make Brands Unforgettable
           </h2>
 
           {/* DESCRIPTION */}
           <p className="mx-auto mt-5 max-w-[580px] text-sm leading-6 text-white/70 sm:text-base">
-            From powerful advertisements to cinematic brand films, we create
-            visual stories that connect with audiences and move businesses
-            forward.
+            From product advertisements and promotional videos to business
+            storytelling, we combine AI, animation, motion graphics, visual
+            effects, design, and real footage to create compelling video content
+            that captures attention and helps brands communicate.
           </p>
 
           {/* BUTTONS */}
@@ -74,7 +79,9 @@ export default function CinematicVideoSection() {
               Start Your Project
             </motion.a>
 
-            {/* <motion.a
+            {/* EXPLORE OUR WORK */}
+            {/* 
+            <motion.a
               href="/portfolio"
               whileHover={{
                 scale: 1.05,
@@ -85,7 +92,8 @@ export default function CinematicVideoSection() {
               className="rounded-full border border-white/40 bg-black/20 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:border-[#CCFF00] hover:text-[#CCFF00]"
             >
               Explore Our Work →
-            </motion.a> */}
+            </motion.a>
+            */}
           </div>
         </motion.div>
       </div>

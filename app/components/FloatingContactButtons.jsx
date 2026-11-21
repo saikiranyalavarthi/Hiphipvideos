@@ -7,28 +7,20 @@ export default function FloatingContactButtons() {
   const phoneNumber = "916301022795";
 
   const whatsappMessage = encodeURIComponent(
-    "Hello HipHipVideos, I am interested in your video production services. I would like to discuss my project.",
+    "Hello Hip Hip Videos, I am interested in your video creation services. I need a video for my product or business and would like to discuss my project.",
   );
 
   const handleWhatsAppClick = () => {
-    console.log("WHATSAPP BUTTON CLICKED");
-    console.log("GA4 Event: whatsapp_click");
-    console.log("gtag type:", typeof window.gtag);
-
     trackEvent("whatsapp_click", {
       location: "floating_button",
-      debug_mode: true,
+      service: "video_creation",
     });
   };
 
   const handleCallClick = () => {
-    console.log("CALL BUTTON CLICKED");
-    console.log("GA4 Event: phone_click");
-    console.log("gtag type:", typeof window.gtag);
-
     trackEvent("phone_click", {
       location: "floating_button",
-      debug_mode: true,
+      service: "video_creation",
     });
   };
 
@@ -39,7 +31,7 @@ export default function FloatingContactButtons() {
         href={`https://wa.me/${phoneNumber}?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with HipHipVideos on WhatsApp"
+        aria-label="Chat with Hip Hip Videos on WhatsApp"
         onClick={handleWhatsAppClick}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
@@ -89,8 +81,8 @@ export default function FloatingContactButtons() {
 
       {/* CALL BUTTON */}
       <motion.a
-        href="tel:+916301022795"
-        aria-label="Call HipHipVideos"
+        href={`tel:+${phoneNumber}`}
+        aria-label="Call Hip Hip Videos"
         onClick={handleCallClick}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}

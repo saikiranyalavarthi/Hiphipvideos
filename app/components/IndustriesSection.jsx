@@ -19,14 +19,12 @@ export default function IndustriesSection() {
     "Tech",
   ];
 
-  // Replace these sample video filenames with your actual MP4 filenames.
-
   const projects = [
     {
       title: "BlueStone",
       length: "Duration not specified",
       industry: "Products",
-      type: "Jewellery Brand Commercial",
+      type: "Jewellery Product Advertisement",
       video: "/videos/BlueStone.mp4",
     },
     {
@@ -40,63 +38,63 @@ export default function IndustriesSection() {
       title: "FabIndia",
       length: "Duration not specified",
       industry: "Fashion",
-      type: "Fashion & Lifestyle Film",
+      type: "Fashion & Lifestyle Video",
       video: "/videos/Fab India.mp4",
     },
     {
       title: "Hidesign",
       length: "Duration not specified",
       industry: "Fashion",
-      type: "Luxury Fashion Commercial",
+      type: "Luxury Fashion Brand Video",
       video: "/videos/Hidesign.mp4",
     },
     {
       title: "Neeman's",
       length: "Duration not specified",
       industry: "Products",
-      type: "Footwear Brand Commercial",
+      type: "Footwear Product Advertisement",
       video: "/videos/neeman.mp4",
     },
     {
       title: "Sleepy Owl",
       length: "Duration not specified",
       industry: "Products",
-      type: "Coffee Brand Commercial",
+      type: "Coffee Product Advertisement",
       video: "/videos/sleepyowl.mp4",
     },
     {
       title: "Slurrp Farm",
       length: "Duration not specified",
       industry: "Products",
-      type: "Food & Nutrition Commercial",
+      type: "Food & Nutrition Product Video",
       video: "/videos/Slurrp Farm.mp4",
     },
     {
       title: "Supertails",
       length: "Duration not specified",
       industry: "Products",
-      type: "Pet Care Brand Commercial",
+      type: "Pet Care Product Video",
       video: "/videos/Supertails.mp4",
     },
     {
       title: "The Summer House",
       length: "Duration not specified",
       industry: "Fashion",
-      type: "Fashion & Lifestyle Commercial",
+      type: "Fashion & Lifestyle Brand Video",
       video: "/videos/The Summer House.mp4",
     },
     {
       title: "Vaya",
       length: "Duration not specified",
       industry: "Products",
-      type: "Lifestyle Product Commercial",
+      type: "Lifestyle Product Video",
       video: "/videos/vaya.mp4",
     },
     {
       title: "Yoga Bar",
       length: "Duration not specified",
       industry: "Products",
-      type: "Food & Nutrition Commercial",
+      type: "Food & Nutrition Product Advertisement",
       video: "/videos/Yoga Bar .mp4",
     },
   ];
@@ -130,15 +128,17 @@ export default function IndustriesSection() {
             id="portfolio-heading"
             className="text-[24px] font-semibold leading-[36px] sm:text-[28px] md:text-[32px] md:leading-[40px]"
           >
-            Video Production Portfolio
+            Product & Business Video Creation Portfolio
           </h2>
 
           <div className="mt-2 h-[3px] w-[60px] rounded-full bg-gradient-to-r from-[#CCFF00] to-transparent" />
 
           <p className="mt-5 max-w-3xl text-[14px] leading-6 text-white/60 sm:text-[16px] sm:leading-7">
-            Explore selected commercial videos, product videos, corporate films,
-            explainer videos, promotional films, motion graphics and branded
-            content created by HipHipVideos for businesses and brands.
+            Explore selected product advertisements, business videos, brand
+            campaigns, fashion visuals, lifestyle content, and creative video
+            experiences. Our work combines storytelling, design, animation,
+            motion graphics, AI-powered visuals, visual effects, and real
+            footage to create engaging video content for brands and businesses.
           </p>
         </motion.div>
 
@@ -146,7 +146,7 @@ export default function IndustriesSection() {
         <div
           className="mb-[30px] flex w-full flex-wrap gap-[10px] md:mb-[40px] md:gap-[12px]"
           role="tablist"
-          aria-label="Filter video portfolio by category"
+          aria-label="Filter video creation portfolio by category"
         >
           {industries.map((item, index) => (
             <motion.button
