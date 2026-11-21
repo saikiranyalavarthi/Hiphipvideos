@@ -23,7 +23,7 @@ export default function Home() {
       <ClientsSection />
 
       {/* 03. Our Work - Portfolio showcase */}
-      <BestCreations />
+      <IndustriesSection />
 
       {/* 04. About Hip Hip - Video creation company positioning */}
       <WhatWeDo />
@@ -35,8 +35,6 @@ export default function Home() {
 
       {/* 06. Our Process - Creative video creation workflow */}
       <ProcessSection />
-
-      <IndustriesSection />
 
       {/* 07. Case Studies - Projects, solutions & creative results */}
       <CaseStudies />
