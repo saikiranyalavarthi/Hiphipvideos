@@ -6,22 +6,22 @@ const capabilities = [
   {
     num: "01",
     title: "Creative Concept & Strategy",
-    desc: "We develop video concepts, creative directions and visual storytelling strategies that connect your brand message with the right audience and business objective.",
+    desc: "We transform business objectives, product ideas and brand messages into creative video concepts, visual directions and storytelling strategies designed to connect with the right audience.",
   },
   {
     num: "02",
-    title: "Video Pre-Production",
-    desc: "From scripting and storyboards to locations, casting, shot lists and production planning, we prepare every important detail before filming begins.",
+    title: "AI & Visual Creation",
+    desc: "We combine AI-generated visuals, creative design, image generation, visual development and digital creativity to bring ideas to life through unique video content.",
   },
   {
     num: "03",
-    title: "Professional Video Production",
-    desc: "Our production team brings your concept to life through professional direction, cinematography, lighting, filming and on-set production for high-quality brand videos.",
+    title: "Animation & Motion Graphics",
+    desc: "We create engaging videos using 2D and 3D animation, motion graphics, visual effects, product visualization and dynamic graphics to communicate ideas creatively.",
   },
   {
     num: "04",
-    title: "Video Editing & Post-Production",
-    desc: "We transform recorded footage into polished videos through editing, color grading, sound design, music, motion graphics, animation and visual effects.",
+    title: "Editing & Final Delivery",
+    desc: "We bring every visual element together through video editing, sound design, music, color grading, effects, storytelling and final video optimization for different platforms.",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function AboutServices() {
             className="shrink-0"
           >
             <p className="text-[#CCFF00] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-2">
-              About HipHipVideos
+              About Hip Hip Videos
             </p>
 
             <h2
@@ -87,32 +87,36 @@ export default function AboutServices() {
             }}
             className="flex-1"
           >
+            {/* MAIN BRAND DESCRIPTION */}
             <p className="text-white text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] font-normal leading-[30px] sm:leading-[32px] md:leading-[36px] lg:leading-[40px]">
-              HipHipVideos is a creative video production company based in
-              Hyderabad, creating high-quality visual content for brands,
-              startups and businesses. We produce commercial videos, corporate
-              films, product videos, advertisements, explainer videos, brand
-              films and other engaging video content.
+              Hip Hip Videos is a creative video creation company producing
+              product-focused and business-focused videos for brands, startups
+              and businesses. We transform ideas into engaging visual
+              experiences through AI, animation, motion graphics, visual
+              effects, graphic design, storytelling and real footage.
             </p>
 
+            {/* SUPPORTING DESCRIPTION */}
             <p className="mt-6 text-white/50 text-[15px] sm:text-[16px] md:text-[18px] leading-[26px] md:leading-[28px] max-w-4xl">
-              Our video production team works across different industries and
-              helps businesses turn ideas into purposeful visual stories. From
-              creative development and production planning to filming and
-              post-production, we provide an end-to-end approach built around
-              your brand, audience and marketing goals.
+              From product advertisements and animated product videos to
+              business explainers, SaaS videos, promotional campaigns and brand
+              storytelling, we develop creative video content that helps
+              businesses showcase products, explain services, communicate ideas
+              and connect with their audiences.
             </p>
 
+            {/* LOCATION & GLOBAL REACH */}
             <p className="mt-5 text-white/40 text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] md:leading-[26px] max-w-4xl">
-              Based in Hyderabad, Telangana, we work with businesses locally and
-              with brands across India on video production projects of different
-              sizes and requirements.
+              Based in Hyderabad, India, Hip Hip Videos works with brands and
+              businesses across India and international markets, delivering
+              creative video solutions for digital marketing, advertising,
+              business communication, product promotion and online platforms.
             </p>
           </motion.div>
         </div>
 
-        {/* CAPABILITIES */}
-        <div className="flex flex-col px-6 lg:px-12 py-[56px] md:py-[72px] justify-center items-start gap-[32px] md:gap-[40px]">
+        {/* CREATIVE CAPABILITIES */}
+        <div className="flex flex-col px-6 lg:px-12 py-[56px] md:py-[72px] justify-center items-start gap-[32px] md:gap-[40px">
           {/* TITLE */}
           <motion.div
             initial={{
@@ -132,11 +136,11 @@ export default function AboutServices() {
             className="w-full"
           >
             <p className="text-[#CCFF00] text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] mb-2">
-              Our Video Production Capabilities
+              Our Video Creation Capabilities
             </p>
 
             <h2 className="text-white text-[24px] md:text-[30px] lg:text-[34px] font-semibold leading-[40px]">
-              From Concept to Final Video
+              From Idea to Final Video
             </h2>
 
             <span
@@ -146,7 +150,7 @@ export default function AboutServices() {
           </motion.div>
 
           {/* CAPABILITY CARDS */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] md:gap-[28px] lg:gap-[32px]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] md:gap-[28px] lg:gap-[32px">
             {capabilities.map((item, index) => (
               <motion.article
                 key={item.num}
@@ -170,14 +174,17 @@ export default function AboutServices() {
                 }}
                 className="flex flex-col gap-[16px] p-[22px] md:p-[24px] rounded-[12px] bg-white/5 backdrop-blur-md border border-white/10 hover:border-[#CCFF00]/40 hover:shadow-[0_0_20px_rgba(204,255,0,0.15)] transition-all duration-300"
               >
+                {/* NUMBER */}
                 <span className="text-[13px] font-medium text-[#CCFF00]">
                   {item.num}
                 </span>
 
+                {/* TITLE */}
                 <h3 className="text-[19px] md:text-[21px] font-semibold leading-[28px]">
                   {item.title}
                 </h3>
 
+                {/* DESCRIPTION */}
                 <p className="text-[14px] sm:text-[15px] md:text-[16px] font-normal leading-[23px] sm:leading-[25px] md:leading-[26px] text-gray-300">
                   {item.desc}
                 </p>
@@ -203,10 +210,13 @@ export default function AboutServices() {
             }}
             className="max-w-5xl text-[14px] sm:text-[15px] md:text-[16px] leading-[24px] md:leading-[27px] text-white/40"
           >
-            Our production capabilities support a wide range of projects,
-            including commercial advertising, corporate communications, product
-            launches, SaaS and technology videos, branded content, pitch videos,
-            promotional campaigns and social media video content.
+            Our video creation services cover product advertising videos,
+            AI-generated videos, product demos, animated product videos, 3D
+            product animation, motion graphics, SaaS explainer videos, app
+            promotional videos, business videos, startup pitch videos, brand
+            campaigns, real estate videos and creative social media video
+            content. Every project is developed around its purpose, audience,
+            message and creative direction.
           </motion.p>
         </div>
       </div>

@@ -6,30 +6,31 @@ import { motion } from "framer-motion";
 const caseStudies = [
   {
     number: "01",
-    category: "Apps & SaaS Video Production",
+    category: "SaaS & Technology Video Creation",
     title: "SaaS Product Launch Video",
     description:
-      "A product launch video created to explain a SaaS platform, communicate its key value proposition and help potential customers understand the product through clear visual storytelling and motion graphics.",
-    services: "SaaS Video • Product Video • Explainer Video • Motion Graphics",
+      "A product-focused video concept designed to explain a SaaS platform, highlight its key features, communicate its value proposition and simplify complex technology through visual storytelling, animation and motion graphics.",
+    services: "SaaS Video • Product Explainer • AI Visuals • Motion Graphics",
     href: "/case-studies/saas-product-launch",
   },
   {
     number: "02",
-    category: "D2C & Product Video Production",
+    category: "Product & D2C Video Creation",
     title: "Product Brand Campaign",
     description:
-      "A product-focused video campaign designed to showcase product features, communicate the brand experience and create engaging visual content for digital marketing, advertising and customer-facing campaigns.",
-    services: "Product Video • Commercial Video • Brand Content • Advertising",
+      "A creative product video campaign built to showcase product features, communicate brand identity and create engaging visual content for digital advertising, social media, marketing campaigns and customer communication.",
+    services:
+      "Product Video • Product Advertising • Brand Content • Creative Campaigns",
     href: "/case-studies/product-brand-campaign",
   },
   {
     number: "03",
-    category: "Corporate Video Production",
+    category: "Business & Brand Video Creation",
     title: "Corporate Brand Film",
     description:
-      "A corporate brand film created to communicate a company's story, people, capabilities and values through professional cinematography, production and visual storytelling.",
+      "A business-focused video concept created to communicate a company's story, services, capabilities and brand identity through creative visuals, storytelling, motion graphics, animation and video content.",
     services:
-      "Corporate Film • Company Profile • Brand Story • Video Production",
+      "Business Video • Brand Storytelling • Company Profile • Visual Communication",
     href: "/case-studies/corporate-brand-film",
   },
 ];
@@ -68,7 +69,7 @@ export default function CaseStudies() {
         >
           {/* LABEL */}
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
-            Video Production Case Studies
+            Video Creation Case Studies
           </p>
 
           {/* SEO H2 */}
@@ -76,16 +77,17 @@ export default function CaseStudies() {
             id="case-studies-heading"
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Video Projects Built Around{" "}
+            Video Ideas Designed Around{" "}
             <span className="text-[#CCFF00]">Real Business Goals</span>
           </h2>
 
           {/* SEO DESCRIPTION */}
           <p className="mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            Explore selected HipHipVideos case studies across SaaS, D2C, product
-            and corporate video production. Each project combines creative
-            strategy, storytelling, production and post-production to
-            communicate a clear business message.
+            Explore video creation case studies across SaaS, technology, product
+            brands and businesses. At Hip Hip Videos, we combine creative
+            strategy, AI-powered visuals, animation, motion graphics, visual
+            effects, graphic design and storytelling to create product-focused
+            and business-focused video content.
           </p>
         </motion.div>
 
@@ -178,10 +180,14 @@ export default function CaseStudies() {
           className="mt-12 max-w-4xl lg:mt-16"
         >
           <p className="text-sm leading-6 text-white/40 sm:text-base sm:leading-7">
-            Our portfolio and case studies cover different types of video
-            production, including commercial videos, corporate films, product
-            videos, SaaS explainers, brand campaigns, advertisements, pitch
-            videos and motion graphics.
+            Our video creation portfolio explores different creative approaches
+            to product video creation, business videos, product advertisements,
+            SaaS explainer videos, AI video creation, animated product videos,
+            brand campaigns, promotional videos, motion graphics, 3D product
+            animation and visual storytelling. We develop video content using
+            AI, animation, graphic design, visual effects and real footage
+            whenever it best serves the creative direction and communication
+            objectives of a project.
           </p>
         </motion.div>
 
@@ -203,13 +209,15 @@ export default function CaseStudies() {
           }}
           className="mt-12 flex flex-col items-center text-center lg:mt-16"
         >
-          <p className="text-sm text-white/40">Have a video project in mind?</p>
+          <p className="text-sm text-white/40">
+            Have a product or business video idea?
+          </p>
 
           <Link
             href="/quote"
             className="mt-4 inline-flex items-center justify-center rounded-[8px] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] px-6 py-3 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
           >
-            Get a Free Discovery Call
+            Start Your Video Project
           </Link>
         </motion.div>
       </div>

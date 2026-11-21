@@ -5,34 +5,35 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "HipHipVideos understood our vision and turned it into a strong visual story that communicated our product clearly.",
+      "HipHipVideos understood our vision and transformed it into an engaging visual story that communicated our product and its value clearly.",
     name: "Arjun Mehta",
     role: "Founder",
     company: "DemoTech",
   },
   {
     quote:
-      "The production process was creative, professional and well organised from concept through final delivery.",
+      "The creative process was professional, collaborative and well organised. The team brought our ideas to life through thoughtful visuals and storytelling.",
     name: "Priya Sharma",
     role: "Marketing Manager",
     company: "BrandNest",
   },
   {
     quote:
-      "The final product video gave our campaign a strong visual identity and presented the product beautifully.",
+      "The final product video showcased our product beautifully and gave our campaign a strong, engaging visual identity.",
     name: "Rahul Verma",
     role: "Brand Director",
     company: "NovaWorks",
   },
 ];
+
 const results = [
   {
     value: "Creative",
     label: "Video Strategy",
   },
   {
-    value: "End-to-End",
-    label: "Production",
+    value: "AI-Powered",
+    label: "Video Creation",
   },
   {
     value: "3D & Motion",
@@ -87,15 +88,16 @@ export default function TestimonialsSection() {
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
             What Clients Say About{" "}
-            <span className="text-[#CCFF00]">HipHipVideos</span>
+            <span className="text-[#CCFF00]">Hip Hip Videos</span>
           </h2>
 
           {/* SUPPORTING CONTENT */}
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            From commercial and corporate videos to product films, explainer
-            videos and branded content, we work closely with our clients to turn
-            ideas into professional visual stories that communicate clearly and
-            support their marketing goals.
+            We collaborate with brands, startups and businesses to transform
+            ideas into engaging video content. From product advertisements and
+            product demos to business videos, AI-powered visuals, animation,
+            motion graphics and brand storytelling, our creative approach is
+            built around your message, audience and business objectives.
           </p>
         </motion.div>
 
@@ -149,7 +151,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* CAPABILITY / RESULTS STRIP */}
+        {/* CAPABILITIES STRIP */}
         <motion.div
           initial={{
             opacity: 0,
@@ -207,10 +209,14 @@ export default function TestimonialsSection() {
           }}
           className="mx-auto mt-10 max-w-4xl text-center text-sm leading-6 text-white/35 sm:text-base sm:leading-7"
         >
-          HipHipVideos provides professional video production services for
-          brands, startups and businesses, including commercial video
-          production, corporate films, product videos, explainer videos,
-          advertisements, brand films and motion graphics.
+          Hip Hip Videos creates product-focused and business-focused videos for
+          brands and businesses. Our video creation services include product
+          advertisements, product demo videos, AI video creation, animated
+          product videos, SaaS explainer videos, business videos, promotional
+          videos, motion graphics, 3D product animation, visual effects and
+          creative brand storytelling. We combine AI, design, animation, editing
+          and real footage where appropriate to create video content for digital
+          marketing, advertising, websites and social media.
         </motion.p>
       </div>
     </section>

@@ -43,7 +43,6 @@ export default function ConnectQuoteSection() {
       }
 
       setStatus("Thank you! Your enquiry has been sent successfully.");
-
       form.reset();
     } catch (error) {
       console.error(error);
@@ -94,23 +93,27 @@ export default function ConnectQuoteSection() {
             </h2>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70 mb-[14px]">
-              Looking for a video production company for your next campaign,
-              product launch, corporate film, advertisement or branded content?
+              Looking for creative video content for your product, business,
+              brand, campaign, or digital platform?
             </p>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70 mb-[14px]">
-              HipHipVideos works with brands, startups and businesses to develop
-              video concepts and turn ideas into high-quality visual content.
+              Hip Hip Videos is a video creation company in Hyderabad, India,
+              creating product-focused and business-focused videos using AI,
+              animation, motion graphics, visual effects, graphic design,
+              storytelling, and real footage when needed.
             </p>
 
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-[26px] md:leading-[29px] text-white/70">
-              Tell us about your project and our team will get back to you to
-              discuss the next steps.
+              Tell us about your project, and our creative team will help you
+              explore the right video concept, visual style, and approach for
+              your business goals.
             </p>
 
             <div className="mt-8 space-y-3 border-t border-white/10 pt-6">
               <a
                 href="tel:+916301022795"
+                aria-label="Call Hip Hip Videos"
                 className="block text-sm sm:text-base text-white/60 hover:text-[#CCFF00] transition"
               >
                 +91 63021 11807
@@ -118,13 +121,14 @@ export default function ConnectQuoteSection() {
 
               <a
                 href="mailto:info@hiphipvideos.com"
+                aria-label="Email Hip Hip Videos"
                 className="block text-sm sm:text-base text-white/60 hover:text-[#CCFF00] transition"
               >
                 info@hiphipvideos.com
               </a>
 
               <p className="text-sm sm:text-base text-white/40">
-                Hyderabad, Telangana
+                Hyderabad, Telangana, India
               </p>
             </div>
           </motion.div>
@@ -146,6 +150,7 @@ export default function ConnectQuoteSection() {
             viewport={{
               once: true,
             }}
+            aria-label="Video creation project enquiry form"
             className="flex flex-col gap-[18px] md:gap-[22px] w-full max-w-[500px]"
           >
             {/* FIRST + LAST NAME */}
@@ -234,19 +239,55 @@ export default function ConnectQuoteSection() {
                     Select Project Type
                   </option>
 
-                  <option value="Commercial Video">Commercial Video</option>
+                  <option value="Product Video Creation">
+                    Product Video Creation
+                  </option>
 
-                  <option value="Corporate Video">Corporate Video</option>
+                  <option value="Product Advertisement">
+                    Product Advertisement
+                  </option>
 
-                  <option value="Product Video">Product Video</option>
+                  <option value="Product Demo Video">Product Demo Video</option>
+
+                  <option value="AI Video Creation">AI Video Creation</option>
+
+                  <option value="Business Video Creation">
+                    Business Video Creation
+                  </option>
+
+                  <option value="Commercial Video Creation">
+                    Commercial Video Creation
+                  </option>
 
                   <option value="Explainer Video">Explainer Video</option>
 
-                  <option value="Advertisement">Advertisement</option>
+                  <option value="SaaS Explainer Video">
+                    SaaS Explainer Video
+                  </option>
 
-                  <option value="Pitch Video">Pitch Video</option>
+                  <option value="Animated Video">Animated Video</option>
 
-                  <option value="Brand Film">Brand Film</option>
+                  <option value="Motion Graphics Video">
+                    Motion Graphics Video
+                  </option>
+
+                  <option value="3D Product Animation">
+                    3D Product Animation
+                  </option>
+
+                  <option value="App Promotional Video">
+                    App Promotional Video
+                  </option>
+
+                  <option value="Startup Pitch Video">
+                    Startup Pitch Video
+                  </option>
+
+                  <option value="Brand Campaign Video">
+                    Brand Campaign Video
+                  </option>
+
+                  <option value="Real Estate Video">Real Estate Video</option>
 
                   <option value="Other">Other</option>
                 </select>
@@ -270,26 +311,37 @@ export default function ConnectQuoteSection() {
 
                   <option value="Apps & SaaS">Apps & SaaS</option>
 
+                  <option value="Technology">Technology</option>
+
                   <option value="D2C Brands">D2C Brands</option>
 
-                  <option value="Fashion">Fashion</option>
+                  <option value="Fashion & Lifestyle">
+                    Fashion & Lifestyle
+                  </option>
 
                   <option value="Real Estate">Real Estate</option>
 
-                  <option value="Corporate">Corporate</option>
+                  <option value="Corporate & Business">
+                    Corporate & Business
+                  </option>
 
                   <option value="Electronics & Gadgets">
                     Electronics & Gadgets
                   </option>
-                    <option value="Electronics & Gadgets">
-                  Food & Beverages
-                  </option>
+
+                  <option value="Food & Beverages">Food & Beverages</option>
 
                   <option value="Industrial & Manufacturing">
                     Industrial & Manufacturing
                   </option>
 
+                  <option value="Healthcare">Healthcare</option>
+
+                  <option value="Education">Education</option>
+
                   <option value="Franchise">Franchise</option>
+
+                  <option value="Automotive">Automotive</option>
 
                   <option value="Other">Other</option>
                 </select>
@@ -337,7 +389,7 @@ export default function ConnectQuoteSection() {
               <textarea
                 id="message"
                 name="message"
-                placeholder="Tell us about your video, campaign, product or project..."
+                placeholder="Tell us about your product, business, campaign, audience, video idea or project requirements..."
                 required
                 className="input-style h-[120px] resize-none"
               />
@@ -346,6 +398,8 @@ export default function ConnectQuoteSection() {
             {/* STATUS MESSAGE */}
             {status && (
               <div
+                role="status"
+                aria-live="polite"
                 className={`text-sm ${
                   status.includes("successfully")
                     ? "text-[#CCFF00]"

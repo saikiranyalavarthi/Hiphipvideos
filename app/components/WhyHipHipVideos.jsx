@@ -6,39 +6,39 @@ import Link from "next/link";
 const strengths = [
   {
     number: "01",
-    title: "Strategy Before Production",
+    title: "Strategy Before Creation",
     description:
-      "Every project starts with understanding your audience, message and business objective before we move into creative production.",
+      "Every video begins with understanding your business, product, audience and goals. We develop creative direction around what your video needs to communicate.",
   },
   {
     number: "02",
-    title: "Creative Storytelling",
+    title: "Creative Visual Storytelling",
     description:
-      "We turn ideas, products and complex messages into clear visual stories that are designed to hold attention.",
+      "We transform ideas, products and complex business messages into engaging visual stories using creative concepts, design and storytelling.",
   },
   {
     number: "03",
-    title: "Production & Post-Production",
+    title: "AI, Animation & Motion",
     description:
-      "From filming and editing to motion graphics, animation, sound design and final delivery, we manage the production journey.",
+      "We combine AI video creation, animation, motion graphics, graphic design and visual effects to bring creative ideas to life.",
   },
   {
     number: "04",
-    title: "Built for Your Brand",
+    title: "Built Around Your Brand",
     description:
-      "We create videos around your brand identity, audience and communication goals instead of using a one-size-fits-all approach.",
+      "Every video is developed around your brand identity, product, audience and communication objectives rather than a generic creative approach.",
   },
   {
     number: "05",
-    title: "Modern Visual Production",
+    title: "Modern Video Creation",
     description:
-      "Our approach combines cinematic production, editing, motion design and modern visual storytelling to create memorable content.",
+      "Our creative process combines AI, digital design, animation, editing, VFX and real footage whenever needed to create engaging visual content.",
   },
   {
     number: "06",
-    title: "Focused on Results",
+    title: "Focused on Business Goals",
     description:
-      "A beautiful video is only the beginning. We focus on creating content that communicates clearly and supports your marketing goals.",
+      "We create videos that do more than look visually appealing. Our focus is on communicating your message, showcasing your offering and supporting your marketing objectives.",
   },
 ];
 
@@ -75,21 +75,26 @@ export default function WhyHipHipVideos() {
           className="mx-auto max-w-4xl text-center"
         >
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
-            Why HipHipVideos
+            Why Hip Hip Videos
           </p>
 
           <h2
             id="why-hiphip-heading"
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            More Than Video Production.{" "}
-            <span className="text-[#CCFF00]">We Build Visual Stories.</span>
+            More Than Videos.
+            <br />
+            <span className="text-[#CCFF00]">
+              We Create Visual Experiences.
+            </span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            From strategy and creative development to production and
-            post-production, HipHipVideos brings the complete video creation
-            process together to help brands tell better stories.
+            Hip Hip Videos is a creative video creation company focused on
+            product and business videos. We bring together AI, animation, motion
+            graphics, visual effects, graphic design, storytelling and video
+            editing to transform ideas into engaging visual content for brands
+            and businesses.
           </p>
         </motion.div>
 
@@ -162,7 +167,7 @@ export default function WhyHipHipVideos() {
             </p>
 
             <p className="mt-1 text-sm text-white/40">
-              Let's turn it into something worth watching.
+              Let's transform your idea into engaging visual content.
             </p>
           </div>
 
@@ -178,7 +183,7 @@ export default function WhyHipHipVideos() {
               href="/quote"
               className="inline-flex items-center justify-center rounded-[8px] bg-[#CCFF00] px-6 py-3 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
             >
-              Get a Free Discovery Call
+              Start Your Video Project
             </Link>
           </div>
         </motion.div>

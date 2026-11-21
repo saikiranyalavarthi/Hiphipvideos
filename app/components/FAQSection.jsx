@@ -5,65 +5,75 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What does a video production company do?",
+    question: "What does a video creation company do?",
     answer:
-      "A video production company helps brands turn ideas into finished video content. This can include creative strategy, concept development, scripting, storyboarding, pre-production, filming, editing, motion graphics, animation, sound design, color grading and final delivery.",
+      "A video creation company develops visual content to help businesses communicate products, services, ideas and brand stories. Video creation can combine creative strategy, AI-generated visuals, animation, motion graphics, visual effects, graphic design, editing, storytelling and real footage when required.",
   },
   {
-    question:
-      "Does HipHipVideos provide video production services in Hyderabad?",
+    question: "What video creation services does Hip Hip Videos offer?",
     answer:
-      "Yes. HipHipVideos is based in Hyderabad, Telangana and works with brands, startups and businesses on commercial videos, corporate films, product videos, advertisements, explainers, branded content and other visual productions.",
+      "Hip Hip Videos creates product videos, business videos, product advertisements, product demos, AI-generated videos, animated videos, motion graphics, 3D product animations, SaaS explainer videos, app promotional videos, startup pitch videos and brand campaign content.",
   },
   {
-    question: "What types of videos does HipHipVideos create?",
+    question: "Is Hip Hip Videos a traditional video production company?",
     answer:
-      "We create commercial videos, advertisements, corporate films, product videos, explainer videos, pitch videos, brand films, promotional content, documentaries, motion graphics and other custom video productions based on the project's goals.",
+      "Hip Hip Videos is positioned as a video creation company focused on product and business content. Rather than relying only on traditional filming, we combine AI, animation, motion graphics, visual effects, graphic design, creative storytelling and real footage when appropriate to develop engaging visual content.",
   },
   {
-    question: "Can you create videos for SaaS and technology companies?",
+    question: "Do you create AI-powered videos?",
     answer:
-      "Yes. We create product videos, SaaS explainer videos, app videos, launch videos, demonstrations and motion-led content that can help technology companies communicate products and complex ideas more clearly.",
+      "Yes. AI can be incorporated into video creation for visual development, creative concepts, product visualization, storytelling, animation and other elements depending on the project's requirements. We combine AI capabilities with creative direction and design to develop videos aligned with your brand and objectives.",
   },
   {
-    question: "Do you create videos for D2C and ecommerce brands?",
+    question: "Can you create product advertisement and demo videos?",
     answer:
-      "Yes. We create product-focused videos, advertisements, branded content and campaign videos for D2C and ecommerce brands. The creative direction can be adapted for websites, social media, paid advertising and product launches.",
+      "Yes. We create product-focused video content, including product advertisements, product demonstrations, promotional videos, animated product videos and product visualization. These videos can help businesses showcase product features, benefits, functionality and brand value across websites, social media and digital advertising.",
   },
   {
-    question: "Do you work with corporate and industrial companies?",
+    question: "Do you create videos for SaaS, apps and technology companies?",
     answer:
-      "Yes. Our video production capabilities can be used for corporate films, company profile videos, manufacturing videos, industrial films, internal communications, product demonstrations and other business-focused content.",
+      "Yes. We create SaaS explainer videos, software demonstrations, app promotional videos, feature videos, product launch videos, animated interface visuals and technology-focused content to help businesses explain their digital products and services.",
   },
   {
-    question: "How does the video production process work?",
+    question: "What types of businesses can work with Hip Hip Videos?",
     answer:
-      "Our process generally moves through discovery, concept development, scripting and storyboarding, pre-production, production, post-production and final delivery. The exact workflow depends on the scope and requirements of each project.",
+      "We work with businesses, startups, product brands and organizations across industries such as technology, SaaS, ecommerce, D2C, fashion, real estate, manufacturing, healthcare, education, food and beverages, automotive and other business sectors.",
   },
   {
-    question: "How much does video production cost?",
+    question: "Can you create business, corporate and promotional videos?",
     answer:
-      "Video production costs depend on factors such as concept complexity, script requirements, shoot days, locations, crew, equipment, talent, animation, motion graphics, post-production and final deliverables. Contact us with your project details and we can discuss the appropriate production scope and budget.",
+      "Yes. We create business-focused video content such as company introduction videos, business explainers, promotional videos, brand storytelling videos, startup pitch videos, franchise promotional videos, corporate communication content and campaign videos based on your objectives.",
   },
   {
-    question: "How long does it take to produce a video?",
+    question: "Do you create animated videos, motion graphics and 3D videos?",
     answer:
-      "The timeline depends on the type and complexity of the project. A simple production may require a shorter turnaround, while larger commercial, corporate or animated productions can require more planning and post-production time. We establish the expected timeline during project planning.",
-  },
-  {
-    question: "Can HipHipVideos handle the complete production?",
-    answer:
-      "Yes. Depending on the project, we can support the production journey from creative concept and scripting through pre-production, filming, editing, motion graphics, sound design, color grading and final delivery.",
+      "Yes. Our creative capabilities include animation, motion graphics, visual effects, graphic design, animated product visuals, 3D product animation and other motion-led visual content. The creative approach depends on the concept, product and communication goals of the project.",
   },
   {
     question: "Can you create videos for social media and digital advertising?",
     answer:
-      "Yes. We can create video content designed for digital campaigns, social media, websites and advertising platforms. Deliverables can be planned around the required formats, aspect ratios, durations and campaign requirements.",
+      "Yes. We create video content for digital marketing, social media, websites, online advertising, product campaigns and brand communication. Videos can be planned for different platforms, aspect ratios, formats and durations according to your campaign requirements.",
   },
   {
-    question: "How can I start a video project with HipHipVideos?",
+    question: "How much does video creation cost?",
     answer:
-      "You can contact HipHipVideos through the project enquiry form or request a free discovery call. Share your project idea, industry, video requirements, timeline and approximate budget, and our team can discuss the next steps with you.",
+      "Video creation costs depend on the creative concept, video duration, complexity, AI requirements, animation, 3D visuals, motion graphics, visual effects, design, editing, deliverables and project scope. Share your requirements with us to discuss an appropriate creative approach and estimated budget.",
+  },
+  {
+    question: "How long does it take to create a video?",
+    answer:
+      "The timeline depends on the type of video, creative complexity, visual requirements, animation, AI generation, revisions and final deliverables. Once we understand your project requirements, we can discuss an estimated timeline for concept development, creation, review and final delivery.",
+  },
+  {
+    question:
+      "Can Hip Hip Videos work with clients outside Hyderabad or India?",
+    answer:
+      "Hip Hip Videos is based in Hyderabad, India. Project requirements and communication can be discussed remotely, making it possible to collaborate with businesses and brands outside Hyderabad and explore video creation projects across different markets.",
+  },
+  {
+    question: "How can I start my video creation project?",
+    answer:
+      "You can start by contacting Hip Hip Videos through our project enquiry form or by requesting a discovery call. Share your product, business, campaign goals, target audience, video requirements, timeline and approximate budget. Our team can discuss your creative direction and the next steps.",
   },
 ];
 
@@ -113,12 +123,13 @@ export default function FAQSection() {
             id="faq-heading"
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
-            Video Production <span className="text-[#CCFF00]">FAQs</span>
+            Video Creation <span className="text-[#CCFF00]">FAQs</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            Answers to common questions about our video production services,
-            process, industries, timelines and project requirements.
+            Find answers about our video creation services, AI-powered visuals,
+            product videos, business videos, creative process, pricing and
+            project requirements.
           </p>
         </motion.div>
 
@@ -233,7 +244,7 @@ export default function FAQSection() {
           className="mt-12 text-center md:mt-16"
         >
           <p className="text-sm text-white/40 sm:text-base">
-            Still have questions about your video project?
+            Have a product, business or video idea to bring to life?
           </p>
 
           <a

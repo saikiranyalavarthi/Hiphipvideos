@@ -20,12 +20,9 @@ const clients = [
   "/clients/Frame 2147211477.png",
   "/clients/Frame 2147211478.png",
   "/clients/Frame 2147211479.png",
-
   "/clients/Frame 2147211482.png",
-
   "/clients/Frame 2147211484.png",
   "/clients/Frame 2147211485.png",
-
   "/clients/Frame 2147211489.png",
   "/clients/Frame 2147211490.png",
   "/clients/Frame 2147211491.png",
@@ -36,32 +33,47 @@ const clients = [
 
 export default function ClientsSection() {
   return (
-    <section className="relative overflow-hidden bg-[#050505] py-12 sm:py-16">
+    <section
+      aria-labelledby="clients-heading"
+      className="relative overflow-hidden bg-[#050505] py-12 sm:py-16"
+    >
+      {/* SECTION HEADING */}
       <div className="mx-auto mb-10 max-w-7xl px-4 text-center sm:px-6">
         <span className="mb-4 inline-block rounded-full border border-[#CCFF00]/30 bg-[#CCFF00]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#CCFF00]">
-          Our Trusted Partners
+          Brands & Businesses
         </span>
 
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">
-          Brands That <span className="text-[#CCFF00]">Trust Us</span>
+        <h2
+          id="clients-heading"
+          className="text-3xl font-bold tracking-tight text-white sm:text-5xl"
+        >
+          Brands That{" "}
+          <span className="text-[#CCFF00]">Trust Our Creativity</span>
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
-          Proud to collaborate with ambitious brands and businesses to create
-          meaningful digital experiences.
+          We collaborate with brands, startups and businesses to create engaging
+          product videos, business videos, promotional content, animated visuals
+          and creative video experiences that bring ideas to life.
         </p>
       </div>
 
-      {/* Single Row Continuous Logo Slider */}
+      {/* CONTINUOUS LOGO SLIDER */}
       <div className="group relative w-full overflow-hidden">
-        {/* Left Fade */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#050505] to-transparent sm:w-28" />
+        {/* LEFT FADE */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#050505] to-transparent sm:w-28"
+        />
 
-        {/* Right Fade */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#050505] to-transparent sm:w-28" />
+        {/* RIGHT FADE */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#050505] to-transparent sm:w-28"
+        />
 
         <div className="flex w-max animate-clients-scroll group-hover:[animation-play-state:paused]">
-          {/* First Logo Group */}
+          {/* ORIGINAL LOGO GROUP */}
           <div className="flex shrink-0 items-center gap-4 px-2 sm:gap-6 sm:px-3">
             {clients.map((logo, index) => (
               <div
@@ -70,15 +82,16 @@ export default function ClientsSection() {
               >
                 <img
                   src={logo}
-                  alt={`Client logo ${index + 1}`}
+                  alt={`Brand ${index + 1} collaborating with Hip Hip Videos`}
                   loading="lazy"
+                  decoding="async"
                   className="max-h-full max-w-full object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                 />
               </div>
             ))}
           </div>
 
-          {/* Duplicate Group For Infinite Scroll */}
+          {/* DUPLICATE GROUP FOR INFINITE SCROLL */}
           <div
             className="flex shrink-0 items-center gap-4 px-2 sm:gap-6 sm:px-3"
             aria-hidden="true"
@@ -92,6 +105,7 @@ export default function ClientsSection() {
                   src={logo}
                   alt=""
                   loading="lazy"
+                  decoding="async"
                   className="max-h-full max-w-full object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
                 />
               </div>
@@ -100,19 +114,21 @@ export default function ClientsSection() {
         </div>
       </div>
 
-      {/* Bottom Text */}
-      <div className="mt-10 text-center">
+      {/* BOTTOM CONTENT */}
+      <div className="mt-10 px-4 text-center">
         <p className="text-sm text-white/50">
-          Building partnerships. Creating impact. Growing together.
+          Creative collaboration. Powerful visuals. Meaningful brand
+          communication.
         </p>
       </div>
 
-      {/* Animation CSS */}
+      {/* SLIDER ANIMATION */}
       <style jsx>{`
         @keyframes clients-scroll {
           from {
             transform: translateX(0);
           }
+
           to {
             transform: translateX(-50%);
           }

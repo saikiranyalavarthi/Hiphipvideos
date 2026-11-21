@@ -30,7 +30,6 @@ export default function CTASection() {
         >
           {/* TITLE + TEXT */}
           <div className="flex flex-col items-center text-center gap-[14px] md:gap-[16px]">
-            {/* SEO H2 */}
             <h2
               id="final-cta-heading"
               className="text-white text-[24px] sm:text-[30px] md:text-[40px] font-bold leading-[34px] sm:leading-[40px] md:leading-[48px] tracking-tight max-w-[900px]"
@@ -41,8 +40,9 @@ export default function CTASection() {
 
             {/* SUPPORTING CONTENT */}
             <p className="text-white/80 text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] max-w-[640px]">
-              Talk to our video production team about your commercial,
-              corporate, product, advertising or branded video project.
+              Bring your product, business, or brand story to life with creative
+              video content powered by AI, animation, motion graphics, visual
+              effects, design, and storytelling.
             </p>
           </div>
 
@@ -55,6 +55,7 @@ export default function CTASection() {
             whileTap={{
               scale: 0.95,
             }}
+            aria-label="Start your video creation project and get a free discovery call"
             className="
               flex items-center justify-center
               px-[24px] py-[12px]
@@ -73,14 +74,15 @@ export default function CTASection() {
             Get a Free Discovery Call
           </motion.a>
 
-          {/* LOCAL SIGNAL */}
+          {/* LOCAL BUSINESS INFORMATION */}
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/40">
-            <span>Hyderabad, Telangana</span>
+            <span>Hyderabad, Telangana, India</span>
 
             <span className="hidden sm:block text-white/20">•</span>
 
             <a
               href="tel:+916301022795"
+              aria-label="Call Hip Hip Videos"
               className="hover:text-[#CCFF00] transition"
             >
               +91 63021 11807
@@ -90,6 +92,7 @@ export default function CTASection() {
 
             <a
               href="mailto:info@hiphipvideos.com"
+              aria-label="Email Hip Hip Videos"
               className="hover:text-[#CCFF00] transition"
             >
               info@hiphipvideos.com
