@@ -31,10 +31,8 @@ export default function Home() {
       {/* 05. Our Services - Product & business video services */}
       <AboutServices />
 
-      <CinematicVideoSection />
-
       {/* 06. Our Process - Creative video creation workflow */}
-      <ProcessSection />
+      {/* <ProcessSection /> */}
 
       {/* 07. Case Studies - Projects, solutions & creative results */}
       <CaseStudies />
@@ -53,7 +51,7 @@ export default function Home() {
 
       {/* 12. CTA - Start your video project */}
       <CTASection />
-
+      <CinematicVideoSection />
       {/* 13. Footer is handled by the global layout */}
     </>
   );

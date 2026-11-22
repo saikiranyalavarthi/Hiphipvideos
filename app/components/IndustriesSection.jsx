@@ -7,238 +7,219 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function IndustriesSection() {
   const industries = [
     "Featured",
-    "Products",
-    "Gadgets",
-    "Automobiles",
+    "Product Ads",
+    "Product Demos",
+    "App & SaaS",
     "Real Estate",
-    "Fashion",
-    "Industrial",
-    "Corporate",
-    "Explainers",
-    "Documentaries",
-    "Tech",
+    "Franchise Videos",
+    "Pitch Videos",
+    "Business Explainers",
+    "Motion Graphics",
+    "Animation Videos",
   ];
 
   const projects = [
     {
       title: "BlueStone",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Jewellery Product Advertisement",
+      category: "Product Ads",
+      type: "Premium jewellery advertising with cinematic product visuals.",
       video: "/videos/BlueStone.mp4",
     },
     {
       title: "Borosil",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Home & Kitchen Product Video",
+      category: "Product Ads",
+      type: "Home and kitchen product advertising.",
       video: "/videos/borosil.mp4",
     },
     {
       title: "FabIndia",
-      length: "Duration not specified",
-      industry: "Fashion",
-      type: "Fashion & Lifestyle Video",
+      category: "Product Ads",
+      type: "Fashion, lifestyle and brand storytelling.",
       video: "/videos/Fab India.mp4",
     },
     {
       title: "Hidesign",
-      length: "Duration not specified",
-      industry: "Fashion",
-      type: "Luxury Fashion Brand Video",
+      category: "Product Ads",
+      type: "Luxury leather and fashion brand visuals.",
       video: "/videos/Hidesign.mp4",
     },
     {
       title: "Neeman's",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Footwear Product Advertisement",
+      category: "Product Ads",
+      type: "Footwear advertising with modern product visuals.",
       video: "/videos/neeman.mp4",
     },
     {
       title: "Sleepy Owl",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Coffee Product Advertisement",
+      category: "Product Ads",
+      type: "Coffee product advertising and brand storytelling.",
       video: "/videos/sleepyowl.mp4",
     },
     {
       title: "Slurrp Farm",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Food & Nutrition Product Video",
+      category: "Product Ads",
+      type: "Food product visuals for a modern nutrition brand.",
       video: "/videos/Slurrp Farm.mp4",
     },
     {
       title: "Supertails",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Pet Care Product Video",
+      category: "Product Ads",
+      type: "Pet care product and lifestyle video content.",
       video: "/videos/Supertails.mp4",
     },
     {
       title: "The Summer House",
-      length: "Duration not specified",
-      industry: "Fashion",
-      type: "Fashion & Lifestyle Brand Video",
+      category: "Product Ads",
+      type: "Fashion and lifestyle brand storytelling.",
       video: "/videos/The Summer House.mp4",
     },
     {
       title: "Vaya",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Lifestyle Product Video",
+      category: "Product Ads",
+      type: "Lifestyle product promotional visuals.",
       video: "/videos/vaya.mp4",
     },
     {
       title: "Yoga Bar",
-      length: "Duration not specified",
-      industry: "Products",
-      type: "Food & Nutrition Product Advertisement",
+      category: "Product Ads",
+      type: "Food and nutrition product advertising.",
       video: "/videos/Yoga Bar .mp4",
     },
   ];
 
-  const [activeIndustry, setActiveIndustry] = useState("Featured");
+  const [activeCategory, setActiveCategory] = useState("Featured");
 
   const filteredProjects =
-    activeIndustry === "Featured"
+    activeCategory === "Featured"
       ? projects
-      : projects.filter((item) => item.industry === activeIndustry);
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
     <section
       aria-labelledby="portfolio-heading"
-      className="flex justify-center overflow-hidden bg-black text-white"
+      className="w-full overflow-hidden bg-black text-white"
     >
-      <div className="flex w-full max-w-[1440px] flex-col items-center px-6 py-[40px] md:px-12 md:py-[48px]">
-        {/* HEADER */}
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 sm:px-8 sm:py-20 lg:px-12">
+        {/* PORTFOLIO HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-[20px] w-full"
+          transition={{ duration: 0.6 }}
+          className="mb-10 max-w-4xl"
         >
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#CCFF00] sm:text-sm">
-            Our Work
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-[#CCFF00] sm:text-sm">
+            Our Portfolio
           </p>
 
           <h2
             id="portfolio-heading"
-            className="text-[24px] font-semibold leading-[36px] sm:text-[28px] md:text-[32px] md:leading-[40px]"
+            className="max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Product & Business Video Creation Portfolio
+            Product & Business Video Creation
           </h2>
 
-          <div className="mt-2 h-[3px] w-[60px] rounded-full bg-gradient-to-r from-[#CCFF00] to-transparent" />
+          <div className="mt-5 h-[3px] w-16 rounded-full bg-[#CCFF00]" />
 
-          <p className="mt-5 max-w-3xl text-[14px] leading-6 text-white/60 sm:text-[16px] sm:leading-7">
-            Explore selected product advertisements, business videos, brand
-            campaigns, fashion visuals, lifestyle content, and creative video
-            experiences. Our work combines storytelling, design, animation,
-            motion graphics, AI-powered visuals, visual effects, and real
-            footage to create engaging video content for brands and businesses.
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-white/55 sm:text-base sm:leading-8">
+            Explore our creative work across product advertisements, brand
+            films, business videos, animation and digital storytelling. We
+            create impactful visuals that help brands capture attention and
+            communicate their value.
           </p>
         </motion.div>
 
-        {/* CATEGORY FILTERS */}
-        <div
-          className="mb-[30px] flex w-full flex-wrap gap-[10px] md:mb-[40px] md:gap-[12px]"
-          role="tablist"
-          aria-label="Filter video creation portfolio by category"
-        >
-          {industries.map((item, index) => (
-            <motion.button
-              key={index}
-              type="button"
-              onClick={() => setActiveIndustry(item)}
-              whileTap={{ scale: 0.95 }}
-              role="tab"
-              aria-selected={activeIndustry === item}
-              className={`rounded-[10px] border px-[16px] py-[10px] text-[13px] transition-all md:text-[14px] ${
-                activeIndustry === item
-                  ? "border-[#CCFF00] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black shadow-[0_0_10px_#CCFF00]"
-                  : "border-[#757575] text-white hover:border-[#CCFF00]"
-              }`}
-            >
-              {item}
-            </motion.button>
-          ))}
+        {/* CATEGORY FILTER */}
+        <div className="mb-10 w-full">
+          <div
+            className="flex flex-wrap gap-2 sm:gap-3"
+            role="tablist"
+            aria-label="Portfolio categories"
+          >
+            {industries.map((category) => {
+              const active = activeCategory === category;
+
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  onClick={() => setActiveCategory(category)}
+                  role="tab"
+                  aria-selected={active}
+                  className={`rounded-full border px-4 py-2.5 text-xs font-medium transition-all duration-300 sm:px-5 sm:py-3 sm:text-sm ${
+                    active
+                      ? "border-[#CCFF00] bg-[#CCFF00] text-black"
+                      : "border-white/20 bg-transparent text-white/75 hover:border-white hover:text-white"
+                  }`}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* VIDEO GRID */}
+        {/* PORTFOLIO GRID */}
         <motion.div
           layout
-          className="grid w-full grid-cols-1 gap-[20px] sm:grid-cols-2 md:gap-[24px] lg:grid-cols-3"
+          className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"
         >
           <AnimatePresence mode="popLayout">
-            {filteredProjects.map((item) => (
-              <motion.div
-                key={item.title}
+            {filteredProjects.map((project) => (
+              <motion.article
+                key={project.title}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4 }}
-                whileHover={{ y: -6 }}
-                className="group relative w-full overflow-hidden rounded-[12px] border border-white/10 bg-[#111] transition-all duration-300 hover:border-[#CCFF00]/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.35 }}
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] transition-colors duration-300 hover:border-white/25"
               >
-                {/* VIDEO PLAYER */}
-                <div className="relative aspect-video w-full overflow-hidden bg-black">
+                {/* VIDEO */}
+                <div className="relative aspect-video overflow-hidden bg-[#111]">
                   <video
-                    src={item.video}
+                    src={project.video}
                     controls
                     playsInline
                     preload="metadata"
-                    className="h-full w-full object-cover"
-                    aria-label={`${item.title} - ${item.type}`}
-                  >
-                    Your browser does not support HTML video.
-                  </video>
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    aria-label={`${project.title} portfolio video`}
+                  />
 
-                  {/* CATEGORY LABEL */}
-                  <div className="pointer-events-none absolute left-3 top-3 rounded-full border border-[#CCFF00]/40 bg-black/75 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-[#CCFF00] sm:text-xs">
-                    {item.industry}
-                  </div>
+                  {/* SUBTLE BOTTOM FADE */}
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/50 to-transparent" />
+
+                  {/* CATEGORY */}
+                  <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-black/60 px-3 py-1.5 text-[10px] font-medium uppercase tracking-wider text-white/90 backdrop-blur-md sm:text-xs">
+                    {project.category}
+                  </span>
                 </div>
 
-                {/* VIDEO DETAILS */}
-                <div className="p-4 sm:p-5">
-                  <div className="mb-2 flex items-start justify-between gap-3">
-                    <h3 className="text-[16px] font-semibold text-white transition-colors group-hover:text-[#CCFF00] md:text-[18px]">
-                      {item.title}
-                    </h3>
+                {/* PROJECT DETAILS */}
+                <div className="relative px-4 pb-5 pt-4 sm:px-5 sm:pb-6">
+                  <h3 className="text-lg font-semibold tracking-tight text-white sm:text-xl">
+                    {project.title}
+                  </h3>
 
-                    <span className="shrink-0 rounded-md bg-white/10 px-2 py-1 text-[10px] text-white/60 sm:text-xs">
-                      {item.length}
-                    </span>
-                  </div>
-
-                  <p className="text-[13px] leading-6 text-white/50 sm:text-[14px]">
-                    {item.type}
+                  <p className="mt-2 line-clamp-2 text-sm leading-6 text-white/50">
+                    {project.type}
                   </p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </AnimatePresence>
         </motion.div>
 
-        {/* PORTFOLIO CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-[35px] md:mt-[45px]"
-        >
+        {/* CTA */}
+        <div className="mt-12 flex justify-center sm:mt-16">
           <Link
             href="/portfolio"
-            className="inline-flex items-center justify-center rounded-[8px] border border-[#CCFF00]/40 px-6 py-3 text-sm font-semibold text-[#CCFF00] transition-all duration-300 hover:bg-[#CCFF00] hover:text-black md:text-base"
+            className="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:border-[#CCFF00] hover:bg-[#CCFF00] hover:text-black sm:px-8"
           >
-            View Full Video Portfolio →
+            Explore Full Portfolio
+            <span>→</span>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

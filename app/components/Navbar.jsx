@@ -259,7 +259,7 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 w-full z-50 flex justify-center backdrop-blur-md bg-black/70 border-b border-white/10"
+      className="fixed top-0 left-0 w-full z-50 flex justify-center backdrop-blur-md bg-white/90 border-b border-black/10 shadow-sm"
       aria-label="Main navigation"
     >
       {/* CONTAINER */}
@@ -284,35 +284,35 @@ export default function Navbar() {
         </Link>
 
         {/* DESKTOP NAVIGATION */}
-        <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-white text-[14px] lg:text-[16px] font-medium">
+        <ul className="hidden md:flex items-center gap-5 lg:gap-7 text-black text-[14px] lg:text-[16px] font-medium">
           <li className="relative group">
             <Link
               href="/"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               Home
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
 
           <li className="relative group">
             <Link
               href="/about"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               About
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
 
           <li className="relative group">
             <Link
               href="/portfolio"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               Portfolio
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
 
           {/* SERVICES */}
@@ -323,10 +323,10 @@ export default function Navbar() {
           >
             <Link
               href="/services"
-              className="relative group transition duration-300 hover:text-[#CCFF00] whitespace-nowrap"
+              className="relative group transition duration-300 hover:text-black whitespace-nowrap"
             >
               Services
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
             </Link>
 
             <AnimatePresence>
@@ -336,11 +336,11 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[320px] bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
+                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[320px] bg-white/95 backdrop-blur-xl border border-black/10 rounded-xl p-3 shadow-2xl"
                 >
                   <Link
                     href="/services"
-                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-[#CCFF00] hover:bg-white/5 transition"
+                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-black hover:bg-black/5 transition"
                   >
                     All Services
                   </Link>
@@ -348,7 +348,7 @@ export default function Navbar() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block px-4 py-2.5 rounded-lg text-sm text-white hover:text-[#CCFF00] hover:bg-white/5 transition"
+                      className="block px-4 py-2.5 rounded-lg text-sm text-black hover:text-black hover:bg-black/5 transition"
                     >
                       {service.name}
                     </Link>
@@ -366,10 +366,10 @@ export default function Navbar() {
           >
             <Link
               href="/industries"
-              className="relative group transition duration-300 hover:text-[#CCFF00] whitespace-nowrap"
+              className="relative group transition duration-300 hover:text-black whitespace-nowrap"
             >
               Industries
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
             </Link>
 
             <AnimatePresence>
@@ -379,11 +379,11 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[330px] bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
+                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[330px] bg-white/95 backdrop-blur-xl border border-black/10 rounded-xl p-3 shadow-2xl"
                 >
                   <Link
                     href="/industries"
-                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-[#CCFF00] hover:bg-white/5 transition"
+                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-black hover:bg-black/5 transition"
                   >
                     All Industries
                   </Link>
@@ -391,7 +391,7 @@ export default function Navbar() {
                     <Link
                       key={industry.href}
                       href={industry.href}
-                      className="block px-4 py-2.5 rounded-lg text-sm text-white hover:text-[#CCFF00] hover:bg-white/5 transition"
+                      className="block px-4 py-2.5 rounded-lg text-sm text-black hover:text-black hover:bg-black/5 transition"
                     >
                       {industry.name}
                     </Link>
@@ -409,10 +409,10 @@ export default function Navbar() {
           >
             <Link
               href="/locations"
-              className="relative group transition duration-300 hover:text-[#CCFF00] whitespace-nowrap"
+              className="relative group transition duration-300 hover:text-black whitespace-nowrap"
             >
               Locations
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
             </Link>
 
             <AnimatePresence>
@@ -422,11 +422,11 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[340px] max-h-[75vh] overflow-y-auto bg-black/95 backdrop-blur-xl border border-white/10 rounded-xl p-3 shadow-2xl"
+                  className="absolute top-8 left-1/2 -translate-x-1/2 w-[340px] max-h-[75vh] overflow-y-auto bg-white/95 backdrop-blur-xl border border-black/10 rounded-xl p-3 shadow-2xl"
                 >
                   <Link
                     href="/locations"
-                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-[#CCFF00] hover:bg-white/5"
+                    className="block px-4 py-3 rounded-lg text-sm font-semibold text-black hover:bg-black/5"
                   >
                     All Global Locations →
                   </Link>
@@ -434,7 +434,7 @@ export default function Navbar() {
                     <div key={country.href} className="mb-2">
                       <Link
                         href={country.href}
-                        className="block px-4 py-2 text-sm font-bold text-[#CCFF00] hover:bg-white/5 rounded-lg"
+                        className="block px-4 py-2 text-sm font-bold text-black hover:bg-black/5 rounded-lg"
                       >
                         {country.name}
                       </Link>
@@ -443,7 +443,7 @@ export default function Navbar() {
                           <Link
                             key={city.href}
                             href={city.href}
-                            className="px-2 py-2 text-xs text-gray-300 hover:text-[#CCFF00] hover:bg-white/5 rounded-md transition"
+                            className="px-2 py-2 text-xs text-gray-600 hover:text-black hover:bg-black/5 rounded-md transition"
                           >
                             {city.name}
                           </Link>
@@ -459,31 +459,31 @@ export default function Navbar() {
           <li className="relative group">
             <Link
               href="/case-studies"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               Case Studies
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
 
           <li className="relative group">
             <Link
               href="/process"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               Process
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
 
           <li className="relative group">
             <Link
               href="/blog"
-              className="transition duration-300 group-hover:text-[#CCFF00] whitespace-nowrap"
+              className="transition duration-300 group-hover:text-black whitespace-nowrap"
             >
               Blog
             </Link>
-            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#CCFF00] transition-all duration-300 group-hover:w-full" />
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#111111] transition-all duration-300 group-hover:w-full" />
           </li>
         </ul>
 
@@ -491,7 +491,7 @@ export default function Navbar() {
         <motion.div whileHover={{ scale: 1.05 }} className="shrink-0">
           <Link
             href="/quote"
-            className="hidden lg:flex h-[40px] px-[16px] items-center justify-center rounded-[8px] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black text-[13px] font-semibold shadow-md hover:shadow-[0_0_15px_#CCFF00] transition-all whitespace-nowrap"
+            className="hidden lg:flex h-[40px] px-[16px] items-center justify-center rounded-[8px] bg-black text-white text-[13px] font-semibold shadow-md hover:shadow-lg transition-all whitespace-nowrap"
           >
             Get a Free Discovery Call
           </Link>
@@ -500,7 +500,7 @@ export default function Navbar() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-white text-3xl"
+          className="md:hidden text-black text-3xl"
           type="button"
           aria-label={open ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={open}
@@ -517,14 +517,14 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-[72px] left-0 w-full bg-black/95 backdrop-blur-md border-t border-white/10 md:hidden max-h-[calc(100vh-72px)] overflow-y-auto"
+            className="absolute top-[72px] left-0 w-full bg-white/95 backdrop-blur-md border-t border-black/10 md:hidden max-h-[calc(100vh-72px)] overflow-y-auto"
           >
-            <ul className="flex flex-col items-center gap-6 p-8 text-white text-lg">
+            <ul className="flex flex-col items-center gap-6 p-8 text-black text-lg">
               <li>
                 <Link
                   href="/"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   Home
                 </Link>
@@ -533,7 +533,7 @@ export default function Navbar() {
                 <Link
                   href="/about"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   About
                 </Link>
@@ -542,7 +542,7 @@ export default function Navbar() {
                 <Link
                   href="/portfolio"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   Portfolio
                 </Link>
@@ -553,7 +553,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileServices(!mobileServices)}
-                  className="w-full flex items-center justify-center py-1 hover:text-[#CCFF00] transition"
+                  className="w-full flex items-center justify-center py-1 hover:text-black transition"
                   aria-expanded={mobileServices}
                 >
                   Services
@@ -567,11 +567,11 @@ export default function Navbar() {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
+                      <div className="mt-3 flex flex-col gap-1 border-t border-black/10 pt-3">
                         <Link
                           href="/services"
                           onClick={closeMobileMenu}
-                          className="text-center text-sm font-semibold text-[#CCFF00] py-2"
+                          className="text-center text-sm font-semibold text-black py-2"
                         >
                           All Services
                         </Link>
@@ -580,7 +580,7 @@ export default function Navbar() {
                             key={service.href}
                             href={service.href}
                             onClick={closeMobileMenu}
-                            className="text-center text-sm text-gray-300 hover:text-[#CCFF00] py-2 transition"
+                            className="text-center text-sm text-gray-600 hover:text-black py-2 transition"
                           >
                             {service.name}
                           </Link>
@@ -596,7 +596,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileIndustries(!mobileIndustries)}
-                  className="w-full flex items-center justify-center py-1 hover:text-[#CCFF00] transition"
+                  className="w-full flex items-center justify-center py-1 hover:text-black transition"
                   aria-expanded={mobileIndustries}
                 >
                   Industries
@@ -610,11 +610,11 @@ export default function Navbar() {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
+                      <div className="mt-3 flex flex-col gap-1 border-t border-black/10 pt-3">
                         <Link
                           href="/industries"
                           onClick={closeMobileMenu}
-                          className="text-center text-sm font-semibold text-[#CCFF00] py-2"
+                          className="text-center text-sm font-semibold text-black py-2"
                         >
                           All Industries
                         </Link>
@@ -623,7 +623,7 @@ export default function Navbar() {
                             key={industry.href}
                             href={industry.href}
                             onClick={closeMobileMenu}
-                            className="text-center text-sm text-gray-300 hover:text-[#CCFF00] py-2 transition"
+                            className="text-center text-sm text-gray-600 hover:text-black py-2 transition"
                           >
                             {industry.name}
                           </Link>
@@ -639,7 +639,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setMobileLocations(!mobileLocations)}
-                  className="w-full flex items-center justify-center py-1 hover:text-[#CCFF00] transition"
+                  className="w-full flex items-center justify-center py-1 hover:text-black transition"
                   aria-expanded={mobileLocations}
                 >
                   Locations
@@ -653,18 +653,18 @@ export default function Navbar() {
                       transition={{ duration: 0.25 }}
                       className="overflow-hidden"
                     >
-                      <div className="mt-3 flex flex-col gap-1 border-t border-white/10 pt-3">
+                      <div className="mt-3 flex flex-col gap-1 border-t border-black/10 pt-3">
                         <Link
                           href="/locations"
                           onClick={closeMobileMenu}
-                          className="text-center text-sm font-semibold text-[#CCFF00] py-2"
+                          className="text-center text-sm font-semibold text-black py-2"
                         >
                           All Global Locations →
                         </Link>
                         {locations.map((country) => (
                           <div
                             key={country.href}
-                            className="border-b border-white/5 last:border-none pb-1"
+                            className="border-b border-black/5 last:border-none pb-1"
                           >
                             <button
                               type="button"
@@ -675,11 +675,11 @@ export default function Navbar() {
                                     : country.name,
                                 )
                               }
-                              className="w-full flex items-center justify-between px-3 py-2 text-sm text-white hover:text-[#CCFF00] transition"
+                              className="w-full flex items-center justify-between px-3 py-2 text-sm text-black hover:text-black transition"
                               aria-expanded={openCountry === country.name}
                             >
                               <span>{country.name}</span>
-                              <span className="text-[#CCFF00] text-xs">
+                              <span className="text-black text-xs">
                                 {openCountry === country.name ? "−" : "+"}
                               </span>
                             </button>
@@ -696,7 +696,7 @@ export default function Navbar() {
                                     <Link
                                       href={country.href}
                                       onClick={closeMobileMenu}
-                                      className="col-span-2 text-center text-xs font-semibold text-[#CCFF00] py-1.5 rounded-md hover:bg-white/5"
+                                      className="col-span-2 text-center text-xs font-semibold text-black py-1.5 rounded-md hover:bg-black/5"
                                     >
                                       All {country.name} Locations
                                     </Link>
@@ -705,7 +705,7 @@ export default function Navbar() {
                                         key={city.href}
                                         href={city.href}
                                         onClick={closeMobileMenu}
-                                        className="text-center text-xs text-gray-300 py-1.5 rounded-md hover:text-[#CCFF00] hover:bg-white/5 transition"
+                                        className="text-center text-xs text-gray-600 py-1.5 rounded-md hover:text-black hover:bg-black/5 transition"
                                       >
                                         {city.name}
                                       </Link>
@@ -726,7 +726,7 @@ export default function Navbar() {
                 <Link
                   href="/case-studies"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   Case Studies
                 </Link>
@@ -735,7 +735,7 @@ export default function Navbar() {
                 <Link
                   href="/process"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   Process
                 </Link>
@@ -744,7 +744,7 @@ export default function Navbar() {
                 <Link
                   href="/blog"
                   onClick={closeMobileMenu}
-                  className="hover:text-[#CCFF00] transition"
+                  className="hover:text-black transition"
                 >
                   Blog
                 </Link>
@@ -754,7 +754,7 @@ export default function Navbar() {
                 <Link
                   href="/quote"
                   onClick={closeMobileMenu}
-                  className="w-full block text-center bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] text-black py-3 rounded-[8px] font-semibold shadow-md hover:shadow-[0_0_15px_#CCFF00] transition-all"
+                  className="w-full block text-center bg-black text-white py-3 rounded-[8px] font-semibold shadow-md hover:shadow-lg transition-all"
                 >
                   Get a Free Discovery Call
                 </Link>

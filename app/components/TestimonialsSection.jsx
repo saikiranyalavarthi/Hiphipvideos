@@ -5,43 +5,24 @@ import { motion } from "framer-motion";
 const testimonials = [
   {
     quote:
-      "HipHipVideos understood our vision and transformed it into an engaging visual story that communicated our product and its value clearly.",
-    name: "Arjun Mehta",
-    role: "Founder",
-    company: "DemoTech",
+      "The team understood what we wanted from the video and made the entire process easy. The final output looked great, and the product was presented exactly the way we had imagined.",
+    name: "Marketing Team",
+    role: "Brand Campaign",
+    company: "Product Brand",
   },
   {
     quote:
-      "The creative process was professional, collaborative and well organised. The team brought our ideas to life through thoughtful visuals and storytelling.",
-    name: "Priya Sharma",
-    role: "Marketing Manager",
-    company: "BrandNest",
+      "Working with Hip Hip Videos was a smooth experience. They understood our requirements, shared creative ideas and delivered a video that communicated our message clearly.",
+    name: "Business Team",
+    role: "Business Communication",
+    company: "Corporate Client",
   },
   {
     quote:
-      "The final product video showcased our product beautifully and gave our campaign a strong, engaging visual identity.",
-    name: "Rahul Verma",
-    role: "Brand Director",
-    company: "NovaWorks",
-  },
-];
-
-const results = [
-  {
-    value: "Creative",
-    label: "Video Strategy",
-  },
-  {
-    value: "AI-Powered",
-    label: "Video Creation",
-  },
-  {
-    value: "3D & Motion",
-    label: "Visual Capabilities",
-  },
-  {
-    value: "Brand-Focused",
-    label: "Storytelling",
+      "We wanted something more engaging than a traditional product video. The team brought a creative approach to the visuals and made the final video feel much more interesting.",
+    name: "Brand Manager",
+    role: "Product Marketing",
+    company: "Consumer Brand",
   },
 ];
 
@@ -49,101 +30,82 @@ export default function TestimonialsSection() {
   return (
     <section
       aria-labelledby="testimonials-heading"
-      className="relative overflow-hidden bg-[#050505] py-20 text-white sm:py-24 md:py-32"
+      className="overflow-hidden bg-white py-20 text-black sm:py-24 md:py-28"
     >
-      {/* BACKGROUND GLOW */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-[-180px] top-[20%] h-[450px] w-[450px] rounded-full bg-[#CCFF00]/5 blur-[150px]"
-      />
-
-      <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+      <div className="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
         {/* HEADER */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.2,
-          }}
-          transition={{
-            duration: 0.7,
-          }}
-          className="mx-auto max-w-4xl text-center"
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl"
         >
-          {/* LABEL */}
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 sm:text-sm">
             Client Experiences
           </p>
 
-          {/* SEO H2 */}
           <h2
             id="testimonials-heading"
-            className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
+            className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
-            What Clients Say About{" "}
-            <span className="text-[#CCFF00]">Hip Hip Videos</span>
+            Good Work.{" "}
+            <span className="text-neutral-400">Good Relationships.</span>
           </h2>
 
-          {/* SUPPORTING CONTENT */}
-          <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            We collaborate with brands, startups and businesses to transform
-            ideas into engaging video content. From product advertisements and
-            product demos to business videos, AI-powered visuals, animation,
-            motion graphics and brand storytelling, our creative approach is
-            built around your message, audience and business objectives.
+          <p className="mt-5 max-w-2xl text-sm leading-7 text-neutral-600 sm:text-base sm:leading-8">
+            We believe the best video projects come from good collaboration.
+            Understanding the brief, sharing ideas, getting the details right
+            and creating something our clients are happy to put their name on.
           </p>
         </motion.div>
 
         {/* TESTIMONIAL CARDS */}
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
             <motion.article
-              key={`${testimonial.name}-${index}`}
-              initial={{
-                opacity: 0,
-                y: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-              }}
-              className="group rounded-2xl border border-white/10 bg-white/[0.025] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#CCFF00]/30 hover:bg-white/[0.04] sm:p-8"
+              key={index}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.12 }}
+              className="flex flex-col justify-between rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-400 sm:p-8"
             >
-              {/* QUOTE MARK */}
-              <div
-                aria-hidden="true"
-                className="text-4xl font-bold leading-none text-[#CCFF00]/40"
-              >
-                "
+              {/* QUOTE ICON */}
+              <div>
+                <span
+                  aria-hidden="true"
+                  className="text-5xl font-serif leading-none text-neutral-300"
+                >
+                  “
+                </span>
+
+                {/* TESTIMONIAL */}
+                <blockquote className="mt-3 text-[15px] leading-7 text-neutral-700 sm:text-base sm:leading-8">
+                  {testimonial.quote}
+                </blockquote>
               </div>
 
-              {/* QUOTE */}
-              <blockquote className="mt-5 text-base leading-7 text-white/70">
-                {testimonial.quote}
-              </blockquote>
+              {/* CLIENT INFORMATION */}
+              <div className="mt-8 border-t border-neutral-200 pt-5">
+                <div className="flex items-center gap-3">
+                  {/* AVATAR */}
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-sm font-semibold text-neutral-700">
+                    {testimonial.name.charAt(0)}
+                  </div>
 
-              {/* CLIENT */}
-              <div className="mt-8 border-t border-white/10 pt-5">
-                <p className="font-semibold text-white">{testimonial.name}</p>
+                  <div>
+                    <p className="text-sm font-semibold text-black">
+                      {testimonial.name}
+                    </p>
 
-                <p className="mt-1 text-sm text-white/40">{testimonial.role}</p>
+                    <p className="mt-1 text-xs text-neutral-500">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                </div>
 
-                <p className="mt-1 text-sm font-medium text-[#CCFF00]/70">
+                <p className="mt-4 text-xs font-medium uppercase tracking-wider text-neutral-400">
                   {testimonial.company}
                 </p>
               </div>
@@ -151,73 +113,20 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* CAPABILITIES STRIP */}
+        {/* BOTTOM MESSAGE */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 25,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mt-12 grid grid-cols-2 overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] lg:mt-16 lg:grid-cols-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 border-t border-neutral-200 pt-8 sm:mt-16 sm:pt-10"
         >
-          {results.map((result, index) => (
-            <div
-              key={result.label}
-              className={`p-6 text-center sm:p-8 ${
-                index !== results.length - 1
-                  ? "border-b border-white/10 lg:border-b-0 lg:border-r"
-                  : ""
-              } ${index === 0 ? "border-r border-white/10" : ""} ${
-                index === 2 ? "lg:border-r" : ""
-              }`}
-            >
-              <p className="text-lg font-bold text-[#CCFF00] sm:text-xl">
-                {result.value}
-              </p>
-
-              <p className="mt-1 text-xs uppercase tracking-wider text-white/40 sm:text-sm">
-                {result.label}
-              </p>
-            </div>
-          ))}
+          <p className="max-w-2xl text-sm leading-7 text-neutral-500 sm:text-base">
+            Every project is a collaboration. We listen, create, refine and work
+            closely with brands and businesses to turn ideas into videos that
+            make an impact.
+          </p>
         </motion.div>
-
-        {/* SUPPORTING SEO CONTENT */}
-        <motion.p
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mx-auto mt-10 max-w-4xl text-center text-sm leading-6 text-white/35 sm:text-base sm:leading-7"
-        >
-          Hip Hip Videos creates product-focused and business-focused videos for
-          brands and businesses. Our video creation services include product
-          advertisements, product demo videos, AI video creation, animated
-          product videos, SaaS explainer videos, business videos, promotional
-          videos, motion graphics, 3D product animation, visual effects and
-          creative brand storytelling. We combine AI, design, animation, editing
-          and real footage where appropriate to create video content for digital
-          marketing, advertising, websites and social media.
-        </motion.p>
       </div>
     </section>
   );

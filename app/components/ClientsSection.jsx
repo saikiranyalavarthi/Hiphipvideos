@@ -35,78 +35,63 @@ export default function ClientsSection() {
   return (
     <section
       aria-labelledby="clients-heading"
-      className="relative overflow-hidden bg-[#050505] py-12 sm:py-16"
+      className="relative w-full overflow-hidden bg-white py-14 sm:py-16 md:py-20"
     >
-      {/* SECTION HEADING */}
-      <div className="mx-auto mb-10 max-w-7xl px-4 text-center sm:px-6">
-        <span className="mb-4 inline-block rounded-full border border-[#CCFF00]/30 bg-[#CCFF00]/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-[#CCFF00]">
-          Brands & Businesses
-        </span>
-
+      {/* HEADING */}
+      <div className="mb-10 px-4 text-center sm:mb-12">
         <h2
           id="clients-heading"
-          className="text-3xl font-bold tracking-tight text-white sm:text-5xl"
+          className="text-[26px] font-medium tracking-tight text-[#858585] sm:text-[34px] md:text-[42px]"
         >
-          Brands That{" "}
-          <span className="text-[#CCFF00]">Trust Our Creativity</span>
+          Companies we <span className="font-bold text-black">collaborate</span>{" "}
+          with.
         </h2>
-
-        <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/50 sm:text-base">
-          We collaborate with brands, startups and businesses to create engaging
-          product videos, business videos, promotional content, animated visuals
-          and creative video experiences that bring ideas to life.
-        </p>
       </div>
 
-      {/* CONTINUOUS LOGO SLIDER */}
+      {/* LOGO SCROLLER */}
       <div className="group relative w-full overflow-hidden">
         {/* LEFT FADE */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-[#050505] to-transparent sm:w-28"
-        />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-white to-transparent sm:w-12 md:w-16" />
 
         {/* RIGHT FADE */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#050505] to-transparent sm:w-28"
-        />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:w-12 md:w-16" />
 
-        <div className="flex w-max animate-clients-scroll group-hover:[animation-play-state:paused]">
-          {/* ORIGINAL LOGO GROUP */}
-          <div className="flex shrink-0 items-center gap-4 px-2 sm:gap-6 sm:px-3">
+        {/* ANIMATED TRACK */}
+        <div className="clients-marquee flex w-max items-center">
+          {/* ORIGINAL LOGOS */}
+          <div className="flex shrink-0 items-center gap-5 px-4 sm:gap-7 sm:px-6 md:gap-9 md:px-8">
             {clients.map((logo, index) => (
               <div
-                key={logo}
-                className="flex h-20 w-32 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 transition-all duration-300 hover:border-[#CCFF00]/50 hover:bg-white/[0.08] sm:h-28 sm:w-48 sm:px-6"
+                key={`logo-${index}`}
+                className="flex h-20 w-32 shrink-0 items-center justify-center sm:h-24 sm:w-40 md:h-28 md:w-48"
               >
                 <img
                   src={logo}
-                  alt={`Brand ${index + 1} collaborating with Hip Hip Videos`}
+                  alt={`Partner company ${index + 1}`}
                   loading="lazy"
                   decoding="async"
-                  className="max-h-full max-w-full object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                  className="max-h-16 max-w-[120px] object-contain sm:max-h-20 sm:max-w-[150px] md:max-h-24 md:max-w-[180px]"
                 />
               </div>
             ))}
           </div>
 
-          {/* DUPLICATE GROUP FOR INFINITE SCROLL */}
+          {/* DUPLICATE LOGOS */}
           <div
-            className="flex shrink-0 items-center gap-4 px-2 sm:gap-6 sm:px-3"
             aria-hidden="true"
+            className="flex shrink-0 items-center gap-5 px-4 sm:gap-7 sm:px-6 md:gap-9 md:px-8"
           >
             {clients.map((logo, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="flex h-20 w-32 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 transition-all duration-300 hover:border-[#CCFF00]/50 hover:bg-white/[0.08] sm:h-28 sm:w-48 sm:px-6"
+                className="flex h-14 w-24 shrink-0 items-center justify-center sm:h-16 sm:w-28 md:h-20 md:w-32"
               >
                 <img
                   src={logo}
                   alt=""
                   loading="lazy"
                   decoding="async"
-                  className="max-h-full max-w-full object-contain grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                  className="max-h-10 max-w-[85px] object-contain sm:max-h-12 sm:max-w-[105px] md:max-h-14 md:max-w-[120px]"
                 />
               </div>
             ))}
@@ -114,39 +99,34 @@ export default function ClientsSection() {
         </div>
       </div>
 
-      {/* BOTTOM CONTENT */}
-      <div className="mt-10 px-4 text-center">
-        <p className="text-sm text-white/50">
-          Creative collaboration. Powerful visuals. Meaningful brand
-          communication.
-        </p>
-      </div>
-
-      {/* SLIDER ANIMATION */}
+      {/* ANIMATION */}
       <style jsx>{`
+        .clients-marquee {
+          animation: clients-scroll 45s linear infinite;
+          will-change: transform;
+        }
+
+        .group:hover .clients-marquee {
+          animation-play-state: paused;
+        }
+
         @keyframes clients-scroll {
           from {
             transform: translateX(0);
           }
-
           to {
             transform: translateX(-50%);
           }
         }
 
-        .animate-clients-scroll {
-          animation: clients-scroll 65s linear infinite;
-          width: max-content;
-        }
-
         @media (max-width: 640px) {
-          .animate-clients-scroll {
-            animation-duration: 45s;
+          .clients-marquee {
+            animation-duration: 35s;
           }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .animate-clients-scroll {
+          .clients-marquee {
             animation: none;
           }
         }

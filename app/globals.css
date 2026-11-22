@@ -1,25 +1,33 @@
 @import "tailwindcss";
 
-/* GLOBAL BASE */
+/* =========================================
+   GLOBAL BASE
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   background-color: #000;
   color: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* DO NOT SET FONT HERE
-   Inter is already applied in layout.jsx via next/font */
+/* Inter font is applied through layout.jsx */
 
-/* -------------------- */
-/* MARQUEE ANIMATION */
-/* -------------------- */
+/* =========================================
+   MARQUEE ANIMATION
+========================================= */
 
 @keyframes marquee {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -29,65 +37,170 @@ body {
   display: flex;
   width: max-content;
   animation: marquee 25s linear infinite;
+  will-change: transform;
 }
 
 .marquee:hover {
   animation-play-state: paused;
 }
+
+/* =========================================
+   INPUT
+========================================= */
+
 .input {
   width: 100%;
   padding: 14px 16px;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #111;
   font-size: 16px;
   transition: all 0.25s ease;
 }
 
 .input:focus {
   outline: none;
-  border-color: #ccff00;
-  box-shadow: 0 0 0 4px rgba(204, 255, 0, 0.35);
+  border-color: #111;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
 }
+
+/* =========================================
+   MONOCHROME TEXT GLOW
+========================================= */
 
 .text-glow {
   text-shadow:
-    0 0 8px rgba(204, 255, 0, 0.7),
-    0 0 16px rgba(204, 255, 0, 0.5);
+    0 0 8px rgba(255, 255, 255, 0.15),
+    0 0 16px rgba(255, 255, 255, 0.08);
 }
+
+/* =========================================
+   FORM LABEL
+========================================= */
 
 .label-style {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 500;
-  color: white;
+  color: #fff;
   letter-spacing: 0.5px;
 }
 
+/* =========================================
+   REQUIRED FIELD
+========================================= */
+
 .req {
-  color: rgba(251, 94, 42, 0.9);
+  color: #fff;
   margin-left: 4px;
 }
+
+/* =========================================
+   CUSTOM INPUT
+========================================= */
 
 .input-style {
   height: 55px;
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid #757575;
+  border: 1px solid #555;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  color: white;
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
   font-size: 14px;
   outline: none;
   transition: all 0.3s ease;
 }
 
-.input-style:focus {
-  border-color: #ccff00;
-  box-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+.input-style:hover {
+  border-color: #999;
 }
 
-/* SELECT DROPDOWN */
+.input-style:focus {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   SELECT DROPDOWN
+========================================= */
+
 .input-style option {
   background-color: #fff;
   color: #000;
+}
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection {
+  background: #fff;
+  color: #000;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* =========================================
+   LINKS
+========================================= */
+
+a {
+  color: inherit;
+}
+
+/* =========================================
+   BUTTON TRANSITIONS
+========================================= */
+
+button {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* =========================================
+   RESPONSIVE BASE
+========================================= */
+
+img,
+video {
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -86,36 +86,26 @@ export default function FAQSection() {
 
   return (
     <section
+      id="faq"
       aria-labelledby="faq-heading"
-      className="relative overflow-hidden bg-black py-20 text-white sm:py-24 md:py-32"
+      className="relative overflow-hidden bg-black py-20 text-white sm:py-24 md:py-28"
     >
-      {/* BACKGROUND GLOW */}
+      {/* Subtle Background */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-[400px] w-[400px] -translate-x-1/2 rounded-full bg-[#CCFF00]/5 blur-[150px]"
+        className="pointer-events-none absolute left-1/2 top-0 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-white/[0.025] blur-[120px]"
       />
 
-      <div className="relative mx-auto w-full max-w-[1100px] px-6 lg:px-12">
+      <div className="relative mx-auto w-full max-w-[1100px] px-5 sm:px-8 lg:px-12">
         {/* HEADER */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.2,
-          }}
-          transition={{
-            duration: 0.7,
-          }}
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-white/50 sm:text-sm">
             Frequently Asked Questions
           </p>
 
@@ -123,10 +113,10 @@ export default function FAQSection() {
             id="faq-heading"
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
-            Video Creation <span className="text-[#CCFF00]">FAQs</span>
+            Video Creation <span className="text-white/50">FAQs</span>
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/50 sm:text-lg sm:leading-8">
             Find answers about our video creation services, AI-powered visuals,
             product videos, business videos, creative process, pricing and
             project requirements.
@@ -141,25 +131,13 @@ export default function FAQSection() {
             return (
               <motion.div
                 key={faq.question}
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                viewport={{
-                  once: true,
-                  amount: 0.1,
-                }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.03,
-                }}
-                className={`overflow-hidden rounded-xl border transition-all duration-300 ${
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.025 }}
+                className={`overflow-hidden rounded-xl border transition-colors duration-300 ${
                   isOpen
-                    ? "border-[#CCFF00]/30 bg-white/[0.04]"
+                    ? "border-white/25 bg-white/[0.045]"
                     : "border-white/10 bg-white/[0.02] hover:border-white/20"
                 }`}
               >
@@ -169,25 +147,26 @@ export default function FAQSection() {
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
-                  className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left sm:px-7 sm:py-6"
+                  className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
                 >
                   <span
-                    className={`text-[15px] font-semibold leading-6 sm:text-[17px] ${
-                      isOpen ? "text-[#CCFF00]" : "text-white"
+                    className={`text-[15px] font-semibold leading-6 transition-colors sm:text-[17px] ${
+                      isOpen ? "text-white" : "text-white/85"
                     }`}
                   >
                     {faq.question}
                   </span>
 
+                  {/* PLUS / MINUS */}
                   <span
                     aria-hidden="true"
-                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-lg transition-all duration-300 ${
+                    className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
                       isOpen
-                        ? "rotate-45 border-[#CCFF00] text-[#CCFF00]"
-                        : "border-white/20 text-white/50"
+                        ? "rotate-45 border-white/40 bg-white text-black"
+                        : "border-white/15 text-white/60"
                     }`}
                   >
-                    +
+                    <span className="text-xl leading-none">+</span>
                   </span>
                 </button>
 
@@ -196,24 +175,13 @@ export default function FAQSection() {
                   {isOpen && (
                     <motion.div
                       id={`faq-answer-${index}`}
-                      initial={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      animate={{
-                        height: "auto",
-                        opacity: 1,
-                      }}
-                      exit={{
-                        height: 0,
-                        opacity: 0,
-                      }}
-                      transition={{
-                        duration: 0.25,
-                      }}
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div className="border-t border-white/10 px-5 pb-6 pt-5 sm:px-7">
-                        <p className="max-w-4xl text-sm leading-6 text-white/55 sm:text-[15px] sm:leading-7">
+                        <p className="max-w-4xl text-sm leading-7 text-white/55 sm:text-[15px] sm:leading-8">
                           {faq.answer}
                         </p>
                       </div>
@@ -227,29 +195,19 @@ export default function FAQSection() {
 
         {/* BOTTOM CTA */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="mt-12 text-center md:mt-16"
         >
-          <p className="text-sm text-white/40 sm:text-base">
+          <p className="text-sm text-white/45 sm:text-base">
             Have a product, business or video idea to bring to life?
           </p>
 
           <a
             href="/quote"
-            className="mt-5 inline-flex items-center justify-center rounded-[8px] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] px-7 py-3.5 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
+            className="mt-6 inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-white/90 sm:px-9"
           >
             Get a Free Discovery Call
           </a>

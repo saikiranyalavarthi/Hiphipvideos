@@ -98,27 +98,34 @@ const industries = [
 ];
 
 /* =========================================
+   FOOTER LINK STYLE
+========================================= */
+
+const footerLinkClass =
+  "text-sm text-white/50 transition-colors duration-300 hover:text-white";
+
+/* =========================================
    FOOTER
 ========================================= */
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white border-t border-white/10">
+    <footer className="overflow-hidden border-t border-white/10 bg-black text-white">
       {/* MAIN FOOTER */}
-      <div className="mx-auto w-full max-w-[1440px] px-6 py-14 sm:py-16 lg:px-12 lg:py-20">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-14 sm:px-8 sm:py-16 lg:px-12 lg:py-20">
         {/* TOP CTA */}
-        <div className="flex flex-col gap-6 border-b border-white/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-7 border-b border-white/10 pb-12 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00]">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-white/45">
               HipHipVideos
             </p>
 
-            <h2 className="text-3xl font-bold leading-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
               Create videos that{" "}
-              <span className="text-[#CCFF00]">make an impact.</span>
+              <span className="text-white/50">make an impact.</span>
             </h2>
 
-            <p className="mt-4 max-w-xl text-sm leading-6 text-white/50 sm:text-base">
+            <p className="mt-4 max-w-xl text-sm leading-7 text-white/50 sm:text-base">
               Creative video creation for products, brands, startups and
               businesses. We combine AI, animation, motion graphics, visual
               effects, graphic design and storytelling to turn ideas into
@@ -129,14 +136,14 @@ export default function Footer() {
           <Link
             href="/quote"
             aria-label="Request a video creation project quote"
-            className="inline-flex w-fit items-center justify-center rounded-lg bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] px-6 py-3 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
+            className="inline-flex w-fit items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
           >
             Get a Free Discovery Call
           </Link>
         </div>
 
         {/* FOOTER GRID */}
-        <div className="grid gap-12 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10">
+        <div className="grid grid-cols-1 gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10 lg:py-14">
           {/* BRAND */}
           <div>
             <Link
@@ -146,14 +153,14 @@ export default function Footer() {
             >
               <Image
                 src="/hiphiplogo.svg"
-                alt="HipHipVideos Video Creation Company logo"
+                alt="HipHipVideos Video Creation Company"
                 width={150}
                 height={40}
                 className="h-[40px] w-[150px] object-contain"
               />
             </Link>
 
-            <p className="mt-5 max-w-xs text-sm leading-6 text-white/45">
+            <p className="mt-5 max-w-xs text-sm leading-7 text-white/45">
               HipHipVideos is a video creation company in Hyderabad, India,
               creating product-focused and business-focused videos using AI,
               animation, motion graphics, visual effects, design, storytelling
@@ -161,11 +168,11 @@ export default function Footer() {
             </p>
 
             {/* CONTACT */}
-            <div className="mt-6 space-y-2">
+            <div className="mt-6 space-y-3">
               <a
-                href="tel:+916301022795"
+                href="tel:+916302111807"
                 aria-label="Call HipHipVideos"
-                className="block text-sm text-white/60 transition hover:text-[#CCFF00]"
+                className="block text-sm text-white/50 transition-colors hover:text-white"
               >
                 +91 63021 11807
               </a>
@@ -173,7 +180,7 @@ export default function Footer() {
               <a
                 href="mailto:info@hiphipvideos.com"
                 aria-label="Email HipHipVideos"
-                className="block break-all text-sm text-white/60 transition hover:text-[#CCFF00]"
+                className="block break-all text-sm text-white/50 transition-colors hover:text-white"
               >
                 info@hiphipvideos.com
               </a>
@@ -182,7 +189,7 @@ export default function Footer() {
 
           {/* COMPANY */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
               Company
             </h3>
 
@@ -190,31 +197,31 @@ export default function Footer() {
               aria-label="Company navigation"
               className="mt-5 flex flex-col gap-3"
             >
-              <Link href="/" className="footer-link">
+              <Link href="/" className={footerLinkClass}>
                 Home
               </Link>
 
-              <Link href="/about" className="footer-link">
+              <Link href="/about" className={footerLinkClass}>
                 About Us
               </Link>
 
-              <Link href="/portfolio" className="footer-link">
+              <Link href="/portfolio" className={footerLinkClass}>
                 Video Portfolio
               </Link>
 
-              <Link href="/case-studies" className="footer-link">
+              <Link href="/case-studies" className={footerLinkClass}>
                 Case Studies
               </Link>
 
-              <Link href="/process" className="footer-link">
+              <Link href="/process" className={footerLinkClass}>
                 Our Creative Process
               </Link>
 
-              <Link href="/blog" className="footer-link">
+              <Link href="/blog" className={footerLinkClass}>
                 Blog
               </Link>
 
-              <Link href="/quote" className="footer-link">
+              <Link href="/quote" className={footerLinkClass}>
                 Get a Quote
               </Link>
             </nav>
@@ -222,7 +229,7 @@ export default function Footer() {
 
           {/* SERVICES */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
               Video Creation Services
             </h3>
 
@@ -234,7 +241,7 @@ export default function Footer() {
                 <Link
                   key={service.href}
                   href={service.href}
-                  className="footer-link"
+                  className={footerLinkClass}
                 >
                   {service.name}
                 </Link>
@@ -244,7 +251,7 @@ export default function Footer() {
 
           {/* INDUSTRIES */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.12em] text-white">
               Industries We Serve
             </h3>
 
@@ -256,7 +263,7 @@ export default function Footer() {
                 <Link
                   key={industry.href}
                   href={industry.href}
-                  className="footer-link"
+                  className={footerLinkClass}
                 >
                   {industry.name}
                 </Link>
@@ -267,33 +274,28 @@ export default function Footer() {
 
         {/* SOCIAL MEDIA */}
         <div
-          className="flex items-center gap-[10px]"
+          className="flex flex-wrap items-center gap-4 sm:gap-5"
           aria-label="HipHipVideos social media"
         >
           {socialLinks.map((icon, index) => (
             <motion.div
               key={index}
-              whileHover={{
-                y: -4,
-                scale: 1.1,
-              }}
-              transition={{
-                duration: 0.2,
-              }}
+              whileHover={{ y: -4, scale: 1.05 }}
+              transition={{ duration: 0.2 }}
             >
               <a
                 href={icon.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`HipHipVideos on ${icon.alt}`}
-                className="group w-[30px] h-[30px] flex items-center justify-center border border-[#CCFF00]/60 rounded-[6px] hover:bg-[#CCFF00] hover:shadow-[0_0_12px_#CCFF00] transition-all duration-300"
+                className="group flex h-[64px] w-[64px] items-center justify-center rounded-[16px] border border-white/20 transition-all duration-300 hover:border-white/60 hover:bg-white sm:h-[72px] sm:w-[72px] sm:rounded-[20px]"
               >
                 <Image
                   src={icon.src}
                   alt=""
-                  width={14}
-                  height={14}
-                  className="transition group-hover:brightness-0"
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 object-contain transition duration-300 group-hover:brightness-0"
                 />
               </a>
             </motion.div>
@@ -301,15 +303,15 @@ export default function Footer() {
         </div>
 
         {/* LOCATION & SEO CONTENT */}
-        <div className="border-t border-white/10 py-8 mt-8">
-          <div className="grid gap-6 md:grid-cols-2">
+        <div className="mt-10 border-t border-white/10 py-8 sm:mt-12">
+          <div className="grid gap-8 md:grid-cols-2">
             {/* LOCAL SEO */}
             <div>
               <h3 className="text-sm font-semibold text-white">
                 Video Creation Company in Hyderabad
               </h3>
 
-              <address className="mt-3 not-italic text-sm leading-6 text-white/45">
+              <address className="mt-3 not-italic text-sm leading-7 text-white/40">
                 Sattva Magnus Commercial Building,
                 <br />
                 Shaikpet, Jubilee Hills,
@@ -324,7 +326,7 @@ export default function Footer() {
                 Product & Business Video Creation
               </p>
 
-              <p className="mt-3 max-w-md text-sm leading-6 text-white/45 md:ml-auto">
+              <p className="mt-3 max-w-md text-sm leading-7 text-white/40 md:ml-auto">
                 Product advertisements, product demo videos, business videos, AI
                 video creation, SaaS explainers, app promotional videos,
                 animated product videos, 3D product animation, motion graphics,
@@ -341,12 +343,15 @@ export default function Footer() {
           <div className="flex flex-wrap gap-5">
             <Link
               href="/privacy-policy"
-              className="transition hover:text-[#CCFF00]"
+              className="transition-colors duration-300 hover:text-white"
             >
               Privacy Policy
             </Link>
 
-            <Link href="/terms" className="transition hover:text-[#CCFF00]">
+            <Link
+              href="/terms"
+              className="transition-colors duration-300 hover:text-white"
+            >
               Terms & Conditions
             </Link>
           </div>

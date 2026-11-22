@@ -6,32 +6,33 @@ import { motion } from "framer-motion";
 const caseStudies = [
   {
     number: "01",
-    category: "SaaS & Technology Video Creation",
-    title: "SaaS Product Launch Video",
+    brand: "Calendly",
+    category: "SaaS & Technology",
+    title: "Product Video & SaaS Storytelling",
     description:
-      "A product-focused video concept designed to explain a SaaS platform, highlight its key features, communicate its value proposition and simplify complex technology through visual storytelling, animation and motion graphics.",
-    services: "SaaS Video • Product Explainer • AI Visuals • Motion Graphics",
-    href: "/case-studies/saas-product-launch",
+      "A creative video experience showcasing Calendly's scheduling platform, highlighting its product functionality, seamless scheduling experience and ability to simplify meeting coordination for businesses and professionals.",
+    services: "SaaS Video • Product Storytelling • Technology Video",
+    href: "/case-studies/calendly",
   },
   {
     number: "02",
-    category: "Product & D2C Video Creation",
-    title: "Product Brand Campaign",
+    brand: "Owlet",
+    category: "Baby Care & Consumer Products",
+    title: "Product Storytelling & Brand Video",
     description:
-      "A creative product video campaign built to showcase product features, communicate brand identity and create engaging visual content for digital advertising, social media, marketing campaigns and customer communication.",
-    services:
-      "Product Video • Product Advertising • Brand Content • Creative Campaigns",
-    href: "/case-studies/product-brand-campaign",
+      "A product-focused video highlighting Owlet's baby care technology through engaging visuals, product storytelling and creative communication designed to introduce product features and connect with families.",
+    services: "Product Video • Brand Storytelling • Product Advertising",
+    href: "/case-studies/owlet",
   },
   {
     number: "03",
-    category: "Business & Brand Video Creation",
-    title: "Corporate Brand Film",
+    brand: "Slurrp Farm",
+    category: "Food & Nutrition",
+    title: "Food Product Advertisement",
     description:
-      "A business-focused video concept created to communicate a company's story, services, capabilities and brand identity through creative visuals, storytelling, motion graphics, animation and video content.",
-    services:
-      "Business Video • Brand Storytelling • Company Profile • Visual Communication",
-    href: "/case-studies/corporate-brand-film",
+      "A creative food and product video designed to bring Slurrp Farm products to life through engaging visuals, product presentation, creative storytelling and advertising-focused content.",
+    services: "Food Advertising • Product Video • Brand Campaign",
+    href: "/case-studies/slurrp-farm",
   },
 ];
 
@@ -41,183 +42,116 @@ export default function CaseStudies() {
       aria-labelledby="case-studies-heading"
       className="relative overflow-hidden bg-black py-20 text-white sm:py-24 md:py-32"
     >
-      {/* BACKGROUND GLOW */}
+      {/* SUBTLE BACKGROUND EFFECT */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute left-[-180px] top-[20%] h-[450px] w-[450px] rounded-full bg-[#CCFF00]/5 blur-[140px]"
+        className="pointer-events-none absolute left-[-200px] top-[20%] h-[500px] w-[500px] rounded-full bg-white/[0.025] blur-[140px]"
       />
 
       <div className="relative mx-auto w-full max-w-[1440px] px-6 lg:px-12">
         {/* HEADER */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-            amount: 0.2,
-          }}
-          transition={{
-            duration: 0.7,
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
           className="max-w-4xl"
         >
-          {/* LABEL */}
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-[#CCFF00] sm:text-sm">
-            Video Creation Case Studies
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-white/50 sm:text-sm">
+            Selected Projects
           </p>
 
-          {/* SEO H2 */}
           <h2
             id="case-studies-heading"
             className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl"
           >
-            Video Ideas Designed Around{" "}
-            <span className="text-[#CCFF00]">Real Business Goals</span>
+            Real Brands.{" "}
+            <span className="text-white/50">Real Video Projects.</span>
           </h2>
 
-          {/* SEO DESCRIPTION */}
-          <p className="mt-6 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
-            Explore video creation case studies across SaaS, technology, product
-            brands and businesses. At Hip Hip Videos, we combine creative
-            strategy, AI-powered visuals, animation, motion graphics, visual
-            effects, graphic design and storytelling to create product-focused
-            and business-focused video content.
+          <p className="mt-6 max-w-3xl text-base leading-7 text-white/50 sm:text-lg sm:leading-8">
+            Explore selected video projects created for brands across SaaS,
+            technology, food, consumer products and business. Each project
+            combines creative direction, visual storytelling and video
+            production to communicate products and brands effectively.
           </p>
         </motion.div>
 
         {/* CASE STUDIES */}
-        <div className="mt-14 space-y-5 lg:mt-20">
+        <div className="mt-14 space-y-0 border-t border-white/15 lg:mt-20">
           {caseStudies.map((study, index) => (
             <motion.article
-              key={study.href}
-              initial={{
-                opacity: 0,
-                y: 35,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-              }}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025] transition-all duration-300 hover:border-[#CCFF00]/30 hover:bg-white/[0.045]"
+              key={study.brand}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group border-b border-white/15"
             >
               <Link
                 href={study.href}
-                aria-label={`View ${study.title} case study`}
-                className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[100px_1fr_auto] lg:items-center lg:gap-10 lg:p-10"
+                className="grid gap-6 py-8 transition-all duration-300 sm:py-10 lg:grid-cols-[100px_1fr_220px] lg:items-center lg:gap-10 lg:py-14"
               >
-                {/* NUMBER */}
-                <div
-                  aria-hidden="true"
-                  className="text-4xl font-bold text-white/10 transition-colors duration-300 group-hover:text-[#CCFF00]/30 sm:text-5xl"
-                >
+                {/* PROJECT NUMBER */}
+                <span className="text-3xl font-medium text-white/20 transition-colors duration-300 group-hover:text-white sm:text-4xl">
                   {study.number}
-                </div>
+                </span>
 
-                {/* CONTENT */}
+                {/* PROJECT DETAILS */}
                 <div>
-                  {/* CATEGORY */}
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#CCFF00]">
+                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/40">
                     {study.category}
                   </p>
 
-                  {/* TITLE */}
-                  <h3 className="mt-3 text-2xl font-bold text-white transition-colors duration-300 group-hover:text-[#CCFF00] sm:text-3xl">
-                    {study.title}
+                  <h3 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
+                    {study.brand}
                   </h3>
 
-                  {/* DESCRIPTION */}
-                  <p className="mt-4 max-w-3xl text-sm leading-6 text-white/50 sm:text-base sm:leading-7">
+                  <p className="mt-2 text-base font-medium text-white/70 sm:text-lg">
+                    {study.title}
+                  </p>
+
+                  <p className="mt-4 max-w-3xl text-sm leading-7 text-white/50 sm:text-base">
                     {study.description}
                   </p>
 
-                  {/* SERVICES */}
-                  <p className="mt-5 text-xs font-medium uppercase tracking-wider text-white/30">
+                  <p className="mt-5 text-xs leading-6 text-white/30 sm:text-sm">
                     {study.services}
                   </p>
                 </div>
 
-                {/* VIEW BUTTON */}
-                <div className="flex items-center gap-2 text-sm font-semibold text-white/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#CCFF00]">
-                  <span>View Case Study</span>
-
-                  <span aria-hidden="true">→</span>
+                {/* VIEW PROJECT */}
+                <div className="flex items-center justify-start lg:justify-end">
+                  <span className="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-black">
+                    View Project
+                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+                  </span>
                 </div>
               </Link>
             </motion.article>
           ))}
         </div>
 
-        {/* SUPPORTING SEO CONTENT */}
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mt-12 max-w-4xl lg:mt-16"
-        >
-          <p className="text-sm leading-6 text-white/40 sm:text-base sm:leading-7">
-            Our video creation portfolio explores different creative approaches
-            to product video creation, business videos, product advertisements,
-            SaaS explainer videos, AI video creation, animated product videos,
-            brand campaigns, promotional videos, motion graphics, 3D product
-            animation and visual storytelling. We develop video content using
-            AI, animation, graphic design, visual effects and real footage
-            whenever it best serves the creative direction and communication
-            objectives of a project.
-          </p>
-        </motion.div>
-
         {/* BOTTOM CTA */}
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mt-12 flex flex-col items-center text-center lg:mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-14 flex flex-col items-center text-center lg:mt-20"
         >
-          <p className="text-sm text-white/40">
+          <p className="text-sm text-white/40 sm:text-base">
             Have a product or business video idea?
           </p>
 
           <Link
             href="/quote"
-            className="mt-4 inline-flex items-center justify-center rounded-[8px] bg-gradient-to-r from-[#CCFF00] to-[#a3ff12] px-6 py-3 text-sm font-bold text-black transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(204,255,0,0.25)]"
+            className="mt-5 inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-black transition-all duration-300 hover:bg-neutral-300 sm:px-9"
           >
             Start Your Video Project
+            <span>→</span>
           </Link>
         </motion.div>
       </div>

@@ -6,97 +6,75 @@ export default function CTASection() {
   return (
     <section
       aria-labelledby="final-cta-heading"
-      className="bg-black flex justify-center overflow-hidden"
+      className="bg-black px-4 py-10 sm:px-6 md:py-16"
     >
-      {/* SECTION CONTAINER */}
-      <div className="flex flex-col items-center justify-center px-6 lg:px-12 py-[40px] md:py-[64px] w-full">
-        {/* INNER WRAPPER */}
+      <div className="mx-auto max-w-[1440px]">
+        {/* SOLID ROUNDED CTA CONTAINER */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.95,
-          }}
-          whileInView={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="w-full max-w-[1440px] flex flex-col items-center gap-[28px] md:gap-[40px]"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative overflow-hidden rounded-[24px] bg-white px-6 py-12 text-black sm:rounded-[32px] sm:px-12 sm:py-16 lg:px-20 lg:py-20"
         >
-          {/* TITLE + TEXT */}
-          <div className="flex flex-col items-center text-center gap-[14px] md:gap-[16px]">
+          {/* CONTENT */}
+          <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
+            {/* LABEL */}
+            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-black/50 sm:text-sm">
+              Let&apos;s Create Something
+            </p>
+
+            {/* HEADING */}
             <h2
               id="final-cta-heading"
-              className="text-white text-[24px] sm:text-[30px] md:text-[40px] font-bold leading-[34px] sm:leading-[40px] md:leading-[48px] tracking-tight max-w-[900px]"
+              className="max-w-[900px] text-[30px] font-bold leading-[1.1] tracking-tight sm:text-[44px] md:text-[56px] lg:text-[68px]"
             >
-              Ready to Create Your{" "}
-              <span className="gradient-text">Next High-Impact Video?</span>
+              Ready to Create Your
+              <br className="hidden sm:block" />
+              <span className="text-black/50">
+                {" "}Next High-Impact Video?
+              </span>
             </h2>
 
-            {/* SUPPORTING CONTENT */}
-            <p className="text-white/80 text-[14px] sm:text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] max-w-[640px]">
+            {/* DESCRIPTION */}
+            <p className="mt-6 max-w-[650px] text-[15px] leading-7 text-black/60 sm:text-[17px] sm:leading-8">
               Bring your product, business, or brand story to life with creative
-              video content powered by AI, animation, motion graphics, visual
-              effects, design, and storytelling.
+              video content built around your vision, audience, and goals.
             </p>
-          </div>
 
-          {/* CTA BUTTON */}
-          <motion.a
-            href="/quote"
-            whileHover={{
-              scale: 1.05,
-            }}
-            whileTap={{
-              scale: 0.95,
-            }}
-            aria-label="Start your video creation project and get a free discovery call"
-            className="
-              flex items-center justify-center
-              px-[24px] py-[12px]
-              rounded-[8px]
-              bg-gradient-to-r from-[#CCFF00] to-[#a3ff12]
-              text-black
-              text-[14px]
-              font-semibold
-              leading-[20px]
-              shadow-lg
-              hover:shadow-[0_0_20px_#CCFF00]
-              transition-all duration-300
-              whitespace-nowrap
-            "
-          >
-            Get a Free Discovery Call
-          </motion.a>
-
-          {/* LOCAL BUSINESS INFORMATION */}
-          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-white/40">
-            <span>Hyderabad, Telangana, India</span>
-
-            <span className="hidden sm:block text-white/20">•</span>
-
-            <a
-              href="tel:+916301022795"
-              aria-label="Call Hip Hip Videos"
-              className="hover:text-[#CCFF00] transition"
+            {/* CTA BUTTON */}
+            <motion.a
+              href="/quote"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.97 }}
+              className="mt-9 inline-flex items-center justify-center gap-3 rounded-full bg-black px-8 py-4 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-black/80 sm:px-10 sm:py-[18px] sm:text-base"
             >
-              +91 63021 11807
-            </a>
+              Start Your Video Project
+              <span className="text-lg">→</span>
+            </motion.a>
 
-            <span className="hidden sm:block text-white/20">•</span>
+            {/* CONTACT DETAILS */}
+            <div className="mt-10 flex flex-col items-center gap-3 text-xs text-black/45 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-5 sm:text-sm">
+              <span>Hyderabad, Telangana, India</span>
 
-            <a
-              href="mailto:info@hiphipvideos.com"
-              aria-label="Email Hip Hip Videos"
-              className="hover:text-[#CCFF00] transition"
-            >
-              info@hiphipvideos.com
-            </a>
+              <span className="hidden sm:block">•</span>
+
+              <a
+                href="tel:+916302111807"
+                className="transition-colors hover:text-black"
+              >
+                +91 63021 11807
+              </a>
+
+              <span className="hidden sm:block">•</span>
+
+              <a
+                href="mailto:info@hiphipvideos.com"
+                className="transition-colors hover:text-black"
+              >
+                info@hiphipvideos.com
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
