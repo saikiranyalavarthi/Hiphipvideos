@@ -90,7 +90,7 @@ export default function FAQSection() {
       aria-labelledby="faq-heading"
       className="relative overflow-hidden bg-black py-20 text-white sm:py-24 md:py-28"
     >
-      {/* Subtle Background */}
+      {/* BACKGROUND */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-white/[0.025] blur-[120px]"
@@ -141,18 +141,30 @@ export default function FAQSection() {
                     : "border-white/10 bg-white/[0.02] hover:border-white/20"
                 }`}
               >
-                {/* QUESTION */}
+                {/* QUESTION BUTTON */}
                 <button
                   type="button"
                   onClick={() => toggleFAQ(index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   className="flex w-full items-center justify-between gap-5 px-5 py-5 text-left sm:px-7 sm:py-6"
+                  style={{
+                    color: "#ffffff",
+                    WebkitTextFillColor: "#ffffff",
+                  }}
                 >
                   <span
                     className={`text-[15px] font-semibold leading-6 transition-colors sm:text-[17px] ${
                       isOpen ? "text-white" : "text-white/85"
                     }`}
+                    style={{
+                      color: isOpen ? "#ffffff" : "rgba(255,255,255,0.85)",
+                      WebkitTextFillColor: isOpen
+                        ? "#ffffff"
+                        : "rgba(255,255,255,0.85)",
+                      opacity: 1,
+                      visibility: "visible",
+                    }}
                   >
                     {faq.question}
                   </span>
@@ -181,7 +193,13 @@ export default function FAQSection() {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                       <div className="border-t border-white/10 px-5 pb-6 pt-5 sm:px-7">
-                        <p className="max-w-4xl text-sm leading-7 text-white/55 sm:text-[15px] sm:leading-8">
+                        <p
+                          className="max-w-4xl text-sm leading-7 sm:text-[15px] sm:leading-8"
+                          style={{
+                            color: "rgba(255,255,255,0.65)",
+                            WebkitTextFillColor: "rgba(255,255,255,0.65)",
+                          }}
+                        >
                           {faq.answer}
                         </p>
                       </div>
@@ -205,11 +223,25 @@ export default function FAQSection() {
             Have a product, business or video idea to bring to life?
           </p>
 
+          {/* CTA BUTTON */}
           <a
             href="/quote"
-            className="mt-6 inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-white/90 sm:px-9"
+            className="mt-6 inline-flex items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-white/90 sm:px-9"
+            style={{
+              color: "#000000",
+              WebkitTextFillColor: "#000000",
+            }}
           >
-            Get a Free Discovery Call
+            <span
+              style={{
+                color: "#000000",
+                WebkitTextFillColor: "#000000",
+                opacity: 1,
+                visibility: "visible",
+              }}
+            >
+              Get a Free Discovery Call
+            </span>
           </a>
         </motion.div>
       </div>

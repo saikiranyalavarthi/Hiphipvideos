@@ -133,12 +133,26 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* CTA BUTTON */}
           <Link
             href="/quote"
             aria-label="Request a video creation project quote"
-            className="inline-flex w-fit items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
+            className="inline-flex w-fit items-center justify-center rounded-xl bg-white px-7 py-3.5 text-sm font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-white/90"
+            style={{
+              color: "#000000",
+              WebkitTextFillColor: "#000000",
+            }}
           >
-            Get a Free Discovery Call
+            <span
+              style={{
+                color: "#000000",
+                WebkitTextFillColor: "#000000",
+                opacity: 1,
+                visibility: "visible",
+              }}
+            >
+              Get a Free Discovery Call
+            </span>
           </Link>
         </div>
 
@@ -173,6 +187,10 @@ export default function Footer() {
                 href="tel:+916302111807"
                 aria-label="Call HipHipVideos"
                 className="block text-sm text-white/50 transition-colors hover:text-white"
+                style={{
+                  color: "rgba(255,255,255,0.5)",
+                  WebkitTextFillColor: "rgba(255,255,255,0.5)",
+                }}
               >
                 +91 63021 11807
               </a>
@@ -181,6 +199,10 @@ export default function Footer() {
                 href="mailto:info@hiphipvideos.com"
                 aria-label="Email HipHipVideos"
                 className="block break-all text-sm text-white/50 transition-colors hover:text-white"
+                style={{
+                  color: "rgba(255,255,255,0.5)",
+                  WebkitTextFillColor: "rgba(255,255,255,0.5)",
+                }}
               >
                 info@hiphipvideos.com
               </a>

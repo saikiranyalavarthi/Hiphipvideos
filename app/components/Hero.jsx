@@ -135,26 +135,71 @@ export default function Hero() {
             </p>
 
             {/* CTA BUTTONS */}
+            {/* CTA BUTTONS */}
             <div className="mt-2 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-6">
               {/* PRIMARY CTA */}
               <motion.a
                 href="/quote"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-3 rounded-full border border-white bg-white px-7 py-4 text-[14px] font-semibold text-black shadow-xl transition-all duration-300 hover:bg-black hover:text-white sm:px-9 sm:py-[18px] sm:text-[16px]"
+                className="inline-flex items-center justify-center gap-3 rounded-full border border-white bg-white px-7 py-4 text-[14px] font-semibold shadow-xl transition-all duration-300 sm:px-9 sm:py-[18px] sm:text-[16px]"
+                style={{
+                  color: "#000",
+                  WebkitTextFillColor: "#000",
+                }}
               >
-                Start Your Video Project
-                <span className="text-lg">→</span>
+                <span
+                  style={{
+                    color: "#000",
+                    WebkitTextFillColor: "#000",
+                    opacity: 1,
+                    visibility: "visible",
+                  }}
+                >
+                  Start Your Video Project
+                </span>
+
+                <span
+                  className="text-lg"
+                  style={{
+                    color: "#000",
+                    WebkitTextFillColor: "#000",
+                    opacity: 1,
+                    visibility: "visible",
+                  }}
+                >
+                  →
+                </span>
               </motion.a>
 
               {/* SECONDARY CTA */}
               <motion.a
                 href="/work"
                 whileHover={{ x: 5 }}
-                className="group inline-flex items-center gap-2 text-[14px] font-semibold text-white transition-all duration-300 sm:text-[16px]"
+                className="group inline-flex items-center gap-2 text-[14px] font-semibold transition-all duration-300 sm:text-[16px]"
+                style={{
+                  color: "#fff",
+                  WebkitTextFillColor: "#fff",
+                }}
               >
-                Explore Our Video Creations
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                <span
+                  style={{
+                    color: "#fff",
+                    WebkitTextFillColor: "#fff",
+                    opacity: 1,
+                    visibility: "visible",
+                  }}
+                >
+                  Explore Our Video Creations
+                </span>
+
+                <span
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                  style={{
+                    color: "#fff",
+                    WebkitTextFillColor: "#fff",
+                  }}
+                >
                   →
                 </span>
               </motion.a>

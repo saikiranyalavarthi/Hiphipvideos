@@ -132,10 +132,32 @@ export default function WhatWeDo() {
                 {/* BUTTON CTA */}
                 <Link
                   href={service.href}
-                  className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition-all duration-300 hover:bg-[#CCFF00]"
+                  className="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-5 py-3 text-sm font-semibold transition-all duration-300 hover:bg-[#CCFF00]"
+                  style={{
+                    color: "#000000",
+                    WebkitTextFillColor: "#000000",
+                  }}
                 >
-                  Explore Service
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  <span
+                    style={{
+                      color: "#000000",
+                      WebkitTextFillColor: "#000000",
+                      visibility: "visible",
+                      opacity: 1,
+                    }}
+                  >
+                    Explore Service
+                  </span>
+
+                  <span
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    style={{
+                      color: "#000000",
+                      WebkitTextFillColor: "#000000",
+                      visibility: "visible",
+                      opacity: 1,
+                    }}
+                  >
                     →
                   </span>
                 </Link>
@@ -170,10 +192,32 @@ export default function WhatWeDo() {
         >
           <Link
             href="/services"
-            className="group inline-flex items-center justify-center gap-3 rounded-full bg-black px-7 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#CCFF00] hover:text-black sm:px-9 sm:text-base"
+            className="group inline-flex items-center justify-center gap-3 rounded-full bg-black px-7 py-4 text-sm font-semibold transition-all duration-300 hover:bg-[#CCFF00]"
+            style={{
+              color: "#ffffff",
+              WebkitTextFillColor: "#ffffff",
+            }}
           >
-            Explore All Video Creation Services
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
+            <span
+              style={{
+                color: "#ffffff",
+                WebkitTextFillColor: "#ffffff",
+                visibility: "visible",
+                opacity: 1,
+              }}
+            >
+              Explore All Video Creation Services
+            </span>
+
+            <span
+              className="transition-transform duration-300 group-hover:translate-x-1"
+              style={{
+                color: "#ffffff",
+                WebkitTextFillColor: "#ffffff",
+                visibility: "visible",
+                opacity: 1,
+              }}
+            >
               →
             </span>
           </Link>

@@ -31,9 +31,7 @@ export default function CTASection() {
             >
               Ready to Create Your
               <br className="hidden sm:block" />
-              <span className="text-black/50">
-                {" "}Next High-Impact Video?
-              </span>
+              <span className="text-black/50"> Next High-Impact Video?</span>
             </h2>
 
             {/* DESCRIPTION */}
@@ -47,10 +45,34 @@ export default function CTASection() {
               href="/quote"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="mt-9 inline-flex items-center justify-center gap-3 rounded-full bg-black px-8 py-4 text-[14px] font-semibold text-white transition-all duration-300 hover:bg-black/80 sm:px-10 sm:py-[18px] sm:text-base"
+              className="mt-9 inline-flex items-center justify-center gap-3 rounded-full bg-black px-8 py-4 text-[14px] font-semibold transition-all duration-300 hover:bg-black/80 sm:px-10 sm:py-[18px] sm:text-base"
+              style={{
+                color: "#ffffff",
+                WebkitTextFillColor: "#ffffff",
+              }}
             >
-              Start Your Video Project
-              <span className="text-lg">→</span>
+              <span
+                style={{
+                  color: "#ffffff",
+                  WebkitTextFillColor: "#ffffff",
+                  opacity: 1,
+                  visibility: "visible",
+                }}
+              >
+                Start Your Video Project
+              </span>
+
+              <span
+                className="text-lg"
+                style={{
+                  color: "#ffffff",
+                  WebkitTextFillColor: "#ffffff",
+                  opacity: 1,
+                  visibility: "visible",
+                }}
+              >
+                →
+              </span>
             </motion.a>
 
             {/* CONTACT DETAILS */}
@@ -62,6 +84,10 @@ export default function CTASection() {
               <a
                 href="tel:+916302111807"
                 className="transition-colors hover:text-black"
+                style={{
+                  color: "rgba(0,0,0,0.45)",
+                  WebkitTextFillColor: "rgba(0,0,0,0.45)",
+                }}
               >
                 +91 63021 11807
               </a>
@@ -71,6 +97,10 @@ export default function CTASection() {
               <a
                 href="mailto:info@hiphipvideos.com"
                 className="transition-colors hover:text-black"
+                style={{
+                  color: "rgba(0,0,0,0.45)",
+                  WebkitTextFillColor: "rgba(0,0,0,0.45)",
+                }}
               >
                 info@hiphipvideos.com
               </a>

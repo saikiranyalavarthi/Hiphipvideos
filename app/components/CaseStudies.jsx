@@ -122,9 +122,33 @@ export default function CaseStudies() {
 
                 {/* VIEW PROJECT */}
                 <div className="flex items-center justify-start lg:justify-end">
-                  <span className="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-sm font-medium text-white transition-all duration-300 group-hover:border-white group-hover:bg-white group-hover:text-black">
-                    View Project
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  <span
+                    className="inline-flex items-center gap-3 rounded-full border border-white/20 px-5 py-3 text-sm font-medium transition-all duration-300 group-hover:border-white group-hover:bg-white"
+                    style={{
+                      color: "#ffffff",
+                      WebkitTextFillColor: "#ffffff",
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#ffffff",
+                        WebkitTextFillColor: "#ffffff",
+                        opacity: 1,
+                        visibility: "visible",
+                      }}
+                    >
+                      View Project
+                    </span>
+
+                    <span
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                      style={{
+                        color: "#ffffff",
+                        WebkitTextFillColor: "#ffffff",
+                        opacity: 1,
+                        visibility: "visible",
+                      }}
+                    >
                       →
                     </span>
                   </span>
@@ -148,10 +172,33 @@ export default function CaseStudies() {
 
           <Link
             href="/quote"
-            className="mt-5 inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold text-black transition-all duration-300 hover:bg-neutral-300 sm:px-9"
+            className="mt-5 inline-flex items-center justify-center gap-3 rounded-full bg-white px-7 py-4 text-sm font-semibold transition-all duration-300 hover:bg-neutral-300 sm:px-9"
+            style={{
+              color: "#000000",
+              WebkitTextFillColor: "#000000",
+            }}
           >
-            Start Your Video Project
-            <span>→</span>
+            <span
+              style={{
+                color: "#000000",
+                WebkitTextFillColor: "#000000",
+                visibility: "visible",
+                opacity: 1,
+              }}
+            >
+              Start Your Video Project
+            </span>
+
+            <span
+              style={{
+                color: "#000000",
+                WebkitTextFillColor: "#000000",
+                visibility: "visible",
+                opacity: 1,
+              }}
+            >
+              →
+            </span>
           </Link>
         </motion.div>
       </div>

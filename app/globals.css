@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -14,10 +15,26 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  width: 100%;
+  overflow-x: clip;
 }
 
-/* Inter font is applied through layout.jsx */
+body {
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================================
+   BOX SIZING
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* =========================================
    MARQUEE ANIMATION
@@ -44,6 +61,12 @@ body {
   animation-play-state: paused;
 }
 
+@media (max-width: 640px) {
+  .marquee {
+    animation-duration: 35s;
+  }
+}
+
 /* =========================================
    INPUT
 ========================================= */
@@ -56,7 +79,10 @@ body {
   background: #fff;
   color: #111;
   font-size: 16px;
-  transition: all 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .input:focus {
@@ -101,16 +127,20 @@ body {
 ========================================= */
 
 .input-style {
-  height: 55px;
   width: 100%;
+  height: 55px;
   padding: 14px 16px;
   border: 1px solid #555;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
   color: #fff;
   font-size: 14px;
+  font-family: inherit;
   outline: none;
-  transition: all 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .input-style:hover {
@@ -128,7 +158,7 @@ body {
 ========================================= */
 
 .input-style option {
-  background-color: #fff;
+  background: #fff;
   color: #000;
 }
 
@@ -147,6 +177,7 @@ body {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -162,19 +193,32 @@ body {
   background: #888;
 }
 
+/* Firefox scrollbar */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #555 #000;
+}
+
 /* =========================================
    LINKS
 ========================================= */
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 /* =========================================
-   BUTTON TRANSITIONS
+   BUTTON BASE
+   Tailwind controls individual button styles
 ========================================= */
 
 button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
@@ -183,13 +227,42 @@ button {
 }
 
 /* =========================================
-   RESPONSIVE BASE
+   MEDIA
 ========================================= */
 
 img,
 video {
   max-width: 100%;
 }
+
+/* =========================================
+   FOCUS ACCESSIBILITY
+========================================= */
+
+:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  .input,
+  .input-style {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -202,5 +275,6 @@ video {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

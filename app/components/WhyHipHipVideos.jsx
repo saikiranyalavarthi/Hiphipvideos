@@ -67,17 +67,15 @@ export default function WhyHipHipVideos() {
           >
             More Than Videos.
             <br />
-            <span className="text-black/50">
-              We Create Visual Experiences.
-            </span>
+            <span className="text-black/50">We Create Visual Experiences.</span>
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-base leading-7 text-black/60 sm:text-lg sm:leading-8">
             Hip Hip Videos is a creative video production company focused on
-            product and business videos. We bring together AI, animation,
-            motion graphics, visual effects, graphic design, storytelling
-            and video editing to transform ideas into engaging visual content
-            for brands and businesses.
+            product and business videos. We bring together AI, animation, motion
+            graphics, visual effects, graphic design, storytelling and video
+            editing to transform ideas into engaging visual content for brands
+            and businesses.
           </p>
         </motion.div>
 
@@ -125,6 +123,7 @@ export default function WhyHipHipVideos() {
           transition={{ duration: 0.6 }}
           className="mt-12 flex flex-col items-center justify-between gap-6 rounded-2xl border border-black/10 bg-neutral-50 p-6 sm:p-8 lg:mt-16 lg:flex-row lg:px-10"
         >
+          {/* CTA TEXT */}
           <div>
             <p className="text-lg font-semibold text-black sm:text-xl">
               Have an idea for your next video?
@@ -135,19 +134,48 @@ export default function WhyHipHipVideos() {
             </p>
           </div>
 
+          {/* CTA BUTTONS */}
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            {/* EXPLORE OUR WORK */}
             <Link
               href="/portfolio"
-              className="inline-flex items-center justify-center rounded-lg border border-black/15 px-6 py-3 text-sm font-semibold text-black transition-all duration-300 hover:border-black hover:bg-black hover:text-white"
+              className="inline-flex items-center justify-center rounded-lg border border-black/15 px-6 py-3 text-sm font-semibold transition-all duration-300 hover:border-black hover:bg-white"
+              style={{
+                color: "#000000",
+                WebkitTextFillColor: "#000000",
+              }}
             >
-              Explore Our Work
+              <span
+                style={{
+                  color: "#000000",
+                  WebkitTextFillColor: "#000000",
+                  opacity: 1,
+                  visibility: "visible",
+                }}
+              >
+                Explore Our Work
+              </span>
             </Link>
 
+            {/* PRIMARY CTA */}
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-neutral-800"
+              className="inline-flex items-center justify-center rounded-lg bg-black px-6 py-3 text-sm font-bold transition-all duration-300 hover:-translate-y-1 hover:bg-neutral-800"
+              style={{
+                color: "#ffffff",
+                WebkitTextFillColor: "#ffffff",
+              }}
             >
-              Start Your Video Project →
+              <span
+                style={{
+                  color: "#ffffff",
+                  WebkitTextFillColor: "#ffffff",
+                  opacity: 1,
+                  visibility: "visible",
+                }}
+              >
+                Start Your Video Project →
+              </span>
             </Link>
           </div>
         </motion.div>
