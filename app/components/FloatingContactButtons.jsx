@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { trackEvent } from "@/app/lib/analytics";
 
 export default function FloatingContactButtons() {
-  const phoneNumber = "916301022795";
+  const phoneNumber = "916302111807";
 
   const whatsappMessage = encodeURIComponent(
     "Hello Hip Hip Videos, I am interested in your video creation services. I need a video for my product or business and would like to discuss my project.",
@@ -24,6 +24,12 @@ export default function FloatingContactButtons() {
     });
   };
 
+  const buttonClass =
+    "group relative flex h-[58px] w-[58px] items-center justify-center rounded-full border border-white/20 bg-white text-black shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-300 hover:bg-black hover:text-white hover:border-white/50";
+
+  const tooltipClass =
+    "pointer-events-none absolute right-[70px] whitespace-nowrap rounded-lg bg-white px-3 py-2 text-xs font-semibold text-black opacity-0 translate-x-2 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100";
+
   return (
     <div className="fixed bottom-5 right-5 z-[9999] flex flex-col gap-3">
       {/* WHATSAPP BUTTON */}
@@ -33,50 +39,23 @@ export default function FloatingContactButtons() {
         rel="noopener noreferrer"
         aria-label="Chat with Hip Hip Videos on WhatsApp"
         onClick={handleWhatsAppClick}
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        className="
-          group
-          relative
-          flex h-[52px] w-[52px]
-          items-center justify-center
-          rounded-full
-          bg-[#25D366]
-          text-white
-          shadow-[0_6px_25px_rgba(37,211,102,0.35)]
-          transition-all duration-300
-          hover:shadow-[0_8px_30px_rgba(37,211,102,0.55)]
-        "
+        whileHover={{ scale: 1.08, y: -3 }}
+        whileTap={{ scale: 0.94 }}
+        className={buttonClass}
       >
+        {/* WhatsApp Symbol */}
         <svg
           viewBox="0 0 32 32"
-          className="h-7 w-7"
+          className="h-8 w-8"
           fill="currentColor"
           aria-hidden="true"
         >
-          <path d="M19.11 17.43c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.77-1.43-1.72-1.6-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.55-.88-2.13-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.1 2.43.9 1.43 1.8 2.51 4.37 3.52.61.26 1.09.41 1.46.53.61.19 1.17.16 1.61.1.49-.07 1.51-.62 1.72-1.22.21-.6.21-1.11.15-1.22-.06-.11-.26-.17-.55-.31z" />
-          <path d="M16.03 3C8.84 3 3 8.82 3 16c0 2.3.6 4.55 1.73 6.54L3 29l6.6-1.7A13 13 0 1 0 16.03 3zm0 23.6c-2.05 0-4.06-.55-5.82-1.59l-.42-.25-3.92 1.01 1.05-3.82-.27-.44A10.58 10.58 0 1 1 16.03 26.6z" />
+          <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.61 4.55 1.76 6.55L3 29l6.64-1.74A13 13 0 1 0 16 3Zm0 23.6a10.56 10.56 0 0 1-5.36-1.46l-.4-.24-3.94 1.03 1.05-3.84-.26-.42A10.57 10.57 0 1 1 16 26.6Z" />
+
+          <path d="M21.8 18.7c-.32-.16-1.88-.92-2.17-1.02-.29-.11-.5-.16-.7.16-.21.32-.81 1.02-.99 1.22-.18.2-.36.23-.68.07-.32-.16-1.34-.5-2.55-1.58-.95-.84-1.58-1.9-1.77-2.22-.18-.32-.02-.5.14-.66.16-.16.32-.36.48-.55.16-.18.21-.32.32-.52.1-.21.05-.4-.02-.55-.07-.16-.7-1.7-.96-2.33-.25-.61-.52-.53-.7-.54h-.6c-.21 0-.55.07-.83.4-.28.32-1.09 1.07-1.09 2.61 0 1.54 1.12 3.03 1.28 3.24.16.21 2.2 3.36 5.34 4.71.75.32 1.34.51 1.8.65.76.24 1.45.2 2 .12.61-.09 1.86-.76 2.13-1.5.27-.73.27-1.36.19-1.5-.08-.14-.29-.22-.61-.38Z" />
         </svg>
 
-        <span
-          className="
-            pointer-events-none
-            absolute right-[62px]
-            whitespace-nowrap
-            rounded-lg
-            bg-white
-            px-3 py-2
-            text-xs font-semibold
-            text-black
-            opacity-0
-            translate-x-2
-            transition-all duration-200
-            group-hover:translate-x-0
-            group-hover:opacity-100
-          "
-        >
-          WhatsApp Us
-        </span>
+        <span className={tooltipClass}>WhatsApp Us</span>
       </motion.a>
 
       {/* CALL BUTTON */}
@@ -84,21 +63,11 @@ export default function FloatingContactButtons() {
         href={`tel:+${phoneNumber}`}
         aria-label="Call Hip Hip Videos"
         onClick={handleCallClick}
-        whileHover={{ scale: 1.08 }}
-        whileTap={{ scale: 0.95 }}
-        className="
-          group
-          relative
-          flex h-[52px] w-[52px]
-          items-center justify-center
-          rounded-full
-          bg-[#CCFF00]
-          text-black
-          shadow-[0_6px_25px_rgba(204,255,0,0.3)]
-          transition-all duration-300
-          hover:shadow-[0_8px_30px_rgba(204,255,0,0.55)]
-        "
+        whileHover={{ scale: 1.08, y: -3 }}
+        whileTap={{ scale: 0.94 }}
+        className={buttonClass}
       >
+        {/* Phone Icon */}
         <svg
           viewBox="0 0 24 24"
           className="h-6 w-6"
@@ -124,25 +93,7 @@ export default function FloatingContactButtons() {
           />
         </svg>
 
-        <span
-          className="
-            pointer-events-none
-            absolute right-[62px]
-            whitespace-nowrap
-            rounded-lg
-            bg-white
-            px-3 py-2
-            text-xs font-semibold
-            text-black
-            opacity-0
-            translate-x-2
-            transition-all duration-200
-            group-hover:translate-x-0
-            group-hover:opacity-100
-          "
-        >
-          Call Us
-        </span>
+        <span className={tooltipClass}>Call Us</span>
       </motion.a>
     </div>
   );
